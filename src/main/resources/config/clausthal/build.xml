@@ -1,0 +1,100 @@
+<project name="clausthal-module" basedir="../../../../../../docportal" xmlns:mcr="antlib:org.mycore.buildtools">
+  <import file="${basedir}/common-modules.xml" />
+  <property name="module.directory" location="${ant.file}/.." />
+  <property name="module.web.dir" location="${module.directory}/../../META-INF/resources" />
+  <property file="${module.directory}/build.properties" />
+  <property name="module.jar" location="${build.lib}/${module.jar.name}" />
+
+  <!-- =================================
+          target: config
+         ================================= -->
+  <target name="config" description="adds configuration options for ${ant.project.name}">
+    <mcr:config action="addInclude"
+                  propertyfile="${build.config}/mycore.properties"
+                  key="MCR.URIResolver.xslIncludes.mycoreobjectXML"
+                  value="embargofilter.xsl" />
+    <mcr:config action="addInclude"
+                propertyfile="${build.config}/mycore.properties"
+                key="MCR.URIResolver.xslIncludes.RDF-mods-journal"
+                value="RDF-mods-journal-clausthal.xsl" />
+    <mcr:config action="addInclude"
+                propertyfile="${build.config}/mycore.properties"
+                key="MCR.URIResolver.xslImports.solr-document"
+                value="clausthal-solr.xsl" />
+    <mcr:config action="addInclude"
+                    propertyfile="${build.config}/mycore.properties"
+                    key="MCR.URIResolver.xslIncludes.solrResponse"
+                    value="response-clausthal.xsl" />
+    <copy todir="${basedir}/config/solr-home">
+      <fileset dir="${basedir}/config/solr-home.template">
+        <exclude name="conf/schema.xml" />
+        <exclude name="conf/solrconfig.xml" />
+      </fileset>
+    </copy>
+    <copy todir="${basedir}/config/solr-home" overwrite="true">
+      <fileset dir="${module.directory}/solr-home" />
+    </copy>
+    <!-- copy tofile="${basedir}/config/solr-home/conf/lang/stopwords_de.txt"
+            file="${basedir}/config/solr-home.template/conf/lang/stopwords_de.txt" overwrite="true">
+      <filterchain>
+        <linecontainsregexp negate="true">
+          <regexp pattern="^(dir|wie|mir)\s+" />
+        </linecontainsregexp>
+      </filterchain>
+    </copy -->
+  </target>
+
+
+  <!-- =================================
+          target: create.default-rules
+         ================================= -->
+  <target name="create.default-rules" description="loads default acl rules for clausthal application">
+    <antcall target="invoke.cli">
+      <param name="cli.directory" value="${module.directory}/acl" />
+      <param name="cli.command" value="process defaultrules-commands.txt" />
+    </antcall>
+    <antcall target="invoke.cli">
+      <param name="cli.directory" value="${module.directory}/acl" />
+      <param name="cli.command" value="process webacl-commands.txt" />
+    </antcall>
+  </target>
+
+  <!-- =================================
+          target: create.webapp
+         ================================= -->
+  <target name="create.webapp" depends="mvn-init" description="overwrites files from docportal">
+    <delete dir="${build.webapps}/content" />
+    <mkdir dir="${build.webapps}/content" />
+    <unjar dest="${build.webapps}" overwrite="true">
+      <fileset file="${module.jar}" />
+      <patternset>
+        <include name="META-INF/resources/config/navigation.xml" />
+        <include name="META-INF/resources/content/**" />
+        <include name="META-INF/resources/editor/**" />
+        <include name="META-INF/resources/images/**" />
+        <include name="META-INF/resources/index.html" />
+        <include name="META-INF/resources/robots.txt" />
+        <include name="META-INF/resources/favicon.ico" />
+      </patternset>
+      <regexpmapper from="^(META-INF/resources/)(.*)" to="\2" />
+    </unjar>
+    <unjar dest="${build.webapps}/WEB-INF/classes/xsl" overwrite="true">
+      <fileset file="${module.jar}" />
+      <patternset>
+        <include name="xsl/layout/mycoreobject.xsl" />
+        <include name="xsl/layout/MyCoReLayout.xsl" />
+        <include name="xsl/*-external.xsl" />
+        <include name="xsl/basket-objects.xsl" />
+        <include name="xsl/editor.xsl" />
+        <include name="xsl/login.xsl" />
+        <include name="xsl/solr-response.xsl" />
+        <include name="xsl/response-browse.xsl" />
+        <include name="xsl/user.xsl" />
+        <include name="xsl/mods2dc.xsl" />
+        <include name="xsl/xsl-output-html.fragment" />
+      </patternset>
+        <flattenmapper/>
+    </unjar>
+  </target>
+
+</project>

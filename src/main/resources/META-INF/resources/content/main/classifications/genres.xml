@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+
+<MyCoReWebPage>
+
+  <section i18n="component.mods.browse.genre" xml:lang="all">
+    <div class="blockbox">
+      <h2>Nach Dokumenttyp</h2>
+      <classificationbrowser classification="clausthal_genres"
+                                 objecttype="mods"
+                                restriction="+category.top:&quot;clausthal_status:published&quot;"
+                                      field="category.top"
+                               countresults="true"
+                                 addclassid="true"
+                                emptyleaves="false"
+                                      style="clausthal"
+                                 parameters="sort=mods.dateIssued+desc"
+                               addParameter="XSL.template=template_clausthal"
+      />
+    </div>
+  </section>
+
+</MyCoReWebPage>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage>
+<section xml:lang="de" title="Interner Zugang">
+  <div class="blockbox">
+    <h2>Administration:</h2>
+    <toc />
+  </div>
+
+</section>
+<meta>
+  <log date="2011-11-10" time="11:50" labelPath=" » Admin" lastEditor="Kathleen Neumann" />
+</meta>
+</MyCoReWebPage>

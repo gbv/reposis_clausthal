@@ -1,0 +1,216 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS Framework
+ *
+ * (en) Screen layout for YAML examples
+ * (de) Bildschirmlayout für YAML-Beispiele
+ *
+ * @copyright       Copyright 2005-2010, Dirk Jesse
+ * @license         CC-A 2.0 (http://creativecommons.org/licenses/by/2.0/),
+ *                  YAML-C (http://www.yaml.de/en/license/license-conditions.html)
+ * @link            http://www.yaml.de
+ * @package         yaml
+ * @version         3.3
+ * @revision        $Revision:426 $
+ * @lastmodified    $Date: 2010-09-14 21:19:30 +0200 (Di, 14 Sep 2010) $
+ */
+
+@media screen, projection
+{
+  /**
+   * (en) Forcing vertical scrollbars in IE8, Firefox, Webkit & Opera
+   * (de) Erzwingen vertikaler Scrollbalken in IE8, Firefox, Webkit & Opera
+   *
+   * @workaround
+   * @affected IE8, FF, Webkit, Opera
+   * @css-for all
+   * @valid CSS3
+   */
+  html { height:101%; }
+  body { overflow-y:scroll; }
+
+  /*------------------------------------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting YAML's  basic layout elements
+   * (de) Gestaltung des YAML Basis-Layouts
+   */
+
+  /* (en) Marginal areas & page background */
+  /* (de) Randbereiche & Seitenhintergrund */
+  body {
+    background-color: transparent;
+    background-image: url("data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAABGAAD/4QNvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjAtYzA2MCA2MS4xMzQ3NzcsIDIwMTAvMDIvMTItMTc6MzI6MDAgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6Rjc3RjExNzQwNzIwNjgxMUFFNTY5MDY0NUU0QkREMjEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MjVGMTdERDRBMzJCMTFFMUFGNjZEMTU2NzEyNUU2ODAiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MjVGMTdERDNBMzJCMTFFMUFGNjZEMTU2NzEyNUU2ODAiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowMTgwMTE3NDA3MjA2ODExOTJCMEZDQjhDRDZCMDE5NyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpGNzdGMTE3NDA3MjA2ODExQUU1NjkwNjQ1RTRCREQyMSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pv/uAA5BZG9iZQBkwAAAAAH/2wCEAAQDAwMDAwQDAwQGBAMEBgcFBAQFBwgGBgcGBggKCAkJCQkICgoMDAwMDAoMDA0NDAwRERERERQUFBQUFBQUFBQBBAUFCAcIDwoKDxQODg4UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/AABEIAJYAlgMBEQACEQEDEQH/xABpAAEBAQEBAAAAAAAAAAAAAAABAAIDCAEBAAAAAAAAAAAAAAAAAAAAABAAAQMCBQMDBAMAAwEAAAAAAQARITECQVFhcRKBkaHwsSLB0eEy8UIDUhMjMxEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A9oD/AEJxN2g/EIJ7smQIsJDm76eyB42ilUBxcoIsIcOgCDgWCDPEaklAm0ZAb/hBC3L7INC1hJA8oJnxPsgCLRJQDgn4jqg0OWLBBECqALEVZAcRqUGmDMyDmDeYc7CniEGnIrHX7IDmaWiUD8/7EBAuMyfZBWkYDsgLr2r2QH/Y+HdAi4mghA1En6IIMBAZBHkf5ZAcCcR7oI2iXuJ0CANoZwG3KBAMEePuYQaY6e6AMFzOlUA92WjINEWW5W7Se5QHw6aoLkNvHugOVmNe6C5ZWoK4lmNzHJBgB5YnwEGhbjA8nug2JMDqgDyLz66IBv8AkWHZBG6y2jk4oIXXExawQR5GpbZAs2+DyguV2Xj7oIEnH6oIlBnmXwbJAj/O0VlAtt0CDN1uZ7oDiKinrZAuMHOn8INCJYBBODSfZBTWnugybnqX6oIVZzsEDxfDugaRj2QZJObIEF8zrQINAxkEATa+flAcgYAKBLVu8ygHLP8A1yZAcrjJLDRBMcj19BBG4jDuguN1wd3HYINC0BBcS8MPPugzWDcbtAguJynMyghaKmqDQpAbVAb9HQBpp2+yCDYDsH8lBOdfdAsTh1JdAi3AnoICCJ/zt9fVBn/sA/W0DWpQPO6jTugSLhLC3UmUA2pO0BBUwb1mUE5IYDqZQM4nsgCch1KCcnHsEELc3fVAwKBBcr82OgQYLEzc50QaAtE8e6BFwwkoAk6DeqCc6t2QRZt8AgmYYDUoAG0HG4oLH9YyxQbuItli40b3lBjliAxzKBe7Eh+6BOp2xQUa9UE3pmQZcCSegQQL0tLINfNqNufsgt2YIMuHcO/hAuXkQgneh7R7oCRTxJ7oNBz6dBMKnqgyeOE7oInoMhCC4jjRBs2W43m/wEB8Qcj5QDkiA6B+R0GiCY4SUFxJqegQQtb9QAgZx8IAktAQDHGBl/CBFtwoG3hBAHqgmJy90Gha5k90ERl9kHIifughacjtQINSP1ADoJrm/afCDTWj+wO1O5QD24B/PvCAkxXygQLsaaoFyPugRqUBzDwHZBG8s5DIAHrsgnvqGAQHyNCSgti20oLlbaGf6+yC5vEk6QgZNYGqA+IFev8ACCHEmB3QaI0f1qgMcHGqABtw8oGX07ILx61QQLlgaIInMHYwgHJowfugYAm47UQWw7oFtUA4w7oAscelUAxMAdSgODyYQaFIPYIEWvh1JQQttAfEYCfJQRJzbUoMxdJJu9kC0M3R5QAsFsEzkECTa8mUAGJ/XkUC91HFugk+EAbCaA73IIWmZ7QgRYRoPKBijk6VQBtAqY1QINpoOXsgTcA1BoEAZLoBzkwQXJsX9aILkciUEBcTAbdA8QP2bdBGRiPCDDBmefHdBsWAalBFsR1KC5B4LjQIFzS21kB8m+XYBA8oa22cygwbjQyckByuME8QggLd9cEGpoaaUQLDX2QZewYDpKBY3YMNZ8IFo+/4QDijvoAg1XPb+EAwGLHSqDPxxrmZQLw874dkGjoQ2nr6oDjaDMnNAgnC0DUoMm4PNznIIE3XZMMyUGXBgk3aBBEgFgOgQIcQB3QacYM6DBuL1bX+UFU57+gg0zUjaqAa0CYQPG2rPqfygeOJLafhARR+iDPG0mqCIFtB1QMt9UGja1Ax1qgGxJQTA4Oe6A+VItCAIGJfdAhmhztCC4jJtqoGgjygySTUsEFxtGd3RAgHGB6yQBAeff7IIwH9g3ugnN2PTHwgRYKs+6DTEQAgmP4EIJjmAe5QZcUfq6DXxzdAQPuUFXH6IADIgbIEC0OO+KBbIRoguIY4IMvaMXQTuQ1vdBr5Y+AgGmfJQDXUEbQgy1tTc/lBoFqAnVBscjQIKgkoMm7AHsgCAP2rlU/VAwgwATFgYZoHgMTOQQaFopTdAfF8ygqzVBG6KsfW6CrQE6mEGgNEC4CCfVAOAgzWrN390FytG6B5XGlp6oA33UqchRAAEmZPdBqKE9vwgRa2QHlBNbTzigbh/pd/9ItydBmKDsIQXE4hBMOmiBZoCC4tUgIA32WwJQY5X3UQAd5rv9kGxuenp0C4ODeuqA4jKdUCxH6xqgwxNS/sguN1CCyBbSMyUDyADD2QT3NpqgZbVBnjc7lie6BD0JAGVtUE9gg11lBG7QndAuSJDIJupQLNMBBggPJdBRVg2qBDVE7oF8vCDJuOyCtciB9/KDXyEQPKAIONxQAtxL9EGhaAXad0Ebsg57IMvc75YIE8v7U1QQAxPZBf+aDZ4Ck9kGHL0AQan1+HQDDNBitIzJQRAFST4QQ0ZBEHE9AgreLx5QaJOT7oAu00zw8INWm7+oG6BnHsgpmOpQYub+0lBNFfdB//2Q==");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+  }
+  /* (en) Layout:width, background, borders */
+  /* (de) Layout:Breite, Hintergrund, Rahmen */
+  .page_margins {
+      width: 1007px;
+      margin: 0 auto;
+  }
+  .page {
+      width: 980px;
+      background-color: white;
+      box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.5);
+  }
+  #header {
+    position:relative;
+    padding: 64px 0 0 0;
+  }
+
+  /* (en) #topnav gets absolute positioning within #header */
+  /* (de) #topnav wird innerhalb von #header absolut positioniert */
+  #topnav {
+    background:transparent;
+    color:#aaa;
+    position:absolute;
+    top:0px;
+    right:0px; /* LTR */
+    text-align:right; /* LTR */
+  }
+  #site_logo {
+    position:absolute;
+    top:0px;
+    left:0px;
+  }
+  #site_logo h1 { margin:0; padding:0; }
+  #project_info {
+      margin: 16px 0 0 64px;
+      padding:0px 20px 30px 0px;
+  }
+  #project_title,
+  #project_slogan {}
+
+  #project_info h2,
+  #project_info h3  {
+      margin: 0;
+      padding: 0;
+      font-family: Arial,Helvetica,sans-serif;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: bold;
+      font-size: 1.4em;
+      border: 0px;
+  }
+  #project_info h2 a,
+  #project_info h3 a {
+    color: #808080;
+  }
+
+  /* (en) adjustment of main navigation */
+  /* (de) Anpassung der Hauptnavigation */
+  #nav { }
+  #nav ul {  }
+  #nav li {  }
+
+  #main {
+    margin:0 0 0 0px;
+  }
+
+  #footer {
+    background-color: #e6e6e6;
+    padding: 8px 20px 8px 20px;
+    font-size: 0.85em;
+    clear: both;
+  }
+
+  /* (en) Backup for correct positioning */
+  /* (de) Absicherung korrekte Positionierung */
+  #header, #main, #footer { clear:both; }
+
+  /*------------------------------------------------------------------------------------------------------*/
+
+  /**
+   * (en) Formatting content container
+   * (de) Formatierung der Inhalts-Container
+   *
+   * |-------------------------------|
+   * | #header                       |
+   * |-------------------------------|
+   * | #col1   | #col3     | #col2   |
+   * | 25%     | flexible  | 25%     |
+   * |-------------------------------|
+   * | #footer                       |
+   * |-------------------------------|
+   */
+
+
+  #col1 { width:265px; }
+  #col1_content { padding:0px 0px 0px 65px; }
+
+  #col3 {
+      margin:0px 20px 0px 280px;
+  }
+  #col3_crumble {
+    padding:0px 0px 5px 0px;
+    font-size: 0.85em;
+    border-bottom: 1px solid #ccc;
+    }
+  #col3_content {
+      padding:10px 20px 20px 0px;
+      background-color: white;
+      color:#333;
+      font-size:1em;
+  }
+
+
+ /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * (en) Styling of layout specific elements
+  * (de) Gestaltung layoutabhängiger Elemente
+  */
+
+  #header h1 {
+    font-weight:bold;
+    font-size:2.5em;
+    letter-spacing:-2px;
+    line-height:65%;
+    color:#000;
+  }
+
+  #header span { color:#999; }
+
+  #topnav a { color:#999; font-weight:normal; background:transparent; text-decoration:none; }
+  #topnav a:focus,
+  #topnav a:hover,
+  #topnav a:active { text-decoration:underline; background-color:transparent; }
+
+  #footer a {  }
+  #footer a:focus,
+  #footer a:hover,
+  #footer a:active { }
+
+ /**
+  * ------------------------------------------------------------------------------------------------- #
+  *
+  * Skiplinks
+  *
+  * (en) Visual styling for skiplink navigation
+  * (de) Visuelle Gestaltung der Skiplink-Navigation
+  *
+  * @section content-skiplinks
+  */
+
+  #skiplinks a.skip:focus,
+  #skiplinks a.skip:active {
+    color:#fff;
+    background:#333;
+    border-bottom:1px #000 solid;
+    padding:10px 0;
+    text-decoration:none;
+  }
+
+  .c15l, .c85l { float:left; }
+  .c15r, .c85r { float:right; margin-left:-5px; }
+  .c15l, .c15r { width:15%; }
+  .c85l, .c85r { width:85%; }
+
+  .c66l .ym-cbox {margin-right: 10px;}
+  .c33r .ym-cbox {margin-left: 10px;}
+}

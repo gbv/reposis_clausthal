@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+  <section title="Einfache Suche über alle Publikationen" xml:lang="de" />
+
+  <section title="Simple search in all publications" xml:lang="en" />
+
+  <section xml:lang="all">
+    <div class="borderbox">
+
+    <editor id="searchmask">
+      <source uri="searchInput:{id}" />
+      <target type="servlet" name="MCRLegacySearchServlet" method="post" format="xml" />
+
+      <components root="root" var="/query">
+        <panel id="root">
+          <hidden var="@mask" default="content/main/search/simple.xml" />
+          <hidden var="@numPerPage" default="20"/>
+
+          <hidden var="conditions/@format" default="xml" />
+          <hidden var="conditions/boolean/@operator" default="and" />
+      <!-- Search only for object type mods -->
+          <hidden var="conditions/boolean/condition1/@field" default="objectType" />
+          <hidden var="conditions/boolean/condition1/@operator" default="=" />
+          <hidden var="conditions/boolean/condition1/@value" default="mods" />
+
+          <cell row="1" colspan="2" anchor="NORTHWEST" class="editorSubHeadlines">
+            <text i18n="component.mods.editor.search.label" />
+          </cell>
+
+      <!-- Search in field "mods-title" with operator "contains" -->
+          <hidden var="conditions/boolean/condition4/@field" default="mods.title" />
+          <hidden var="conditions/boolean/condition4/@operator" default="contains" />
+          <cell row="4" col="1" anchor="EAST">
+            <text i18n="editor.search.clausthal.title" />
+          </cell>
+          <cell row="4" col="2" anchor="WEST" var="conditions/boolean/condition4/@value">
+            <textfield width="40" />
+          </cell>
+
+      <!-- Search in field "mods-name" with operator "contains" -->
+          <hidden var="conditions/boolean/condition5/@field" default="mods.name" />
+          <hidden var="conditions/boolean/condition5/@operator" default="contains" />
+          <cell row="5" col="1" anchor="EAST">
+            <text i18n="editor.search.clausthal.name" />
+          </cell>
+          <cell row="5" col="2" anchor="WEST" var="conditions/boolean/condition5/@value">
+            <textfield width="40" />
+          </cell>
+
+      <!-- Search in field "allMeta" with operator "contains" -->
+          <hidden var="conditions/boolean/condition6/@field" default="allMeta" />
+          <hidden var="conditions/boolean/condition6/@operator" default="contains" />
+          <cell row="6" col="1" anchor="EAST">
+            <text i18n="editor.search.metadata" />
+          </cell>
+          <cell row="6" col="2" anchor="WEST" var="conditions/boolean/condition6/@value">
+            <textfield width="40" />
+          </cell>
+
+      <!-- Search in field "content" with operator "contains" -->
+          <hidden var="conditions/boolean/condition7/@field" default="content" />
+          <hidden var="conditions/boolean/condition7/@operator" default="contains" />
+          <cell row="7" col="1" anchor="EAST">
+            <text i18n="editor.search.derivate" />
+          </cell>
+          <cell row="7" col="2" anchor="WEST" var="conditions/boolean/condition7/@value">
+            <textfield width="40" />
+          </cell>
+
+      <!-- Search in field "category" with operator "=" -->
+          <hidden var="conditions/boolean/condition8/@field" default="category" />
+          <hidden var="conditions/boolean/condition8/@operator" default="=" />
+          <cell row="8" col="1" anchor="EAST">
+            <text i18n="editor.search.clausthal.institute" />
+          </cell>
+          <cell row="8" col="2" var="conditions/boolean/condition8/@value">
+            <list width="30" type="dropdown">
+              <item value="">
+                <label xml:lang="de">(bitte wählen)</label>
+                <label xml:lang="en">(please select)</label>
+              </item>
+              <include uri="classification:editorComplete:-1:children:clausthal_institutes" cacheable="false" />
+            </list>
+          </cell>
+      <!-- search in field publication status -->
+          <hidden var="conditions/boolean/condition60/@field" default="category" />
+          <hidden var="conditions/boolean/condition60/@operator" default="=" />
+          <hidden var="conditions/boolean/condition60/@value" default="clausthal_status:published" />
+
+          <cell row="19" col="1" anchor="NORTHEAST">
+            <text i18n="editor.search.sortby" />
+          </cell>
+          <cell row="19" col="2" colspan="2" anchor="NORTHWEST" var="sortBy/field">
+            <repeater min="1" max="3">
+              <panel>
+                <cell row="1" col="1" anchor="WEST" var="@name">
+                  <list type="dropdown">
+                    <!--<item value="" i18n="editor.search.choose" />-->
+                    <item value="mods.dateIssued" i18n="component.mods.metaData.dictionary.dateIssued" />
+                    <item value="score" i18n="editor.search.score" />
+                  </list>
+                </cell>
+                <cell row="1" col="2" anchor="WEST" var="@order">
+                  <list type="dropdown" default="descending">
+                    <item value="ascending" i18n="editor.search.ascending" />
+                    <item value="descending" i18n="editor.search.descending" />
+                  </list>
+                </cell>
+              </panel>
+            </repeater>
+          </cell>
+
+          <cell row="20" col="1" colspan="2" anchor="EAST">
+            <submitButton i18n="editor.search.search" width="150px" />
+          </cell>
+        </panel>
+      </components>
+    </editor>
+    </div>
+  </section>
+
+  <section xml:lang="de">
+    <div class="blockbox">
+      <h2>Hinweis</h2>
+      <p>
+        Bei der einfachen Suche können Sie entscheiden, ob Ihr Suchbegriff im Titel, im Namensfeld, in den
+        bibliografischen Angaben oder in den angehängten Dateien vorkommen soll, beziehungsweise von welcher
+        Einrichtung die Veröffentlichung stammen soll. Sollten Sie mehrere Suchfelder nutzen, werden diese
+        für die Suche mit einem logischen 'UND' verknüpft.
+      </p>
+      <p>
+        Als Ergebnis erhalten Sie eine Liste aller zu Ihren Suchbegriffen passenden Treffer.
+        Angezeigt werden Titel, Autor, Dokumenttyp und das letzte Bearbeitungsdatum.
+        Ist etwas dabei, das Ihren Vorstellungen entspricht bekommen Sie mit einem Klick auf das passende Dokument
+        die Detailansicht (Metadaten) dieses Treffers angezeigt. Sofern zu diesem Datensatz angehängte Dokumente
+        vorhanden sind, können Sie die hier auswählen und anzeigen lassen.
+      </p>
+      <p>
+        Bitte beachten Sie, dass diese Datenbank noch aufgebaut wird und nicht bei allen Suchergebnissen
+        Volltexte oder sonstige angehängte Dateien vorhanden sind.
+      </p>
+    </div>
+  </section>
+</MyCoReWebPage>

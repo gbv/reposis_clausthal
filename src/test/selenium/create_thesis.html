@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://reposis-test.gbv.de/clausthal/" />
+<title>create_thesis</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">create_thesis</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/clausthal/content/main/authors.xml</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Publizieren</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Hochschulschriften (Diss., MA, BA, u.a.)</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:titleInfo/mods:title</td>
+	<td>Dies ist ein Testtitel</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name__type__personal/nameOrPND</td>
+	<td>Neumann, Kathleen</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:name__type__personal[2]/nameOrPND</td>
+	<td>Mustermann, Max</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=_s-institutes.subselect-/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/noteLocationCorp/mods:name__type__corporate</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=cbButton_clausthal_institutes_few</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForVisible</td>
+	<td>//div[@id='cbChildren_clausthal_institutes_few']/ul/li[3]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Institut für deutsches und internationales Berg- und Energierecht</td>
+	<td></td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>name=/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:genre__type__kindof/@mcr:categId</td>
+	<td>label=Dissertation</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>name=/mycoreobject/metadata/def.modsContainer/modsContainer/mods:mods/mods:extension__displayLabel__contact/contact/mods:email</td>
+	<td>kathleen.neumann@gbv.de</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.submit_big</td>
+	<td></td>
+</tr>
+<tr>
+	<td>verifyText</td>
+	<td>css=td.metavalue</td>
+	<td>Dies ist ein Testtitel</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.basket_button</td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>
