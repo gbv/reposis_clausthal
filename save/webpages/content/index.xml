@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage title="Dokumentenserver der TU Clausthal">
+
+  <section title="Willkommen auf den Seiten des Dokumentenserver der TU Clausthal" xml:lang="de">
+
+    <div class="row">
+      <div class="col-md-10" lang="de">
+            <h2>Der Dokumentenserver der TU Clausthal</h2>
+            <p>
+              ... ermöglicht TU-Angehörigen das elektronische Publizieren ihrer wissenschaftlichen Arbeiten im Rahmen der Open Access Initiative.
+            </p>
+            <p>
+              Eigene Publikationen, z.B. Zeitschriftenartikel, Konferenzbeiträge, Berichte, Reports, Lehrmaterialien, Forschungsdaten u.a., sei es
+              als Erst- oder als Zweitveröffentlichungen können auf dem Server abgelegt werden. Auch für Prüfungsschriften, z.B. Dissertationen und
+              Habilitationsschriften, aber auch für Bachelor-, Master- und andere Abschlussarbeiten bietet der Dokumentenserver den geeigneten Rahmen.
+            </p>
+            <p>
+              An der Technischen Universität Clausthal erstellte digitale Dokumente sind damit allgemein suchbar. Jedermann weltweit kann darin suchen oder browsen.
+            </p>
+            <p>
+              Der Dokumentenserver der Technischen Universität Clausthal ist ein Service der Universitätsbibliothek. Wir bieten:
+            </p>
+            <ul>
+              <li>Dauerhafte Archivierung</li>
+              <li>Verzeichnung im Gesamtkatalog und in der Hochschulbibliographie</li>
+              <li>Such- und auffindbar in überregionalen Katalogen und Suchmaschinen</li>
+              <li>Abgabe an die Deutsche Nationalbibliothek bei Erstveröffentlichungen </li>
+            </ul>
+            <p>
+              Open-Access bietet freien Zugang zu wissenschaftlichen Informationen. Die Verwertungsrechte bleiben bei den Autoren. Sie räumen der
+              Bibliothek lediglich ein einfaches Nutzungsrecht ein, so dass eine kommerzielle Veröffentlichung nicht behindert wird.
+            </p>
+      </div>
+    </div>
+
+  </section>
+  <meta>
+    <log date="2013-08-14" time="14:39" labelPath=" » Start" lastEditor="Kathleen Neumann"/>
+  </meta>
+</MyCoReWebPage>

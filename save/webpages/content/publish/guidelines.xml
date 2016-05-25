@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage title="Autoreninformation">
+
+  <section title="Informationen für Autoren" xml:lang="de">
+
+    <div class="blockbox">
+      <h2>Elektronisch Publizieren</h2>
+      <p>
+        Als Angehörige/r der Technischen Universität Clausthal haben Sie die Möglichkeit,
+        Ihre Publikationen auf unserem Dokumentenserver kostenfrei zu veröffentlichen. <br/>
+        Alle Publikationen werden unter Wahrung des Urheberrechts
+        <a href="http://open-access.net/">Open Access</a> veröffentlicht.
+        Wir empfehlen, die Dokumente mit einer
+        <a href="http://creativecommons.org/licenses/by-nc-nd/2.0/de/deed.de">Creative-Commons-Lizenz</a>
+        bereitzustellen, wenn die urheberrechtliche Seite dies erlaubt.
+        Der Sammelauftrag der Universitätsbibliothek der Technischen Universität Clausthal
+        umfasst die Speicherung, Katalogisierung und Archivierung aller durch Mitglieder der
+        Universität Clausthal veröffentlichten elektronischen Dokumente. Details finden Sie unter
+        <a href="http://www.ub.tu-clausthal.de/serviceangebote/elektronisches-publizieren/leitlinie-hochschulschriftenserver/"
+        >Leitlinien für den Betrieb des Hochschulschriftenservers</a>.
+      </p>
+    </div>
+    <div class="blockbox">
+      <p>
+        Um eine Arbeit einreichen zu können, können sich Angehörige der TU Clausthal mit dem RZ-Account über das
+        <a class="httpAuthLogin" href="/servlets/MCRServlet3LoginServlet?url=https://dokumente.ub.tu-clausthal.de/servlets/MCRActionMappingServlet/publish/start&amp;realm=clausthal_ldap">Autoren-Login</a> anmelden.
+      </p>
+    </div>
+    <div class="blockbox">
+      <h2>Ansprechpartner</h2>
+      <p>
+        Für Fragen zur Publikation von elektronischen Dokumenten wenden Sie sich bitte an:<br/>
+        Frau Kleinander / Frau Zernecke<br/>
+        Tel.: 05323 72 3630<br/>
+        Email: <a href="mailto:Dokumente@ub.tu-clausthal.de">Dokumente@ub.tu-clausthal.de</a>
+      </p>
+      <p>
+        Für Fragen zu Dissertationen wenden Sie sich bitte an die Dissertationsstelle:<br/>
+        Frau Kraft<br/>
+        Tel.: 05323 72 3102<br/>
+        Email: <a href="mailto:kraft@ub.tu-clausthal.de">kraft@ub.tu-clausthal.de</a>
+      </p>
+      <p>
+        Für Fragen bei technischen Problemen, zur Autorenberatung oder zu Open-Access wenden Sie sich bitte an:<br/>
+        Frau Frank<br/>
+        Tel.: 05323 72 2348<br/>
+        Email: <a href="mailto:silke.frank@ub.tu-clausthal.de">silke.frank@ub.tu-clausthal.de</a>
+      </p>
+
+    </div>
+
+    <div class="blockbox">
+      <h2>Urheberrecht</h2>
+      <p>
+        Für alle auf dem Dokumentenserver der TU Clausthal eingestellten Dokumente, gilt
+        das <a href="http://www.gesetze-im-internet.de/urhg/index.html">deutsche Urheberrecht</a>. Stellen
+        Sie als Autor daher vor dem Einstellen Ihrer Publikationen sicher, dass Sie alle Rechte der
+        Veröffentlichung, Nutzung, Verbreitung, Vervielfältigung und der öffentlichen Wiedergabe besitzen.
+        Alternativ müssen die Nutzungsrechte beim Urheber eingeholt werden.
+      </p>
+    </div>
+
+  </section>
+  <meta>
+    <log date="2013-09-27" time="15:12" labelPath=" » Authors" lastEditor="Kathleen Neumann"/>
+  </meta>
+</MyCoReWebPage>
