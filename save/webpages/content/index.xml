@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE MyCoReWebPage>
-<MyCoReWebPage title="Dokumentenserver der TU Clausthal">
+<MyCoReWebPage title="Publikationsserver der TU Clausthal">
 
-  <section title="Willkommen auf den Seiten des Dokumentenserver der TU Clausthal" xml:lang="de">
+  <section title="Willkommen auf den Seiten des Publikationsserver der TU Clausthal" xml:lang="de">
 
     <div class="row">
       <div class="col-md-10" lang="de">
-            <h2>Der Dokumentenserver der TU Clausthal</h2>
+            <h2>Der Publikationsserver der TU Clausthal</h2>
             <p>
               ... ermöglicht TU-Angehörigen das elektronische Publizieren ihrer wissenschaftlichen Arbeiten im Rahmen der Open Access Initiative.
             </p>
             <p>
               Eigene Publikationen, z.B. Zeitschriftenartikel, Konferenzbeiträge, Berichte, Reports, Lehrmaterialien, Forschungsdaten u.a., sei es
               als Erst- oder als Zweitveröffentlichungen können auf dem Server abgelegt werden. Auch für Prüfungsschriften, z.B. Dissertationen und
-              Habilitationsschriften, aber auch für Bachelor-, Master- und andere Abschlussarbeiten bietet der Dokumentenserver den geeigneten Rahmen.
+              Habilitationsschriften, aber auch für Bachelor-, Master- und andere Abschlussarbeiten bietet der Publikationsserver den geeigneten Rahmen.
             </p>
             <p>
               An der Technischen Universität Clausthal erstellte digitale Dokumente sind damit allgemein suchbar. Jedermann weltweit kann darin suchen oder browsen.
             </p>
             <p>
-              Der Dokumentenserver der Technischen Universität Clausthal ist ein Service der Universitätsbibliothek. Wir bieten:
+              Der Publikationsserver der Technischen Universität Clausthal ist ein Service der Universitätsbibliothek. Wir bieten:
             </p>
             <ul>
               <li>Dauerhafte Archivierung</li>

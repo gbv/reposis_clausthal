@@ -10,13 +10,13 @@
     <div id="head" class="container">
       <div class="row">
         <div id="header_back">
-          <img src="https://dokumente.ub.tu-clausthal.de/templates/master/template_clausthal/IMAGES/tuc2005.gif" id="header_ratio" />
+          <img src="{$WebApplicationBaseURL}images/tuclogo.png" id="header_ratio" />
           <h2 id="project_title">
             <a href="http://www.ub.tu-clausthal.de/">Universitätsbibliothek</a>
           </h2>
           <h3 id="project_slogan">
             <a href="{$WebApplicationBaseURL}">
-              Dokumentenserver
+              Publikationsserver
             </a>
           </h3>
         </div>
