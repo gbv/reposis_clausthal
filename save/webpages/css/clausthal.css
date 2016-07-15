@@ -164,7 +164,8 @@ footer .container #menu #copyright {
     width: 1280px;
 }
 
-#side_nav_column .mir-side-nav nav .navbar-nav > li > a {
+#side_nav_column .mir-side-nav nav .navbar-nav > li > a,
+#side_nav_column .mir-side-nav nav .navbar-nav > li.active > a {
     padding: 18px 0 0 20px;
 }
 
@@ -214,4 +215,16 @@ footer .container #menu #copyright {
 
 .classificationBrowser {
   width: 100%;
+}
+
+.panel-body .form-control, #dynamic_editor .form-control, #editor-admin-form .form-control, #complexSearch .form-control, #complexSearch .input-group-addon , .input-group > .input-group-addon{
+  padding: 6px 8px;
+  height: 31px;
+  font-size: 12px;
+}
+
+.panel-body .btn, #dynamic_editor .btn, #editor-admin-form .btn, #complexSearch .btn {
+  padding: 6px 8px;
+  font-size: 12px;
+  margin-top: 0px;
 }
