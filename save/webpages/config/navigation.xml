@@ -11,18 +11,18 @@
       <label xml:lang="de">Start</label>
       <label xml:lang="en">Start</label>
     </item>
-    <item href="/content/brand/impressum.xml" type="intern">
-      <label xml:lang="de">Impressum</label>
-      <label xml:lang="en">Impressum</label>
-    </item>
-    <item href="/content/brand/contact.xml" type="intern">
-      <label xml:lang="de">Kontakt</label>
-      <label xml:lang="en">Contact</label>
-    </item>
   </menu>
   <menu id="below" dir="/content/below">
     <label xml:lang="de">Footer-Menü</label>
     <label xml:lang="en">Footer menu</label>
+    <item href="http://www.tu-clausthal.de/info/impressum/" type="extern">
+      <label xml:lang="de">Impressum</label>
+      <label xml:lang="en">Impressum</label>
+    </item>
+    <item href="http://www.ub.tu-clausthal.de/kontakt/" type="extern">
+      <label xml:lang="de">Kontakt</label>
+      <label xml:lang="en">Contact</label>
+    </item>
   </menu>
   <menu id="search">
     <!-- search menu  -->
@@ -65,7 +65,7 @@
       <label xml:lang="de">nach Sachgruppe</label>
       <label xml:lang="en">SNDB</label>
     </item>
-    <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="extern">
+    <item href="/servlets/MCRActionMappingServlet/personindex/browse" type="intern">
       <label xml:lang="de">nach Personen</label>
       <label xml:lang="en">Persons</label>
     </item>
@@ -84,6 +84,26 @@
     <item href="/content/publish/contract.xml" type="intern">
       <label xml:lang="de">Vertragsbedingungen</label>
       <label xml:lang="en">Terms &amp; Conditions</label>
+    </item>
+  </menu>
+  <menu id="misc" dir="/content/misc">
+    <label xml:lang="de">Direktlinks</label>
+    <label xml:lang="en">External Links</label>
+    <item href="http://opac.ub.tu-clausthal.de/" type="extern">
+      <label xml:lang="de">Gesamtkatalog</label>
+      <label xml:lang="en">Catalog</label>
+    </item>
+    <item href="http://rzblx1.uni-regensburg.de/ezeit/fl.phtml?bibid=UBCL&amp;colors=7&amp;lang=de" type="extern">
+      <label xml:lang="de">EZB</label>
+      <label xml:lang="en">EZB</label>
+    </item>
+    <item href="http://rzblx10.uni-regensburg.de/dbinfo/fachliste.php?bib_id=ubcl&amp;lett=l&amp;colors=&amp;ocolors=" type="extern">
+      <label xml:lang="de">DBIS</label>
+      <label xml:lang="en">DBIS</label>
+    </item>
+    <item href="http://www.ub.tu-clausthal.de/kontakt/online-hilfe-chat/" type="extern">
+      <label xml:lang="de">Online-Hilfe</label>
+      <label xml:lang="en">Help</label>
     </item>
   </menu>
   <menu id="user">
