@@ -213,10 +213,6 @@ footer .container #menu #copyright {
   font-size: 130%;
 }
 
-.classificationBrowser {
-  width: 100%;
-}
-
 .panel-body .form-control, #dynamic_editor .form-control, #editor-admin-form .form-control, #complexSearch .form-control, #complexSearch .input-group-addon , .input-group > .input-group-addon{
   padding: 6px 8px;
   height: 31px;
@@ -227,4 +223,8 @@ footer .container #menu #copyright {
   padding: 6px 8px;
   font-size: 12px;
   margin-top: 0px;
+}
+
+ul {
+  list-style-type: square;
 }
