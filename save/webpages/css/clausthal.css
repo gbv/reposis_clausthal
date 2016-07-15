@@ -211,3 +211,7 @@ footer .container #menu #copyright {
 #side_nav_column .mir-side-nav nav .navbar-nav #basket-list-item +li a.dropdown-toggle{
   font-size: 130%;
 }
+
+.classificationBrowser {
+  width: 100%;
+}
