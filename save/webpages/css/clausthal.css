@@ -26,6 +26,7 @@ header #head  {
 div#page {
     border: 1px solid #ccc;
     border-width: 0 1px 0 1px;
+    padding-right: 30px;
 }
 
 header .container .row #header_back #header_ratio {
