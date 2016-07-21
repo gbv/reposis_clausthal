@@ -229,3 +229,10 @@ footer .container #menu #copyright {
 ul {
   list-style-type: square;
 }
+
+.mycoreViewer .navbar.navbar-default .btn {
+    margin-right: 5px;
+}
+.viewer .btn {
+    padding: 6px 10px;
+}
