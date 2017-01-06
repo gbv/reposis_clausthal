@@ -91,7 +91,7 @@
             </div>
             <div class="modal-footer">
               <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/oas-service/open-access-statistik-service">
-                <img src="{$WebApplicationBaseURL}content/images/oaslogo.png" />
+                <img src="{$WebApplicationBaseURL}images/open_access_statistic/oaslogo.png" />
               </a>
             </div>
           </div>
