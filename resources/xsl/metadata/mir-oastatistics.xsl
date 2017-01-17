@@ -4,10 +4,12 @@
 
   <xsl:import href="xslImport:modsmeta:metadata/mir-oastatistics.xsl" />  
   
-  <xsl:param name="MIR.OAS.GraphProviderURL" select="''"/>
-  <xsl:param name="MIR.OAS.Prefix" select="''"/>
+  <xsl:param name="MIR.OAS" select="'hide'" />
+  <xsl:param name="MIR.OAS.Prefix" />
+  <xsl:param name="MIR.OAS.GraphProviderURL" />
   
   <xsl:template match="/">
+    <xsl:if test="$MIR.OAS = 'show'">
     <xsl:variable name="ID" select="/mycoreobject/@ID" />
     <xsl:variable name="now" select="ex:date-time()"/>  
     <xsl:variable name="now-1year">
@@ -27,9 +29,7 @@
     <xsl:variable name="until" select="ex:format-date($now,'yyyy-MM-dd')" />
     <xsl:variable name="objID" select="mycoreobject/@ID" />
     <div id="mir-oastatistics">
-      <div class="row">
-        <h3 class="col-md-12">Gesamt</h3>
-      </div>
+      <span><strong><xsl:value-of select="concat(i18n:translate('mir.oas.total'),':')" /></strong></span>
       <div class="row">
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.fulltext')" /></div>
         <div  data-oaselementtype="OASInline" 
@@ -46,9 +46,7 @@
             data-oascounttype="counter_abstract" 
         />
       </div>
-      <div class="row">
-        <h3 class="col-md-12">12 Monate</h3>
-      </div>
+      <span><strong><xsl:value-of select="concat(i18n:translate('mir.oas.last12Month'),':')" /></strong></span>
       <div class="row">
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.fulltext')" /></div>
         <div  data-oaselementtype="OASInline" 
@@ -67,11 +65,9 @@
             data-oasfrom="{$from}" data-oasuntil="{$until}"
         />
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <a href="#" data-toggle="modal" data-target="#oasGraphModal">Grafik öffnen</a>
-        </div>
-      </div>
+        <p class="text-right">
+          <a href="#" data-toggle="modal" data-target="#oasGraphModal"><xsl:value-of select="i18n:translate('mir.oas.open')" /></a>
+        </p>
       <div class="modal fade" id="oasGraphModal" tabindex="-1" role="dialog" aria-labelledby="oasGraphTitel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -79,7 +75,7 @@
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <i class="fa fa-times" aria-hidden="true"></i>
               </button>
-              <h4 class="modal-title" id="oasGraphTitel">Zugriffstatistik</h4>
+                <h4 class="modal-title" id="oasGraphTitel"><xsl:value-of select="i18n:translate('mir.oas.panelheading')" /></h4>
             </div>
             <div class="modal-body">
               <div id="oasGraph" style="width:100%;height:200px;" 
@@ -102,6 +98,7 @@
       <script src="{$WebApplicationBaseURL}js/oa-statistic.js" ></script>
       <style type="text/css"> @import url("<xsl:value-of select="$MIR.OAS.GraphProviderURL" />includes/morris.js-0.5.1/morris.css"); </style> 
     </div>
+    </xsl:if>
     <xsl:apply-imports />
   </xsl:template>
 
