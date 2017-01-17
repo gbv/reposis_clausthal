@@ -236,3 +236,10 @@ ul {
 .viewer .btn {
     padding: 6px 10px;
 }
+
+#clausthal_cc0 {
+  float: left;
+  marging: 7px 20px 10px 0;
+  padding: 0;
+  vertical-align: bottom;
+}
