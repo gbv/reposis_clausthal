@@ -23,6 +23,10 @@
       <label xml:lang="de">Kontakt</label>
       <label xml:lang="en">Contact</label>
     </item>
+    <item href="/content/below/rights.xml" type="intern">
+      <label xml:lang="de">Datenschutz</label>
+      <label xml:lang="en">Rights</label>
+    </item>
   </menu>
   <menu id="search">
     <!-- search menu  -->
