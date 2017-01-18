@@ -59,7 +59,7 @@
       <div class="row">
         <div class="col-md-7 col-sm-9 col-xs-6 text-right"><xsl:value-of select="i18n:translate('mir.oas.counter.abstract')" /></div>
         <div data-oaselementtype="OASInline" 
-            data-oasproviderurl="{$WebApplicationBaseURL}graphprovider/" 
+            data-oasproviderurl="{$MIR.OAS.GraphProviderURL}" 
             data-oasidentifier="{$MIR.OAS.Prefix}:{$objID}" 
             data-oascounttype="counter_abstract"
             data-oasfrom="{$from}" data-oasuntil="{$until}"
