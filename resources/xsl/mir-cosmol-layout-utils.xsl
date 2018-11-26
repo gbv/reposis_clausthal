@@ -3,7 +3,8 @@
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
   xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
-  exclude-result-prefixes="i18n mcrver">
+  xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
+  exclude-result-prefixes="i18n mcrver mcrxsl">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:param name="piwikID" select="'0'" />
@@ -46,13 +47,21 @@
   </xsl:template>
 
   <xsl:template name="mir.navigation">
-    <div class="navbar navbar-default mir-side-nav">
+    <div class="navbar navbar-default mir-side-nav searchfield_box">
       <nav class="mir-main-nav-entries">
-        <form action="{$WebApplicationBaseURL}servlets/solr/find?q={0}" class="navbar-form form-inline" role="search">
+        <form action="{$WebApplicationBaseURL}servlets/solr/find" class="navbar-form form-inline" role="search">
           <div class="form-group">
-            <input name="q" placeholder="{i18n:translate('mir.cosmol.navsearch.placeholder')}" title="{i18n:translate('mir.cosmol.navsearch.title')}" class="form-control search-query" id="searchInput" type="text" />
+            <input name="condQuery" placeholder="{i18n:translate('mir.navsearch.placeholder')}" title="{i18n:translate('mir.cosmol.navsearch.title')}" class="form-control search-query" id="searchInput" type="text" />
+            <xsl:choose>
+                <xsl:when test="mcrxsl:isCurrentUserInRole('admin') or mcrxsl:isCurrentUserInRole('editor')">
+                  <input name="owner" type="hidden" value="createdby:*" />
+                </xsl:when>
+                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                </xsl:when>
+              </xsl:choose>
           </div>
-          <button type="submit" title="{i18n:translate('mir.cosmol.navsearch.title')}" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span></button>
+          <button type="submit" title="{i18n:translate('mir.cosmol.navsearch.title')}" class="btn btn-primary"><span class="fa fa-search"></span></button>
         </form>
         <ul class="nav navbar-nav">
           <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='main']" />

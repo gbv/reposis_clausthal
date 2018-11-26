@@ -214,6 +214,10 @@ footer .container #menu #copyright {
   font-size: 130%;
 }
 
+#side_nav_column .mir-side-nav nav .navbar-form .btn {
+  padding: 4px 9px;
+}
+
 .panel-body .form-control, #dynamic_editor .form-control, #editor-admin-form .form-control, #complexSearch .form-control, #complexSearch .input-group-addon , .input-group > .input-group-addon{
   padding: 6px 8px;
   height: 31px;
