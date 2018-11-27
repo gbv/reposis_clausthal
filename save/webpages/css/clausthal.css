@@ -215,7 +215,7 @@ footer .container #menu #copyright {
 }
 
 #side_nav_column .mir-side-nav nav .navbar-form .btn {
-  padding: 4px 9px;
+  padding: 2px 6px 3px 6px;
 }
 
 .panel-body .form-control, #dynamic_editor .form-control, #editor-admin-form .form-control, #complexSearch .form-control, #complexSearch .input-group-addon , .input-group > .input-group-addon{
