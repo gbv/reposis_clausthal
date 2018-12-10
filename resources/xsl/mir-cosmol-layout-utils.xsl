@@ -4,7 +4,8 @@
   xmlns:i18n="xalan://org.mycore.services.i18n.MCRTranslation"
   xmlns:mcrver="xalan://org.mycore.common.MCRCoreVersion"
   xmlns:mcrxsl="xalan://org.mycore.common.xml.MCRXMLFunctions"
-  exclude-result-prefixes="i18n mcrver mcrxsl">
+  xmlns:java="java"
+  exclude-result-prefixes="i18n mcrver mcrxsl java">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
   <xsl:param name="piwikID" select="'0'" />
@@ -86,7 +87,7 @@
                 </ul>
             </div>
             <div class="col-xs-6">
-                <div id="copyright">© <xsl:value-of select="$MCR.NameOfProject" /> 2018</div>
+              <div id="copyright">© <xsl:value-of select="$MCR.NameOfProject" /> <xsl:value-of select="java:Calendar.getInstance().get(Calendar.YEAR)"/> </div>
             </div>
         </div>
         <div id="credits" class="row">
