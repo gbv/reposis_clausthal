@@ -1,0 +1,238 @@
+#
+# by Kathleen.Neumann@gbv.de
+#
+# created 2016-05-23
+# 2016-06-15: added URN, DOI and FileUpload configuration (neumann@gbv.de)
+#
+
+##############################################################################
+#                                                                            #
+# basic application configuration                                            #
+#                                                                            #
+##############################################################################
+
+# name of project
+  MCR.NameOfProject=Clausthal
+  MIR.projectid.default=clausthal
+
+# application base URL
+# MCR.baseurl=https://dokumente.ub.tu-clausthal.de
+
+# supported languages
+  MCR.Metadata.Languages=de
+
+# SOLR-URL
+  MCR.Solr.ServerURL=
+  MCR.Solr.Core.main.Name=%MIR.projectid.default%_main
+  MCR.Solr.Core.classification.Name=%MIR.projectid.default%_class
+
+# Datadirecotry
+  MCR.datadir=/mcr/clausthal/data
+  MCR.Save.FileSystem=/mcr/clausthal/.mycore/clausthal/save
+
+# Layout
+  MIR.Layout.Theme=cosmol
+  MIR.DefaultLayout.CSS=cosmo.min
+  MIR.CustomLayout.CSS=clausthal.css
+  MIR.CustomLayout.JS=clausthal.js
+
+# Set PIWIK-ID in mycore.properties for productive to 19, default is 0 (no tracking)
+
+# this is a productive environment
+  MIR.testEnvironment=false
+
+# disable access keys
+  MIR.Strategy.AccessKey.ObjectTypes=
+
+# deactivate event handler for import
+# MCR.EventHandler.MCRPath.060.Class=org.mycore.mets.events.MCRUpdateMetsOnDerivateChangeEventHandler
+# MCR.EventHandler.MCRDerivate.050.Class=org.mycore.mets.events.MCRUpdateMetsOnDerivateChangeEventHandler
+MCR.EventHandler.MCRPath.060.Class=
+#MCR.EventHandler.MCRPath.020.Class=
+#MCR.EventHandler.MCRPath.035.Class=
+#MCR.EventHandler.MCRPath.100.Class=
+#MCR.EventHandler.MCRPath.110.Class=
+MCR.EventHandler.MCRDerivate.050.Class=
+
+
+##############################################################################
+#                                                                            #
+# Google - ReCaptcha (https://www.google.com/recaptcha)                      #
+# registered for: reposis-test.gbv.de, reposis.gbv.de                        #
+#                                                                            #
+##############################################################################
+
+  MIR.ReCaptcha.secret.key=
+  MIR.ReCaptcha.site.key=
+  
+##############################################################################
+# Google Sitemap                                                             #
+##############################################################################
+  MCR.GoogleSitemap.Types=mods
+
+
+
+
+##############################################################################
+#                                                                            #
+#                                                                            #
+# Sherpa/Romeo API Key                                                       #
+# http://www.sherpa.ac.uk/romeo/api29.php?ak=                                #
+#                                                                            #
+##############################################################################
+
+# key registered for xxx
+#  MCR.Mods.SherpaRomeo.ApiKey=xxx
+
+
+##############################################################################
+#                                                                            #
+# Generic mail configuration for MCRMailer                                   #
+#                                                                            #
+##############################################################################
+
+# The server for outgoing mails
+  MCR.Mail.Server=mailer.gbv.de
+# The mail protocol
+  MCR.Mail.Protocol=smtp
+# The debug option
+  MCR.Mail.Debug=false
+# Encoding for the mail
+  MCR.Mail.Encoding=UTF-8
+# Number of send tries
+  MCR.Mail.NumTries=1
+# Editor Mail adresses for Messages add1@serv1,add2@serv2,...
+  MCR.Mail.Address=
+  MCR.mir-module.EditorMail=Editor KNN <neumann@gbv.de>
+  MCR.mir-module.MailSender=TU Clausthal - Repository <dms-list@lists.gbv.de>
+
+#  MCR.mir-module.EditorMail=Publikationsserver TU Clausthal - Editormail <dokumente@ub.tu-clausthal.de>
+#  MCR.mir-module.MailSender=Publikationsserver TU Clausthal - Repository <dokumente@ub.tu-clausthal.de>
+
+
+##############################################################################
+#                                                                            #
+# OAI Data Provider                                                          #
+#                                                                            #
+##############################################################################
+
+  MCR.OAIDataProvider.OAI2.RepositoryName=Publikationsserver der TU Clausthal
+  MCR.OAIDataProvider.OAI2.RepositoryIdentifier=dokumente.ub.tu-clausthal.de
+  MCR.OAIDataProvider.OAI2.AdminEmail=dokumente@ub.tu-clausthal.de
+# MCR.OAIDataProvider.OAI2.DescriptionURI.EPrints=webapp:oai/oai-eprints.xml
+# MCR.OAIDataProvider.OAI2.DescriptionURI.Rights=webapp:oai/oai-rights.xml
+  MCR.OAIDataProvider.OAI2.RecordSampleID=clausthal_mods_00000213
+
+  # Metadata formats
+  MCR.OAIDataProvider.OAI2.MetadataFormats=oai_dc,epicur,oai_datacite,xMetaDissPlus
+  MCR.OAIDataProvider.MetadataFormat.oai_datacite.Namespace=http://schema.datacite.org/oai/oai-1.0/
+  MCR.OAIDataProvider.MetadataFormat.oai_datacite.Schema=http://schema.datacite.org/oai/oai-1.0/oai_datacite.xsd
+
+  # Set specifications
+  MCR.OAIDataProvider.OAI2.FilterEmptySets=false
+  MCR.OAIDataProvider.OAI2.Sets=open_access,openaire_data,GENRE,SDNB,xmetadissplus,urn
+  MCR.OAIDataProvider.OAI2.Sets.GENRE=xslStyle:classification2sets:classification:metadata:10:children:mir_genres
+  MCR.OAIDataProvider.OAI2.Sets.SDNB=xslStyle:classification2sets:classification:metadata:10:children:SDNB
+  MCR.OAIDataProvider.OAI2.MapSetToClassification.SDNB=SDNB
+  MCR.OAIDataProvider.OAI2.MapSetToQuery.open_access=((derCount:[1 TO *] AND mods.embargo:[* TO NOW]) OR (derCount:[1 TO *] AND NOT mods.embargo:[* TO *])) AND NOT (mods.rights:"Alle Rechte vorbehalten" OR mods.rights:"All rights reserved")
+  MCR.OAIDataProvider.OAI2.MapSetToQuery.openaire_data=((derCount:[1 TO *] AND mods.embargo:[* TO NOW]) OR (derCount:[1 TO *] AND NOT mods.embargo:[* TO *])) AND (mods.identifier:info\\:eu-repo/grantAgreement*)
+
+  # friendly OAI interfaces
+  MCR.OAIDataProvider.OAI2.Friends.OpenAgrar=https://openagrar.bmel-forschung.de/servlets/OAIDataProvider
+  MCR.OAIDataProvider.OAI2.Friends.DuEPublico=http://duepublico.uni-duisburg-essen.de/servlets/OAIDataProvider
+  MCR.OAIDataProvider.OAI2.Friends.DBThueringen=http://www.db-thueringen.de/servlets/OAIDataProvider
+  MCR.OAIDataProvider.OAI2.Friends.RosDok=http://rosdok.uni-rostock.de/oai
+
+  # xMetaDissPlus
+  MCR.OAIDataProvider.MetadataFormat.xMetaDissPlus.Schema=http://files.dnb.de/standards/xmetadissplus/xmetadissplus.xsd
+  MCR.OAIDataProvider.MetadataFormat.xMetaDissPlus.Namespace=http://www.d-nb.de/standards/xmetadissplus/
+  MCR.OAIDataProvider.OAI2.MapSetToQuery.xmetadissplus={!join from=returnId to=id}derivateURN:*
+  MCR.OAIDataProvider.OAI2.Sets.xmetadissplus=webapp:oai/set_xmetadissplus.xml
+  
+  # Define URN set
+  MCR.OAIDataProvider.OAI2.MapSetToQuery.urn={!join from=returnId to=id}derivateURN:*
+  MCR.OAIDataProvider.OAI2.Sets.urn=webapp:oai/set_urn.xml
+
+  # If name, place and the address of the repository owner.
+  MCR.OAIDataProvider.RepositoryPublisherName=Technische Universit\u00E4t Clausthal
+  MCR.OAIDataProvider.RepositoryPublisherPlace=Clausthal-Zellerfeld
+  MCR.OAIDataProvider.RepositoryPublisherAddress=Adolph-Roemer-Stra\u00DFe 2A
+
+
+##############################################################################
+#                                                                            #
+# File Upload                                                                #
+#                                                                            #
+##############################################################################
+
+# FileUpload connection
+# MCR.FileUpload.IP=193.174.240.180
+  MCR.FileUpload.Port=8301
+
+
+##############################################################################
+#                                                                            #
+# URN configuration                                                          #
+#                                                                            #
+##############################################################################
+
+  MCR.URN.SubNamespace.Default.Prefix=urn:nbn:de:gbv:104-
+  MCR.PI.Generator.TypeYearCountURN.Namespace=urn:nbn:de:gbv:104-
+  MCR.PI.Generator.TypeYearCountURN.GeneralPattern=%MCR.PI.Generator.TypeYearCountURN.Namespace%$ObjectDate-$Count-
+  MCR.PI.Generator.TypeYearCountURN.DateFormat=yyyyMMdd
+
+##############################################################################
+#                                                                            #
+# DOI configuration                                                          #
+#                                                                            #
+##############################################################################
+
+# Quick example for DOI registration
+  MCR.DOI.Prefix=10.21268
+# MCR.DOI.HostingInstitution=Universit\u00E4tsbibliothek der TU Clausthal
+  MCR.DOI.HostingInstitution=Universit\u00E4tsbibliothek der TU Clausthal (TEST)
+  MCR.DOI.NISSPattern=yyyyMMdd-HHmmss
+  MIR.registerDOI=true
+ 
+  MCR.PI.Service.Datacite=org.mycore.pi.doi.MCRDOIService
+  MCR.PI.Service.Datacite.MetadataService=MODSDOI
+  MCR.PI.Service.Datacite.Generator=DateDOI
+  MCR.PI.Service.Datacite.RegisterBaseURL=https://dokumente.ub.tu-clausthal.de
+  MCR.PI.Service.Datacite.Username=
+  MCR.PI.Service.Datacite.Password=
+  MCR.PI.Service.Datacite.UseTestPrefix=true
+  MCR.PI.Service.Datacite.Transformer=datacite
+  MCR.PI.Service.Datacite.JobApiUser=datacitejob
+  MCR.PI.Service.Datacite.RegistrationConditionProvider=org.mycore.pi.condition.MCRPIPublishedConditionProvider
+ 
+  MCR.PI.Generator.DateDOI=org.mycore.pi.MCRGenericPIGenerator
+  MCR.PI.Generator.DateDOI.GeneralPattern=10.21268/$ObjectDate-$Count
+  MCR.PI.Generator.DateDOI.DateFormat=yyyy-MM-dd
+  MCR.PI.Generator.DateDOI.CountPrecision=-1
+  MCR.PI.Generator.DateDOI.Type=doi
+  
+  MCR.PI.MetadataService.MODSDOI=org.mycore.mods.identifier.MCRMODSDOIMetadataService
+  MCR.PI.MetadataService.MODSDOI.Type=doi
+
+  MCR.PI.Parsers.doi=org.mycore.pi.doi.MCRDOIParser
+
+#  MIR.citationStyles=archiv-fur-die-civilistische-praxis,austrian-legal,bluebook-law-review,chicago-author-date,chicago-author-date-de,computer-und-recht,der-moderne-staat,elsevier-harvard,gewerblicher-rechtsschutz-und-urheberrecht,juristische-schulung,juristische-zitierweise,kommunikation-und-recht,law-and-society-review,leidraad-voor-juridische-auteurs,mohr-siebeck-recht,neue-juristische-wochenschrift,oxford-university-press-humsoc,polish-legal,spanish-legal,swedish-legal,the-journal-of-juristic-papyrology,vienna-legal
+#  MIR.altmetrics.hide=false
+
+
+##############################################################################
+# MIR OAS                                                                    #
+##############################################################################
+# show OAS Statistics in metadata view ('show', 'hide')
+  MIR.OAS=show
+
+# URL of the graphprovider
+  MIR.OAS.GraphProviderURL=https://dokumente.ub.tu-clausthal.de/graphprovider/
+  MIR.OAS.Prefix=oai:dms.ub.tu-clausthal.de
+
+##############################################################################
+# Error Page                                                                 #
+##############################################################################
+# Set mcr_error properties in your mycore.properties.private to show OA error page without StackTrace
+#  MCR.ContentTransformer.mcr_error.Stylesheet=xsl/errorPage.xsl,%MCR.LayoutTransformerFactory.Default.Stylesheets%
+
