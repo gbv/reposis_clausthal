@@ -228,7 +228,7 @@ MCR.EventHandler.MCRDerivate.050.Class=
 
 # URL of the graphprovider
   MIR.OAS.GraphProviderURL=https://dokumente.ub.tu-clausthal.de/graphprovider/
-  MIR.OAS.Prefix=oai:dms.ub.tu-clausthal.de
+  MIR.OAS.Prefix=
 
 ##############################################################################
 # Error Page                                                                 #
