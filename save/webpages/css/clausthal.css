@@ -250,3 +250,11 @@ ul {
 legend {
   border-bottom: 0px;
 }
+
+.pager a{
+    color: #008c4f;
+}
+
+.pager .disabled > a, .pager .disabled > a:hover, .pager .disabled > a:focus, .pager .disabled > span {
+	background-color: #fff;
+}
