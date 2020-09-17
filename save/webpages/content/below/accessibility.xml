@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE MyCoReWebPage>
+<MyCoReWebPage>
+  <section xml:lang="de" title="Erklärung zur Barrierefreiheit">
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <h1>Erklärung zur Barrierefreiheit</h1>
+        <p>
+          Informationen über die Zugänglichkeit dieser Webseiten gemäß § 9b NBGG sowie über diesbezügliche Kontaktmöglichkeiten.
+        </p>
+        <p>
+          Die Technische Universität Clausthal ist in hohem Maße bemüht, ihre Webseiten und ihre Anwendungen im Einklang mit den 
+          Rechtsvorschriften barrierefrei zugänglich zu machen. Zur Verbesserung der Barrierefreiheit wurde eine Arbeitsgruppe 
+          eingerichtet, die sich regelmäßig austauscht.
+        </p>
+        <p>
+          Diese Webseiten sind mit den Vorgaben der harmonisierten europäischen Norm EN 301 549 V2.1.2 (08-2018) größtenteils vereinbar.
+        </p>
+        <h2> 
+          Nicht barrierefreie Inhalte
+        </h2>
+        <p> 
+          Die auf dem Dokumentenserver publizierten Dokumente sind teilweise nicht barrierefrei und können nicht automatisiert in eine
+          barrierefreies Form umgewandelt werden, da
+          <ul>
+           <li> da die UB Clausthal nicht das Recht auf die Änderung der Dateien besitzt, </li>
+           <li> die Ausgangsformate nicht zu Verfügungs stehen,</li>
+           <li> die Zitierfähigkeit der Dokumente nicht mehr gewährleistet ist.</li>
+          </ul>
+          Eine nachträgliche manuelle Bearbeitung der Dokumente ist unverhältnismäßig arbeitsaufwendig und wird nur in Ausnahmefällen
+          durchgeführt.
+        </p>
+        <p>
+          Der Dokumentenserver richtet sich an Wissenschafler aus den jeweiligen Fachbereichen. Auf Grund der komplexen Inhalte, 
+          kann eine einfache Sprachgestaltung nicht umgestzt werden.
+        </p>
+        <h2>
+          Erstellung dieser Erklärung zur Barrierefreiheit
+        </h2>
+        <p>
+          Diese Erklärung wurde am 23.09.2020 erstellt. Die Einschätzung basiert auf Selbstbewertung. 
+        </p>
+        <h2>
+          Feedback und Kontaktangaben
+        </h2>
+        <p>
+          Über die <a href="http://www.ub.tu-clausthal.de/kontakt/">Kontaktseite</a> der UB-Clausthal können Sie Mängel in Bezug auf die Einhaltung der Barrierefreiheitsanforderungen mitteilen
+          und nicht barrierefreie Inhalte in einem für Sie zugänglichen Format anfordern.
+        </p>
+        <h2>
+          Durchsetzungsverfahren
+        </h2>
+        <p>
+          Sollten Sie innerhalb von sechs Wochen keine zufriedenstellende Antwort auf Mitteilungen oder Anfragen zur Barrierefreiheit
+          erhalten haben, können Sie die Schlichtungsstelle, eingerichtet bei der Landesbeauftragten für Menschen mit Behinderungen in
+          Niedersachsen, einschalten.
+        </p>
+        <p>
+          Die Schlichtungsstelle nach § 9 d NBGG hat die Aufgabe, Streitigkeiten zwischen Menschen mit Behinderungen und öffentlichen
+          Stellen des Landes Niedersachsen, zum Thema Barrierefreiheit in der IT, beizulegen. Das Schlichtungsverfahren ist kostenlos. 
+          Es muss kein Rechtsbeistand eingeschaltet werden.
+        </p>
+        <p>
+          Landesbeauftragte für Menschen mit Behinderungen<br />
+          Hannah-Arendt-Platz 2<br />
+          30159 Hannover <br />
+          <a href="http://www.behindertenbeauftragter-niedersachsen.de/">http://www.behindertenbeauftragter-niedersachsen.de/</a>
+          E-Mail: <span class="madress">schlichtungsstelle@ms.niedersachsen.de</span><br />
+          Telefon: +49 (0)0511 120-4010
+        </p>
+      </div>
+    </div>
+  </section>
+  <meta>
+    <log lastEditor="administrator" date="2018-11-27" time="12:30" />
+  </meta>
+</MyCoReWebPage>
