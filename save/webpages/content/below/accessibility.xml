@@ -16,12 +16,17 @@
         <p>
           Diese Webseiten sind mit den Vorgaben der harmonisierten europäischen Norm EN 301 549 V2.1.2 (08-2018) größtenteils vereinbar.
         </p>
+        <p>
+          Diese Erklärung zur Barrierefreiheit gilt für den Dokumentenserver der UB Clausthal, der unter der Domain 
+          dokumente.ub.tu-clausthal.de zu erreichen ist.
+        </p>
+        
         <h2> 
           Nicht barrierefreie Inhalte
         </h2>
         <p> 
           Die auf dem Dokumentenserver publizierten Dokumente sind teilweise nicht barrierefrei und können nicht automatisiert in eine
-          barrierefreies Form umgewandelt werden, da
+          barrierefreies Format umgewandelt werden, da
           <ul>
            <li> da die UB Clausthal nicht das Recht auf die Änderung der Dateien besitzt, </li>
            <li> die Ausgangsformate nicht zu Verfügungs stehen,</li>
@@ -31,20 +36,21 @@
           durchgeführt.
         </p>
         <p>
-          Der Dokumentenserver richtet sich an Wissenschafler aus den jeweiligen Fachbereichen. Auf Grund der komplexen Inhalte, 
-          kann eine einfache Sprachgestaltung nicht umgestzt werden.
+          Der Dokumentenserver richtet sich an Wissenschafler aus den jeweiligen Fachbereichen. Auf Grund der komplexen Inhalte 
+          kann eine einfache Sprachgestaltung nicht umgesetzt werden und es werden gängige Fachbegriffe und Abkürzungen genutzt.
         </p>
         <h2>
           Erstellung dieser Erklärung zur Barrierefreiheit
         </h2>
         <p>
-          Diese Erklärung wurde am 23.09.2020 erstellt. Die Einschätzung basiert auf Selbstbewertung. 
+          Diese Erklärung wurde am 23.09.2020 erstellt. Die Einschätzung basiert auf einer Selbstbewertung. 
         </p>
         <h2>
           Feedback und Kontaktangaben
         </h2>
         <p>
-          Über die <a href="http://www.ub.tu-clausthal.de/kontakt/">Kontaktseite</a> der UB-Clausthal können Sie Mängel in Bezug auf die Einhaltung der Barrierefreiheitsanforderungen mitteilen
+          Über die <a href="http://www.ub.tu-clausthal.de/kontakt/">Kontaktseite</a> der UB-Clausthal können Sie Mängel in Bezug
+          auf die Einhaltung der Barrierefreiheitsanforderungen mitteilen
           und nicht barrierefreie Inhalte in einem für Sie zugänglichen Format anfordern.
         </p>
         <h2>
@@ -64,7 +70,7 @@
           Landesbeauftragte für Menschen mit Behinderungen<br />
           Hannah-Arendt-Platz 2<br />
           30159 Hannover <br />
-          <a href="http://www.behindertenbeauftragter-niedersachsen.de/">http://www.behindertenbeauftragter-niedersachsen.de/</a>
+          <a href="http://www.behindertenbeauftragter-niedersachsen.de/">http://www.behindertenbeauftragter-niedersachsen.de/</a><br />
           E-Mail: <span class="madress">schlichtungsstelle@ms.niedersachsen.de</span><br />
           Telefon: +49 (0)0511 120-4010
         </p>
