@@ -44,6 +44,8 @@
   <xsl:param name="MCR.OAIDataProvider.RepositoryPublisherPlace" select="''" />
   <xsl:param name="MCR.OAIDataProvider.RepositoryPublisherAddress" select="''" />
   <xsl:param name="MCR.Metadata.DefaultLang" select="''" />
+  
+  <xsl:param name="MIR.HostedPeriodicals.List" select="''" />
 
   <xsl:variable name="languages" select="document('classification:metadata:-1:children:rfc5646')" />
   <xsl:variable name="marcrelator" select="document('classification:metadata:-1:children:marcrelator')" />
@@ -110,8 +112,9 @@
     <xsl:apply-templates select="$mods" mode="type" />
     <xsl:apply-templates select="$mods" mode="dc_identifier" />
     <xsl:apply-templates select="$mods" mode="format" />
-    <xsl:apply-templates select="$mods" mode="publisher" />
+    <!-- <xsl:apply-templates select="$mods" mode="publisher" /> -->
     <xsl:apply-templates select="$mods" mode="relatedItem2source" />
+    <xsl:apply-templates select="$mods" mode="conference2source" />
     <xsl:call-template name="language" />
     <xsl:apply-templates select="$mods" mode="relatedItem2ispartof" />
     <xsl:apply-templates select="$mods" mode="degree" />
@@ -603,14 +606,20 @@
   </xsl:template>
 
   <xsl:template mode="relatedItem2source" match="mods:mods">
-      <!--  If not use isPartOf use dc:source -->
-    <xsl:if test="not(contains(mods:genre/@valueURI, 'issue') or contains(mods:genre/@valueURI, 'article'))">
-      <xsl:for-each select="mods:relatedItem[@type='host']">
+      <!--  For documents published as part of an publication use dc:source. For the relation to a periodical use dcterms:partOf -->
+    <xsl:for-each select="mods:relatedItem[@type='host' or @type='series']">
+      <xsl:variable name="is_hosted_periodical">
+        <xsl:call-template name="get_is_hosted_periodical" >
+          <xsl:with-param name="mycoreid" select="mods:relatedItem/@xlink:href"/>
+        </xsl:call-template>
+      </xsl:variable>
+      <xsl:if test="$is_hosted_periodical='false'">
         <xsl:variable name="hosttitel" select="mods:titleInfo/mods:title" />
         <xsl:variable name="issue" select="mods:part/mods:detail[@type='issue']/mods:number" />
         <xsl:variable name="volume" select="mods:part/mods:detail[@type='volume']/mods:number" />
         <xsl:variable name="startPage" select="mods:part/mods:extent[@unit='pages']/mods:start" />
         <xsl:variable name="endPage" select="mods:part/mods:extent[@unit='pages']/mods:end" />
+        <xsl:variable name="issn" select="mods:identifier[@type='issn']" />
         <xsl:variable name="volume2">
           <xsl:if test="string-length($volume) &gt; 0">
             <xsl:value-of select="concat('(',$volume,')')" />
@@ -626,10 +635,38 @@
             <xsl:value-of select="concat(', S.',$startPage,'-',$endPage)" />
           </xsl:if>
         </xsl:variable>
+        <xsl:variable name="issn2">
+          <xsl:if test="string-length($issn) &gt; 0">
+            <xsl:value-of select="concat('-ISSN',$issn,' ')"/>
+          </xsl:if>
+        </xsl:variable>
         <dc:source xsi:type="ddb:noScheme">
-          <xsl:value-of select="concat($hosttitel,$volume2,$issue2,$pages)" />
+          <xsl:value-of select="concat($hosttitel,$volume2,$issue2,$pages,$issn2)" />
         </dc:source>
-      </xsl:for-each>
+      </xsl:if>
+    </xsl:for-each>
+    
+  </xsl:template>
+  
+  <xsl:template mode="conference2source" match="mods:mods">
+      <!--  For documents published as part of an publication use dc:source. For the relation to a periodical use dcterms:partOf -->
+    <xsl:variable name="conference">
+      <xsl:choose>
+        <xsl:when test="mods:name[@type='conference']">
+          <xsl:value-of select="mods:name[@type='conference'][0]"/>
+        </xsl:when>
+        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:name[@type='conference']">
+          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:name[@type='conference'][0]"/>
+        </xsl:when>
+        <xsl:otherwise>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="displayForm" select="mods:displayForm" />
+    <xsl:if test="string-length($displayForm) &gt; 0">
+      <dc:source xsi:type="ddb:noScheme">
+        <xsl:value-of select="$displayForm" />
+      </dc:source>
     </xsl:if>
   </xsl:template>
 
@@ -639,39 +676,50 @@
     </dc:language>
   </xsl:template>
 
-<!-- dcterms:isPartOf xsi:type="ddb:Erstkat-ID" >2049984-X</dcterms:isPartOf>
-<dcterms:isPartOf xsi:type="ddb:ZS-Ausgabe" >2004</dcterms:isPartOf -->
+  <!-- dcterms:isPartOf xsi:type="ddb:Erstkat-ID" >2049984-X</dcterms:isPartOf>
+  <dcterms:isPartOf xsi:type="ddb:ZS-Ausgabe" >2004</dcterms:isPartOf -->
   <xsl:template mode="relatedItem2ispartof" match="mods:mods">
       <!-- Ausgabe der Schriftenreihe ala: <dcterms:isPartOf xsi:type=“ddb:noScheme“>Bulletin ; 34</dcterms:isPartOf>  -->
-    <xsl:if test="mods:relatedItem/@type='series'">
-      <dcterms:isPartOf xsi:type="ddb:noScheme">
-        <xsl:value-of select="mods:relatedItem[@type='series']/mods:titleInfo/mods:title" />
-        <xsl:if test="mods:relatedItem[@type='series']/mods:part/mods:detail[@type='volume']/mods:number">
-          <xsl:value-of select="concat(' ; ',mods:relatedItem[@type='series']/mods:part/mods:detail[@type='volume']/mods:number)" />
-        </xsl:if>
-      </dcterms:isPartOf>
-    </xsl:if>
-    <xsl:if test="contains(mods:genre/@valueURI, 'issue') or contains(mods:genre/@valueURI, 'article')">
-      <dcterms:isPartOf xsi:type="ddb:ZSTitelID">
-        <xsl:value-of select="mods:relatedItem[@type='host']/@xlink:href" />
-      </dcterms:isPartOf>
-      <xsl:if test="mods:relatedItem[@type='host']/mods:part/mods:detail[@type='volume']">
-        <dcterms:isPartOf xsi:type="ddb:ZS-Ausgabe">
-          <xsl:choose>
-            <xsl:when test="mods:relatedItem[@type='host']/mods:part/mods:detail[@type='issue']">
-              <xsl:value-of
-                select="concat(normalize-space(mods:relatedItem[@type='host']/mods:part/mods:detail[@type='volume']),
-                  ', ',
-                  i18n:translate('component.mods.metaData.dictionary.issue'),
-                  ' ',
-                  normalize-space(mods:relatedItem[@type='host']/mods:part/mods:detail[@type='issue']))" />
-            </xsl:when>
-            <xsl:otherwise>
-              <xsl:value-of select="normalize-space(mods:relatedItem[@type='host']/mods:part/mods:detail[@type='volume'])" />
-            </xsl:otherwise>
-          </xsl:choose>
-        </dcterms:isPartOf>
-      </xsl:if>
+      <!-- isPartOf is the relation to an periodical eg. journal, series. For relation to nonperiodical use dc:source  -->
+    <xsl:variable name="firstPeriodical" select="mods:relatedItem[@type='series' or (@type='host' and (contains(mods:genre/@valueURI,'journal') or contains(mods:genre/@valueURI,'series')) )][1]" />
+    <xsl:if test="$firstPeriodical">
+      <xsl:variable name="is_hosted_periodical">
+        <xsl:call-template name="get_is_hosted_periodical" >
+          <xsl:with-param name="mycoreid" select="mods:relatedItem/@xlink:href"/>
+        </xsl:call-template>
+      </xsl:variable>
+      <xsl:choose>
+        <xsl:when test="$is_hosted_periodical = 'true' and $firstPeriodical/@type='host'">
+          <dcterms:isPartOf xsi:type="ddb:ZSTitelID">
+            <xsl:value-of select="$firstPeriodical/@xlink:href" />
+          </dcterms:isPartOf>
+          <xsl:if test="$firstPeriodical/mods:part/mods:detail[@type='volume']">
+            <dcterms:isPartOf xsi:type="ddb:ZS-Ausgabe">
+              <xsl:choose>
+                <xsl:when test="$firstPeriodical/mods:part/mods:detail[@type='issue']">
+                  <xsl:value-of
+                    select="concat(normalize-space($firstPeriodical/mods:part/mods:detail[@type='volume']),
+                      ', ',
+                      i18n:translate('component.mods.metaData.dictionary.issue'),
+                      ' ',
+                      normalize-space($firstPeriodical/mods:part/mods:detail[@type='issue']))" />
+                </xsl:when>
+                <xsl:otherwise>
+                  <xsl:value-of select="normalize-space($firstPeriodical/mods:part/mods:detail[@type='volume'])" />
+                </xsl:otherwise>
+              </xsl:choose>
+            </dcterms:isPartOf>
+          </xsl:if>
+        </xsl:when>
+        <xsl:when test="$is_hosted_periodical = 'true' and $firstPeriodical/@type='series'">
+          <dcterms:isPartOf xsi:type="ddb:noScheme">
+            <xsl:value-of select="$firstPeriodical/mods:titleInfo/mods:title" /> 
+            <xsl:if test="$firstPeriodical/mods:part/mods:detail[@type='volume']/mods:number">
+              <xsl:value-of select="concat(' ; ',$firstPeriodical/mods:part/mods:detail[@type='volume']/mods:number)" />
+            </xsl:if>
+          </dcterms:isPartOf>
+        </xsl:when>
+      </xsl:choose>
     </xsl:if>
   </xsl:template>
 
@@ -782,6 +830,22 @@
       </xsl:when>
       <xsl:otherwise>
         <ddb:rights ddb:kind="domain" />
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:template>
+  
+  <xsl:template name="get_is_hosted_periodical">
+    <!-- Test for journals or series hosted/published by this repository (eg. Zeitschriftenserver)  -->
+    <xsl:param name="mycoreid"/>
+    <xsl:choose>
+      <xsl:when test="not($mycoreid) or $mycoreid = ''">
+        <xsl:value-of select="'false'"/>
+      </xsl:when>
+      <xsl:when test="contains($MIR.HostedPeriodicals.List,$mycoreid)">
+        <xsl:value-of select="'true'"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:value-of select="'false'"/>
       </xsl:otherwise>
     </xsl:choose>
   </xsl:template>
