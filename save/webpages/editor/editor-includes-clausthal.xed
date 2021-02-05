@@ -6,7 +6,7 @@
   <xsl:param name="MIR.PPN.DatabaseList" select="gvk"/>
 
   <xed:template id="in.out">
-    <xed:source uri="xslStyle:import/remove-genres,import/mods2mycoreobject,editor/oa-mods2xeditor,editor/mods2xeditor:enrich:import:buildxml:_rootName_=mods:mods&amp;mods:identifier={$modsId}&amp;mods:identifier/@type={$type}" />
+    <xed:source uri="xslStyle:import/remove-genres,import/mods2mycoreobject,editor/mods2xeditor,editor/mods2xeditor:enrich:import:buildxml:_rootName_=mods:mods&amp;mods:identifier={$modsId}&amp;mods:identifier/@type={$type}" />
     <xed:source uri="xslStyle:PPN-mods-simple,mir-PPN-import,mycoreobject-migrate-nameIdentifier,editor/mods2xeditor:http://unapi.k10plus.de/?id={$MIR.PPN.DatabaseList}:ppn:{$ppn}&amp;format=mods36" />
     <xed:source uri="xslStyle:editor/oa-mods2xeditor,editor/mods2xeditor:{$sourceUri}" />
     <xed:source uri="xslStyle:mycoreobject-editor,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$id}" />
