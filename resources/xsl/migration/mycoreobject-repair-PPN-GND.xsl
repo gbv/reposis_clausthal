@@ -8,10 +8,10 @@
   
   <xsl:include href="copynodes.xsl" />
     
-  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[@type='gnd'][starts-with(.,'(DE-601)')]">
+  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[starts-with(.,'(DE-601)')]">
   </xsl:template>
   
-  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[@type='gnd'][starts-with(.,'(DE-588)')]">
+  <xsl:template match="mods:mods/mods:name/mods:nameIdentifier[starts-with(.,'(DE-588)')]">
     <xsl:variable name="gnd" select="substring-after(.,'(DE-588)')"/>
     <xsl:if test="not(../mods:nameIdentifier[@type='gnd'][text()=$gnd])">
       <mods:nameIdentifier type="gnd">
