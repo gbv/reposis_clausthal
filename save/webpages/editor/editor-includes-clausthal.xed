@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<xed:template xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir"
+              xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:param name="MIR.PPN.DatabaseList" select="gvk"/>
+
+  <xed:template id="in.out">
+    <xed:source uri="xslStyle:import/remove-genres,import/mods2mycoreobject,editor/oa-mods2xeditor,editor/mods2xeditor:enrich:import:buildxml:_rootName_=mods:mods&amp;mods:identifier={$modsId}&amp;mods:identifier/@type={$type}" />
+    <xed:source uri="xslStyle:PPN-mods-simple,mir-PPN-import,mycoreobject-migrate-nameIdentifier,editor/mods2xeditor:http://unapi.k10plus.de/?id={$MIR.PPN.DatabaseList}:ppn:{$ppn}&amp;format=mods36" />
+    <xed:source uri="xslStyle:editor/oa-mods2xeditor,editor/mods2xeditor:{$sourceUri}" />
+    <xed:source uri="xslStyle:mycoreobject-editor,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$id}" />
+    <xed:source uri="xslStyle:mycoreobject-copyof,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$copyofid}" />
+    <xed:source uri="xslStyle:mods-addPreceding,mycoreobject-copyof,editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$oldVersion}" />
+    <xed:source uri="xslStyle:as{$relatedItemType},editor/oa-mods2xeditor,editor/mods2xeditor:mcrobject:{$relatedItemId}" />
+
+    <xed:cancel
+      url="../servlets/MCRLockServlet?action=unlock&amp;id={$id}&amp;url=/receive/{$id}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="{$cancelUrl}?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:cancel url="../index.html?XSL.Status.Message=mir.editstatus.canceled&amp;XSL.Status.Style=danger" />
+    <xed:post-processor xsl="editor/xeditor2mods.xsl" />
+  </xed:template>
+
+</xed:template>
