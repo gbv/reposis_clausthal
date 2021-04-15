@@ -112,7 +112,7 @@
     <xsl:apply-templates select="$mods" mode="type" />
     <xsl:apply-templates select="$mods" mode="dc_identifier" />
     <xsl:apply-templates select="$mods" mode="format" />
-    <!-- <xsl:apply-templates select="$mods" mode="publisher" /> -->
+    <xsl:apply-templates select="$mods" mode="publisher" />
     <xsl:apply-templates select="$mods" mode="relatedItem2source" />
     <xsl:apply-templates select="$mods" mode="conference2source" />
     <xsl:call-template name="language" />
@@ -384,32 +384,16 @@
         </xsl:choose>
       </xsl:variable>
       <xsl:if test="string-length($publisher_name) &gt; 0">
-        <xsl:choose>
-          <xsl:when test="string-length($publisher_place) &gt; 0">
-            <dc:source xsi:type="ddb:noScheme">
-              <xsl:value-of select="concat($publisher_place,' : ',$publisher_name)" />
-            </dc:source>
-          </xsl:when>
-          <xsl:otherwise>
-            <dc:source xsi:type="ddb:noScheme">
-              <xsl:value-of select="$publisher_name" />
-            </dc:source>
-          </xsl:otherwise>
-        </xsl:choose>
+        <xsl:call-template name="repositoryPublisherElement">
+          <xsl:with-param name="name" select="$publisher_name" />
+          <xsl:with-param name="place" select="$publisher_place" />
+        </xsl:call-template>
       </xsl:if>
     </xsl:if>
   </xsl:template>
 
   <xsl:template mode="repositoryPublisher" match="mods:mods">
     <xsl:choose>
-      <xsl:when
-        test="mods:originInfo[@eventType='publication']/mods:publisher and mods:originInfo[@eventType='publication']/mods:place/mods:placeTerm[@type='text']">
-        <xsl:call-template name="repositoryPublisherElement">
-          <xsl:with-param name="name" select="mods:originInfo[@eventType='publication']/mods:publisher" />
-          <xsl:with-param name="place" select="mods:originInfo[@eventType='publication']/mods:place/mods:placeTerm[@type='text']" />
-          <xsl:with-param name="address" select="''" />
-        </xsl:call-template>
-      </xsl:when>
       <xsl:when test="mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]">
         <xsl:variable name="insti" select="substring-after(mods:name[mods:role/mods:roleTerm/text()='his' and @valueURI]/@valueURI, '#')" />
         <xsl:variable name="myURI" select="concat('classification:metadata:0:parents:mir_institutes:',$insti)" />
@@ -462,13 +446,17 @@
         <cc:name>
           <xsl:value-of select="$name" />
         </cc:name>
-        <cc:place>
-          <xsl:value-of select="$place" />
-        </cc:place>
+        <xsl:if test="$place">
+          <cc:place>
+            <xsl:value-of select="$place" />
+          </cc:place>
+        </xsl:if>
       </cc:universityOrInstitution>
-      <cc:address cc:Scheme="DIN5008">
-        <xsl:value-of select="$address" />
-      </cc:address>
+      <xsl:if test="$address">
+        <cc:address cc:Scheme="DIN5008">
+          <xsl:value-of select="$address" />
+        </cc:address>
+      </xsl:if>
     </dc:publisher>
   </xsl:template>
 
@@ -650,23 +638,14 @@
   
   <xsl:template mode="conference2source" match="mods:mods">
       <!--  For documents published as part of an publication use dc:source. For the relation to a periodical use dcterms:partOf -->
-    <xsl:variable name="conference">
-      <xsl:choose>
-        <xsl:when test="mods:name[@type='conference']">
-          <xsl:value-of select="mods:name[@type='conference'][0]"/>
-        </xsl:when>
-        <xsl:when test="mods:relatedItem[@type='host' or @type='series']/mods:name[@type='conference']">
-          <xsl:value-of select="mods:relatedItem[@type='host' or @type='series']/mods:name[@type='conference'][0]"/>
-        </xsl:when>
-        <xsl:otherwise>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:variable>
-    <xsl:variable name="displayForm" select="mods:displayForm" />
-    <xsl:if test="string-length($displayForm) &gt; 0">
-      <dc:source xsi:type="ddb:noScheme">
-        <xsl:value-of select="$displayForm" />
-      </dc:source>
+    <xsl:variable name="conference" select="mods:name[@type='conference'] | mods:relatedItem[@type='host' or @type='series']/mods:name[@type='conference']" />
+    <xsl:if test="$conference" >
+      <xsl:variable name="displayForm" select="$conference/mods:displayForm" />
+      <xsl:if test="string-length($displayForm) &gt; 0">
+        <dc:source xsi:type="ddb:noScheme">
+          <xsl:value-of select="$displayForm" />
+        </dc:source>
+      </xsl:if>
     </xsl:if>
   </xsl:template>
 
