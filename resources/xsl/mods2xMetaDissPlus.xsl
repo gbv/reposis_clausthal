@@ -47,7 +47,7 @@
   
   <xsl:param name="MIR.HostedPeriodicals.List" select="''" />
   <xsl:param name="MIR.xMetaDissPlus.disabledTemplates" select="''" />
-  <xsl:param name="MIR.xMetaDissPlus.rights.rights_reseved2free" select="''" />
+  <xsl:param name="MIR.xMetaDissPlus.rights.rightsReserved2free" select="''" />
   
 
   <xsl:variable name="languages" select="document('classification:metadata:-1:children:rfc5646')" />
@@ -1038,7 +1038,7 @@
   <xsl:template name="rights">
     <xsl:param name="derivateID" />
     <xsl:choose>
-      <xsl:when test="acl:checkPermission($derivateID,'read') and $MIR.xMetaDissPlus.rights.rights_reseved2free = 'true' ">
+      <xsl:when test="acl:checkPermission($derivateID,'read') and $MIR.xMetaDissPlus.rights.rightsReserved2free = 'true' ">
         <ddb:rights ddb:kind="free" />
       </xsl:when>
       <xsl:otherwise>
