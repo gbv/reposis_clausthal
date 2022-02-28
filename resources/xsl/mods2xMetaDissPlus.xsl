@@ -179,7 +179,8 @@
         <!-- A periodocal part not published at the repository should handled like a monograph. FormatDoc XMDP (2020) Kap. 0.8 S.5 und Kap.5.2 S.53 -->
         <xsl:call-template name="XMDP_Document">
           <xsl:with-param name="documentType" select="$type"/>
-          <xsl:with-param name="documentPublisher" select="$publisher"/>
+          <!-- <xsl:with-param name="documentPublisher" select="$publisher"/>  -->
+          <xsl:with-param name="documentPublisher" select="$repositoryPublisher"/> 
           <xsl:with-param name="periodicalAsPartOf" select="'false'"/>
         </xsl:call-template> 
       </xsl:when>
@@ -188,7 +189,8 @@
         <!-- A thesis published by an publishing company should handled like a monograph. FormatDoc XMDP (2020) Kap.3.2. S.27 ; Kap.1.2 S.10-->
         <xsl:call-template name="XMDP_Document">
           <xsl:with-param name="documentType" select="'book'"/>
-          <xsl:with-param name="documentPublisher" select="$publisher"/> 
+          <!-- <xsl:with-param name="documentPublisher" select="$publisher"/> -->
+          <xsl:with-param name="documentPublisher" select="$repositoryPublisher"/>
           <xsl:with-param name="periodicalAsPartOf" select="'false'"/>
         </xsl:call-template> 
       </xsl:when>
@@ -212,7 +214,8 @@
         <!-- Implizite Zweitveröffentlichung -->
         <xsl:call-template name="XMDP_Document">
           <xsl:with-param name="documentType" select="$type"/>
-          <xsl:with-param name="documentPublisher" select="$publisher"/>
+          <!-- <xsl:with-param name="documentPublisher" select="$publisher"/> -->
+          <xsl:with-param name="documentPublisher" select="$repositoryPublisher"/>
           <xsl:with-param name="periodicalAsPartOf" select="'false'"/>
         </xsl:call-template> 
       </xsl:when>
@@ -319,6 +322,10 @@
     <!-- Zusätzliche Angaben (2) Konferenzangaben -->
     <xsl:if test="not(contains($MIR.xMetaDissPlus.disabledTemplates,'conference2source'))">
       <xsl:call-template name="conference2source" />
+    </xsl:if>
+    <!-- Zusätzlich Angaben (3) Verlag -->
+    <xsl:if test="not(contains($MIR.xMetaDissPlus.disabledTemplates,'publisher2source'))">
+      <xsl:call-template name="publisher2source" />
     </xsl:if>
     <!-- Sprache -->
     <xsl:if test="not(contains($MIR.xMetaDissPlus.disabledTemplates,'language'))">
@@ -427,11 +434,19 @@
         <xsl:value-of select="$lang" />
       </xsl:attribute>
       <xsl:value-of select="$mainTitle/mods:title" />
-      <xsl:if test="$mainTitle/mods:subTitle">
+      <!-- <xsl:if test="$mainTitle/mods:subTitle">
         <xsl:value-of select="concat(' : ',$mainTitle/mods:subTitle)" />
       </xsl:if>
+       -->
     </dc:title>
-
+    
+    <dcterms:alternative xsi:type="ddb:talternativeISO639-2">
+      <xsl:attribute name="lang">
+        <xsl:value-of select="$lang" />
+      </xsl:attribute>
+      <xsl:value-of select="$mainTitle/mods:subTitle" />
+    </dcterms:alternative>
+    
     <xsl:for-each select="$mods/mods:titleInfo[@type='translated']" >
     <!-- There's multiple translation possible. -->
       <xsl:if test="./@xml:lang">
@@ -442,14 +457,16 @@
             </xsl:call-template>
           </xsl:attribute>
           <xsl:value-of select="./mods:title" />
-          <xsl:if test="./mods:subTitle">
+          <!-- <xsl:if test="./mods:subTitle">
             <xsl:value-of select="concat(' : ',./mods:subTitle)" />
           </xsl:if>
+           -->
         </dcterms:alternative>
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
 
+  <!-- No uniform, abbreviated or alternative Titel should be delivered. (see Mail Mirka Kaiser)
   <xsl:template name="alternative">
     <xsl:for-each select="$mods/mods:titleInfo[@type='uniform' or @type='abbreviated' or @type='alternative']">
       <xsl:variable name="lang">
@@ -475,12 +492,19 @@
       </dcterms:alternative>
     </xsl:for-each>
   </xsl:template>
-
+   -->
   <xsl:template name="creator">
     <!-- TO DO: Update creatorRoles for the case, if cre does not exists. -->
     <xsl:variable name="creatorRoles" select="$marcrelator/mycoreclass/categories/category[@ID='cre']/descendant-or-self::category" />
     <xsl:for-each select="$mods/mods:name[$creatorRoles/@ID=mods:role/mods:roleTerm/text()]">
       <dc:creator xsi:type="pc:MetaPers">
+        <!-- GND is attribute of dc:creator and not of pc:person. Description in standard is wrong, the example
+             is right. (see Mail Mirka Kaiser)  -->
+        <xsl:if test="mods:nameIdentifier[@type='gnd']">
+          <xsl:attribute name="GND-Nr">
+            <xsl:value-of select="mods:nameIdentifier[@type='gnd']" />
+          </xsl:attribute>
+        </xsl:if>
         <xsl:apply-templates select="." mode="pc-person" />
       </dc:creator>
     </xsl:for-each>
@@ -488,10 +512,10 @@
   
   <xsl:template mode="pc-person" match="mods:name">
     <pc:person>
-      <xsl:if test="mods:nameIdentifier[@type='gnd']">
-        <xsl:attribute name="PND-Nr">
-          <xsl:value-of select="mods:nameIdentifier[@type='gnd']" />
-        </xsl:attribute>
+      <xsl:if test="mods:nameIdentifier[@type='orcid']">
+        <ddb:ORCID>
+          <xsl:value-of select="mods:nameIdentifier[@type='orcid']" />
+        </ddb:ORCID>
       </xsl:if>
       <pc:name>
         <xsl:choose>
@@ -873,7 +897,6 @@
   </xsl:template>
   
   <xsl:template name="conference2source">
-      <!--  For documents published as part of an publication use dc:source. For the relation to a periodical use dcterms:partOf -->
     <xsl:variable name="conference" select="$mods/mods:name[@type='conference'] | $mods/mods:relatedItem[@type='host' or @type='series']/mods:name[@type='conference']" />
     <xsl:if test="$conference" >
       <xsl:variable name="displayForm" select="$conference/mods:displayForm" />
@@ -884,11 +907,67 @@
       </xsl:if>
     </xsl:if>
   </xsl:template>
+  
+  <xsl:template name="publisher2source">
+    <xsl:variable name="publisherRoles" select="$marcrelator/mycoreclass/categories/category[@ID='pbl']/descendant-or-self::category" />
+    <xsl:variable name="publisher_name">
+      <xsl:choose>
+        <xsl:when test="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:publisher">
+          <xsl:value-of select="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:publisher" />
+        </xsl:when>
+        <xsl:when test="$mods/mods:name[$publisherRoles/@ID=mods:role/mods:roleTerm/text()]">
+          <xsl:value-of select="$mods/mods:name[mods:role/mods:roleTerm/text()='pbl']/mods:displayForm" />
+        </xsl:when>
+        <xsl:when test="$mods/mods:accessCondition[@type='copyrightMD']/cmd:copyright/cmd:rights.holder/cmd:name">
+          <xsl:value-of select="$mods/mods:accessCondition[@type='copyrightMD']/cmd:copyright/cmd:rights.holder/cmd:name" />
+        </xsl:when>
+        <xsl:when test="$mods/mods:relatedItem[@type='host']/mods:originInfo[not(@eventType) or @eventType='publication']/mods:publisher">
+          <xsl:value-of
+            select="$mods/mods:relatedItem[@type='host']/mods:originInfo[not(@eventType) or @eventType='publication']/mods:publisher" />
+        </xsl:when>
+        <xsl:when test="$mods/mods:relatedItem[@type='host']/mods:name[mods:role/mods:roleTerm/text()='pbl']">
+          <xsl:value-of select="$mods/mods:relatedItem[@type='host']/mods:name[mods:role/mods:roleTerm/text()='pbl']/mods:displayForm" />
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:variable name="publisher_place">
+      <xsl:choose>
+        <xsl:when test="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:place/mods:placeTerm[@type='text']">
+          <xsl:value-of select="$mods/mods:originInfo[not(@eventType) or @eventType='publication']/mods:place/mods:placeTerm[@type='text']" />
+        </xsl:when>
+        <xsl:when
+          test="$mods/mods:relatedItem[@type='host']/mods:originInfo[not(@eventType) or @eventType='publication']/mods:place/mods:placeTerm[@type='text']">
+          <xsl:value-of
+            select="$mods/mods:relatedItem[@type='host']/mods:originInfo[not(@eventType) or @eventType='publication']/mods:place/mods:placeTerm[@type='text']" />
+        </xsl:when>
+      </xsl:choose>
+    </xsl:variable>
+    <xsl:if test="string-length($publisher_name) &gt; 0" >
+      <xsl:variable name="place2">
+        <xsl:if test="string-length($publisher_place) &gt; 0">
+          <xsl:value-of select="concat(', ',$publisher_place)" />
+        </xsl:if>
+      </xsl:variable>
+      <dc:source xsi:type="ddb:noScheme">
+        <xsl:value-of select="concat($publisher_name,$place2)" />
+      </dc:source>
+    </xsl:if>
+  </xsl:template>
 
   <xsl:template name="language">
     <dc:language xsi:type="dcterms:ISO639-2">
-      <xsl:value-of select="$language" />
+      <xsl:choose>
+        <!-- XMetaDissPlus allow only one language. In case of an multilingual publication send langcode "mul". 
+        (see Mail Mirka Kaiser) -->
+        <xsl:when test="count($mods/mods:language/mods:languageTerm) &gt; 1">
+          <xsl:value-of select="'mul'" />
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:value-of select="$language" />
+        </xsl:otherwise>
+      </xsl:choose>
     </dc:language>
+    
   </xsl:template>
 
   <xsl:template name="relatedItem2ispartof">
