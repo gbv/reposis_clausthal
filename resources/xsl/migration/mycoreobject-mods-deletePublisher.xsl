@@ -8,10 +8,10 @@
   
   <xsl:include href="copynodes.xsl" />
     
-  <xsl:template match="mods:mods/mods:originInfo[eventType='publication']/mods:place">
+  <xsl:template match="mods:mods/mods:originInfo[@eventType='publication']/mods:place">
   </xsl:template>
   
-  <xsl:template match="mods:mods/mods:originInfo[eventType='publication']/mods:publisher">
+  <xsl:template match="mods:mods/mods:originInfo[@eventType='publication']/mods:publisher">
   </xsl:template>
     
 </xsl:stylesheet>
