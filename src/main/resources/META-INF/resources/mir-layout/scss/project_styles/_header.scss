@@ -1,0 +1,71 @@
+/*
+ *  header settings
+ */
+
+// Extra large devices (large desktops)
+// set the defaults for all responsive levels here
+// no (xl) media query necessary (desktop first)
+
+// logo and menu container
+
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .96);
+    box-shadow: 0 .25rem .625rem rgba(0,0,0,.3);
+    z-index: 1000;
+  }
+
+  #header_box {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  .project_logo_box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project_logo_link {
+    font-size: 1rem;
+    color: $body-color;
+    width: 16rem;
+    &:hover {
+      text-decoration: none;
+      color: $primary;
+    }
+    &--logo {
+      img {
+        width: 16rem;
+      }
+    }
+    &--ub {
+      padding-top: 0.65rem;
+      padding-left: 3.5rem;
+    }
+    &--project {
+      padding-left: 3.5rem;
+    }
+  }
+
+// Large devices (desktops) and below: <= 1200px
+@include media-breakpoint-down(lg) {
+  // add/overwrite styles for responsive level lg and lower
+}
+
+// Medium devices (tablets) and below: <= 992px
+@include media-breakpoint-down(md) {
+  // add/overwrite styles for responsive level md and lower
+}
+
+// Small devices (landscape phones) and below: <= 768px
+@include media-breakpoint-down(sm) {
+  // add/overwrite styles for responsive level sm and lower
+}
+
+// Extra small devices (portrait phones): <= 576px
+@include media-breakpoint-down(xs) {
+  // add/overwrite styles for responsive level xs
+}

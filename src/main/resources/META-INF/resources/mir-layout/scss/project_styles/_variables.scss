@@ -1,0 +1,47 @@
+// **************************************************
+//  Variables
+// **************************************************
+
+// --------------------------------------------------
+//  modifies bootstrap/bootswatch settings
+// --------------------------------------------------
+//  You can't use bootstrap variables here,
+//  they are unknown yet.
+//  But if you set them here, you will overwrite
+//  the bootstrap defaults! in this way
+
+// --------------------------------------------------
+//  project settings
+// --------------------------------------------------
+
+
+$cGreen:        #008c4f; // logo
+$cGreenClear:   #008000; // border
+$cGreenVariant: #008048; // button
+
+$cBlue:         #005262; // button border
+
+$cGray:         #444; // text
+
+$cGrayLight:    #cacaca; // scroll top
+$cGrayForm:     #e9e9ed; // form button
+$cGrayBack:     #f7f7f7; // footer back
+
+
+// --------------------------------------------------
+//  overwrite bootstrap
+// --------------------------------------------------
+
+$primary: $cGreen;
+$secondary: $cGrayForm;
+
+$web-font-path: "https://webfonts.gbv.de/css2?Open+Sans&display=swap";
+$font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-size-base: 0.875rem;
+
+$body-color: $cGray;
+
+$navbar-light-color: $body-color;
+$navbar-nav-link-padding-x: 1rem;
+$navbar-light-hover-color: $primary;
+$navbar-light-active-color: $primary;
