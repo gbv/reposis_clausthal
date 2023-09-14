@@ -32,9 +32,10 @@
     font-size: 1rem;
     color: $body-color;
     width: 16rem;
+    text-decoration: none;
     &:hover {
       text-decoration: none;
-      color: $primary;
+      color: $blackLight;
     }
     &--logo {
       img {

@@ -12,9 +12,11 @@
     border-top: .0625rem solid #ddd;
     margin-top: 2rem;
     padding-top: 2rem;
-    a,
+    font-size: 0.875rem;
     h4 {
+      font-size: 1rem;
       color: $body-color;
+      font-weight: 700;
     }
   }
 
@@ -22,6 +24,24 @@
     background-color: $cGrayBack;
     border: none;
     padding: 5rem 0 2rem 0;
+  }
+
+  .project-nav-footer {
+    flex-direction: column;
+  }
+
+  .flatmir-footer .nav > li > a,
+  .flatmir-footer .nav > li > a:hover,
+  .flatmir-footer .nav > li > a:focus {
+    font-size: 0.875rem;
+    color: $body-color;
+    padding: 0px;
+  }
+
+  .flatmir-footer .nav > li > a:hover,
+  .flatmir-footer .nav > li > a:focus {
+    text-decoration: underline;
+    background-color: transparent;
   }
 
 // Large devices (desktops) and below: <= 1200px

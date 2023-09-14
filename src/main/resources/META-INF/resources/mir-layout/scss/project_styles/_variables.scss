@@ -22,10 +22,14 @@ $cGreenVariant: #008048; // button
 $cBlue:         #005262; // button border
 
 $cGray:         #444; // text
+$blackLight:    #1e1e1e; // link hover
 
 $cGrayLight:    #cacaca; // scroll top
+$cGrayBackDark: #ddd;    // menu back
 $cGrayForm:     #e9e9ed; // form button
 $cGrayBack:     #f7f7f7; // footer back
+
+
 
 
 // --------------------------------------------------
@@ -41,7 +45,25 @@ $font-size-base: 0.875rem;
 
 $body-color: $cGray;
 
+$link-color: $cGray;
+$link-decoration: underline;
+$link-hover-color: $blackLight;
+
 $navbar-light-color: $body-color;
 $navbar-nav-link-padding-x: 1rem;
 $navbar-light-hover-color: $primary;
 $navbar-light-active-color: $primary;
+
+$dropdown-link-color: $body-color;
+
+$dropdown-link-hover-color: $primary;
+$dropdown-link-hover-bg: $cGrayBackDark;
+
+$dropdown-link-active-color: $primary ;
+$dropdown-link-active-bg: $cGrayBackDark;
+
+$dropdown-border-radius: 0;
+// $dropdown-border-width: 0; // like home, but looks not good
+// $dropdown-box-shadow: inset 0 .125rem .3125rem rgba(0,0,0,.3); // is not working, set in navigation
+
+$dropdown-spacer: 0;

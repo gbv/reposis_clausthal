@@ -15,11 +15,11 @@
     <menu id="below" dir="/content/below">
         <label xml:lang="de">Footer-Menü</label>
         <label xml:lang="en">Footer menu</label>
-        <item href="http://www.tu-clausthal.de/info/impressum/" type="extern" replaceMenu="false" constrainPopUp="false">
+        <item href="https://www.tu-clausthal.de/impressum/" type="extern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Impressum</label>
             <label xml:lang="en">Impressum</label>
         </item>
-        <item href="http://www.ub.tu-clausthal.de/kontakt/" type="extern" replaceMenu="false" constrainPopUp="false">
+        <item href="https://www.ub.tu-clausthal.de/ueber-uns/kontakt-und-anfahrt" type="extern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Kontakt</label>
             <label xml:lang="en">Contact</label>
         </item>

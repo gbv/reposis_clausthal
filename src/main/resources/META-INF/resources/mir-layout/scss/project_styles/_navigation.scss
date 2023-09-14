@@ -22,6 +22,10 @@
     }
   }
 
+  .dropdown-menu {
+    //box-shadow: inset 0 0 .3125rem rgba(0,0,0,.3); // home style but ugly
+  }
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower
