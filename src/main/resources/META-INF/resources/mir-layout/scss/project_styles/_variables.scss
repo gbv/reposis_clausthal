@@ -37,7 +37,7 @@ $cGrayBack:     #f7f7f7; // footer back
 // --------------------------------------------------
 
 $primary: $cGreen;
-$secondary: $cGrayForm;
+$secondary: $cGray;
 
 $web-font-path: "https://webfonts.gbv.de/css2?Open+Sans&display=swap";
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -67,3 +67,9 @@ $dropdown-border-radius: 0;
 // $dropdown-box-shadow: inset 0 .125rem .3125rem rgba(0,0,0,.3); // is not working, set in navigation
 
 $dropdown-spacer: 0;
+
+$pagination-color: white;
+$pagination-bg: $cGreen;
+
+$pagination-disabled-color: $blackLight;
+$pagination-disabled-bg: $cGrayLight;
