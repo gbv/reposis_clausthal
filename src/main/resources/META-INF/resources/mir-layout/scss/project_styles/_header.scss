@@ -28,6 +28,10 @@
     flex-direction: column;
   }
 
+  .project_slogans {
+    padding-top: 0.65rem;
+    padding-left: 3.5rem;
+  }
   .project_logo_link {
     font-size: 1rem;
     color: $body-color;
@@ -42,13 +46,8 @@
         width: 16rem;
       }
     }
-    &--ub {
-      padding-top: 0.65rem;
-      padding-left: 3.5rem;
-    }
-    &--project {
-      padding-left: 3.5rem;
-    }
+    &--ub {}
+    &--project {}
   }
 
 // Large devices (desktops) and below: <= 1200px

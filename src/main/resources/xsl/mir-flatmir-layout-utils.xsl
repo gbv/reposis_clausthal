@@ -21,26 +21,67 @@
              class="project_logo_link project_logo_link--logo">
             <img src="{$WebApplicationBaseURL}images/logos/Logo_TUC_de_rgb.SVG" alt="TUC Logo" />
           </a>
-          <a href="https://www.ub.tu-clausthal.de/"
-             class="project_logo_link project_logo_link--ub">
-              Universitätsbibliothek
-          </a>
-          <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}"
-             class="project_logo_link project_logo_link--project">
-              Publikationsserver
-          </a>
+          <div class="project_slogans">
+            <a href="https://www.ub.tu-clausthal.de/"
+               class="project_logo_link project_logo_link--ub">
+                Universitätsbibliothek
+            </a>
+            |
+            <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}"
+               class="project_logo_link project_logo_link--project">
+                Publikationsserver
+            </a>
+          </div>
         </div>
       </div>
 
       <div class="col">
-        <div class="mir-prop-nav">
-          <nav>
-            <ul class="navbar-nav ml-auto flex-row">
-              <xsl:call-template name="mir.loginMenu" />
-              <xsl:call-template name="mir.languageMenu" />
-            </ul>
-          </nav>
+
+        <div class="row">
+          <div class="col">
+            <div class="mir-prop-nav">
+              <nav>
+                <ul class="navbar-nav ml-auto flex-row">
+                  <xsl:call-template name="mir.loginMenu" />
+                  <xsl:call-template name="mir.languageMenu" />
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="mir-prop-nav">
+
+              <form
+                action="{$WebApplicationBaseURL}servlets/solr/find"
+                class="searchfield_box form-inline m-3"
+                role="search">
+                <input
+                  name="condQuery"
+                  placeholder="{i18n:translate('mir.navsearch.placeholder')}"
+                  class="form-control mr-sm-2 search-query"
+                  id="searchInput"
+                  type="text"
+                  aria-label="Search" />
+                <xsl:choose>
+                  <xsl:when test="contains($isSearchAllowedForCurrentUser, 'true')">
+                    <input name="owner" type="hidden" value="createdby:*" />
+                  </xsl:when>
+                  <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
+                    <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
+                  </xsl:when>
+                </xsl:choose>
+                <button type="submit" class="btn btn-primary my-2 my-sm-0">
+                  <i class="fas fa-search"></i>
+                </button>
+              </form>
+
+            </div>
+          </div>
+        </div>
+
 
       </div>
     </div>
@@ -78,32 +119,6 @@
               </xsl:for-each>
               <xsl:call-template name="mir.basketMenu" />
             </ul>
-            <!--
-            <form
-              action="{$WebApplicationBaseURL}servlets/solr/find"
-              class="searchfield_box form-inline my-2 my-lg-0"
-              role="search">
-              <input
-                name="condQuery"
-                placeholder="{i18n:translate('mir.navsearch.placeholder')}"
-                class="form-control mr-sm-2 search-query"
-                id="searchInput"
-                type="text"
-                aria-label="Search" />
-              <xsl:choose>
-                <xsl:when test="contains($isSearchAllowedForCurrentUser, 'true')">
-                  <input name="owner" type="hidden" value="createdby:*" />
-                </xsl:when>
-                <xsl:when test="not(mcrxsl:isCurrentUserGuestUser())">
-                  <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
-                </xsl:when>
-              </xsl:choose>
-              <button type="submit" class="btn btn-primary my-2 my-sm-0">
-                <i class="fas fa-search"></i>
-              </button>
-            </form>
-            -->
-
           </div>
 
         </nav>
