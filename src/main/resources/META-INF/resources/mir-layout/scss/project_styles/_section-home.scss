@@ -6,7 +6,12 @@
 // set the defaults for all responsive levels here
 // no (xl) media query necessary (desktop first)
 
-
+  #clausthal_cc0 {
+    float: left;
+    margin: 7px 20px 10px 0;
+    padding: 0;
+    vertical-align: bottom;
+  }
 
 
 // Large devices (desktops) and below: <= 1200px

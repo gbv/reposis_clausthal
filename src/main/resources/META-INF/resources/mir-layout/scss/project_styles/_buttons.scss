@@ -10,6 +10,15 @@
     color: $cGrayLight;
   }
 
+  a.badge,
+  a.btn {
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+
 // Large devices (desktops) and below: <= 1200px
 @include media-breakpoint-down(lg) {
   // add/overwrite styles for responsive level lg and lower

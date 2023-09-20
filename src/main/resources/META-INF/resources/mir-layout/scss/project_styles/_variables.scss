@@ -21,8 +21,9 @@ $cGreenVariant: #008048; // button
 
 $cBlue:         #005262; // button border
 
-$cGray:         #444; // text
-$blackLight:    #1e1e1e; // link hover
+$cGray:         #444;     // text
+$cGrayMedium:   #808080;  // logo gray
+$blackLight:    #1e1e1e;  // link hover
 
 $cGrayLight:    #cacaca; // scroll top
 $cGrayBackDark: #ddd;    // menu back
@@ -37,7 +38,7 @@ $cGrayBack:     #f7f7f7; // footer back
 // --------------------------------------------------
 
 $primary: $cGreen;
-$secondary: $cGray;
+$secondary: $cGrayMedium;
 
 $web-font-path: "https://webfonts.gbv.de/css2?Open+Sans&display=swap";
 $font-family-sans-serif: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
