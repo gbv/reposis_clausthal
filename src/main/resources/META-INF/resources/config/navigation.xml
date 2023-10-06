@@ -92,26 +92,6 @@
             <label xml:lang="en">Guidelines</label>
         </item>
     </menu>
-    <menu id="misc" dir="/content/misc">
-        <label xml:lang="de">Direktlinks</label>
-        <label xml:lang="en">External Links</label>
-        <item href="http://opac.ub.tu-clausthal.de/" type="extern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Gesamtkatalog</label>
-            <label xml:lang="en">Catalog</label>
-        </item>
-        <item href="http://rzblx1.uni-regensburg.de/ezeit/fl.phtml?bibid=UBCL&amp;colors=7&amp;lang=de" type="extern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">EZB</label>
-            <label xml:lang="en">EZB</label>
-        </item>
-        <item href="http://rzblx10.uni-regensburg.de/dbinfo/fachliste.php?bib_id=ubcl&amp;lett=l&amp;colors=&amp;ocolors=" type="extern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">DBIS</label>
-            <label xml:lang="en">DBIS</label>
-        </item>
-        <item href="http://www.ub.tu-clausthal.de/kontakt/online-hilfe-chat/" type="extern" replaceMenu="false" constrainPopUp="false">
-            <label xml:lang="de">Online-Hilfe</label>
-            <label xml:lang="en">Help</label>
-        </item>
-    </menu>
     <menu id="user">
         <label xml:lang="de">Nutzermenü</label>
         <label xml:lang="en">User menu</label>
