@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MyCoReWebPage>
+
+<section xml:lang="de" title="Kontakt">
+  <div>
+  <h3><span style="font-size:26px;">Kontakt</span></h3>
+
+    <h3>Leitung Forschungsunterstützung und digitale Dienste</h3>
+    <p>
+      Florian Strauß<br/>
+      E-Mail: <span class="madress">florian.strauss [at] tu-clausthal.de</span><br/>
+      Telefon: +49 (0)5323 72-2276
+    </p>
+  
+  
+    <h3>Für Fragen zur Publikation von elektronischen Dokumenten wenden Sie sich bitte an:</h3>
+    <p>
+      Nadine Kleinander<br/>
+      E-Mail: <span class="madress">dokumente [at] ub.tu-clausthal.de</span><br/>
+      Telefon: +49 (0)5323 72-3630
+    </p>
+    
+    <h3>Für Fragen zur Publikation und Archivierung von Forschungsdaten wenden Sie sich bitte an:</h3>
+    <p>
+      Florian Strauß<br/>
+      E-Mail: <span class="madress">fdm [at] tu-clausthal.de</span><br/>
+      Telefon: +49 (0)5323 72-2276
+    </p>
+    
+    <h3>Für Fragen zu Dissertationen wenden Sie sich bitte an die Dissertationsstelle:</h3>
+    <p>
+      Ann-Kathrin Koch<br/>
+      E-Mail: <span class="madress">dissertation [at] tu-clausthal.de</span><br/>
+      Telefon: +49 (0)5323 72-3102
+    </p>
+    
+    <h3>Für Fragen zu anderen Themen wenden Sie sich bitte an:</h3>
+    <p>
+      E-Mail: <span class="madress">service [at] tu-clausthal.de</span>
+    </p>
+    
+    <h3>Fragen zum Repositoryframework MyCoRe und dem Datenbankserver beantwortet Ihnen die</h3>
+    <p>
+      Platz der Göttinger Sieben 1<br />
+      37073 Göttingen<br />
+      Tel.: +49551 39 5207<br />
+      Fax: +49551 39 13980<br />
+      <strong>Digital Library, Reposis</strong><br />
+      Internet: <a href="https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service">https://www.gbv.de/Verbundzentrale/serviceangebote/reposis-repository-service</a><br />
+      E-Mail: <span class="madress">dms-list [at] lists.gbv.de</span>
+    </p>
+  </div>  
+</section>
+<meta>
+<log lastEditor="ustahl" date="2018-01-24" time="10:59" />
+</meta>
+</MyCoReWebPage>

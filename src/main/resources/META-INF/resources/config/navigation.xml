@@ -19,7 +19,7 @@
             <label xml:lang="de">Impressum</label>
             <label xml:lang="en">Impressum</label>
         </item>
-        <item href="https://www.ub.tu-clausthal.de/ueber-uns/kontakt-und-anfahrt" type="extern" replaceMenu="false" constrainPopUp="false">
+        <item href="/content/below/rights.xml" type="extern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Kontakt</label>
             <label xml:lang="en">Contact</label>
         </item>
