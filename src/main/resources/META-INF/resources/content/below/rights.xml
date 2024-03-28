@@ -1,113 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE MyCoReWebPage>
 <MyCoReWebPage>
-  <section xml:lang="de" title="Datenschutz (Privacy Policy)">
-        <div class="row">
-            <div class="col-md-12" lang="de">
-                
-
-      <h2>I. Allgemeines zur Datenverarbeitung</h2>
+  <section xml:lang="de" title="Datenschutz">
+    <div class="row">
+      <div class="col-md-12" lang="de">
+        
+        <h2>I. Allgemeines zur Datenverarbeitung</h2>
+        
+        <p>
+          Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies
+          zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist.
+          Dies geschieht zur Wahrnehmung der uns übertragenen Aufgabe der Unterstützung von Lehre und Forschung 
+          gemäß Art. 6 Abs. 1 lit. e DSGVO. Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung
+          einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage.
+          Eine Ausnahme gilt in solchen Fällen, in denen eine vorherige Einholung einer Einwilligung aus tatsächlichen 
+          Gründen nicht möglich ist und die Verarbeitung der Daten durch gesetzliche Vorschriften gestattet ist.
+        </p>
+        
+        <h2>II. Verbindungsdaten und Logfiles</h2>
+        
+        <p>
+          Bei jedem Aufruf der Webseiten dieses Publikationsservers überträgt Ihr Web-Browser automatisch Daten des aufrufenden Rechners. 
+          Dies ist eine Grundfunktion des World Wide Web und nicht durch uns beeinflussbar. 
+          Dabei werden folgende Daten übertragen und in Log-Dateien gespeichert:
+        </p>
+        <ul>
+          <li>Datum und Uhrzeit des Zugriffs</li>
+          <li>Adressen der aufgerufenen Webseiten</li>
+          <li>IP-Adresse des Nutzers, daraus ableitbar die Herkunft des Webseitenaufrufs (Land, Stadt oder Organisation, Internet Service Provider)</li>
+          <li>Informationen zum verwendeten Betriebssystem und Browsertyp</li>
+          <li>Adressen der Webseiten, von denen aus Sie auf unsere Webseiten gelangt sind</li>
+        </ul>
+        <p>
+          Die vorübergehende Verarbeitung dieser Verbindungsdaten ist zur Bereitstellung der Plattform technisch zwingend erforderlich.
+          Die Speicherung in Log-Dateien erfolgt zur Optimierung und Sicherstellung der Funktionsfähigkeit und Sicherheit der Plattform.
+          Die Daten in den Log-Dateien werden regelmäßig in anonymisierter Form zu statistischen Zwecken weiterverarbeitet.
+          Personenbezogene Zugriffsdaten werden nach 7 Tagen gelöscht.
+        </p>
+        
+        <h2>III. Session Cookies</h2>
+        
+        <p>
+          Der Publikationsserver verwendet sogenannte Session Cookies. 
+          Session-Cookies sind kleine Informationseinheiten, die ein Webserver 
+          im Arbeitsspeicher des Computers des Besuchers speichert. 
+          In einem Session-Cookie wird eine zufällig erzeugte
+          eindeutige Identifikationsnummer abgelegt, eine sogenannte Session-ID. 
+          Außerdem enthält ein Cookie die Angabe über seine Herkunft und die Speicherfrist. 
+          Diese Cookies können keine anderen Daten speichern. 
+          Die von uns eingesetzten Session-Cookies sind für die Funktion unserer Webseite 
+          notwendig, damit Ihr Browser auch nach einem Seitenwechsel wiedererkannt wird.
+          Sie werden automatisch gelöscht, wenn Sie Ihren Webbrowser schließen.
+          Session Cookies werden nicht zur Erstellung von Nutzerprofilen verwendet.
+        </p>
+        
+        <h2>IV. Anmelde-Daten</h2>
+        
+        <p>
+          Eine Anmeldung (Login) mit persönlichen Daten ist nur zur Bearbeitung der Daten
+          durch Hochschulangehörige erforderlich, nicht für die Suche nach oder den lesenden Zugriff
+          auf Publikationen.
+          Zur Veröffentlichung melden sich Hochschulangehörige mit ihrer Hochschul-Kennung an.
+          Unser Publikationsserver verarbeitet und speichert folgende Nutzerdaten:
+        </p>  
+        <ul>
+          <li>Name</li>
+          <li>Benutzerkennung (nur zur Authentifizierung, wird nicht gespeichert)</li>
+          <li>Hochschulkennung</li>
+          <li>Uhrzeit und Datum des letzten Logins</li>
+          <li>Benutzerrollen (z.B. Administrator*innen, die Rollen werden im Publikationsserver zugewiesen)</li>
+          <li>Verknüpfung zu den in diesem Publikationsserevr erfassten Publikationen, inkl. Datum und Uhrzeit der letzten Änderung</li>
+        </ul>  
+        <p>
+          Die Speicherung und Verarbeitung dieser Daten geschieht zur Wahrnehmung der uns 
+          übertragenen Aufgabe der Unterstützung von Lehre und Forschung gemäß Art. 6 Abs. 1 lit. e DSGVO 
+          und ist erforderlich.
+        </p>
+        <ul>
+          <li>zum Nachweis der Berechtigung zur Nutzung der Publikationsservers</li>
+          <li>zur Kommunikation mit Autor*innen</li>
+          <li>zum Nachweis der Urheberschaft an den Publikationen</li>
+        </ul>
+        
+        <h2>V. Publikationsdaten</h2>
+        
+        <p>
+          Zweck des Publikationsservers ist die weltweite Veröffentlichung und Bereitstellung elektronischer Publikationen.
+          Dazu speichern, verarbeiten und veröffentlichen
+          wir auch personenbezogene Daten der an Publikationen beteiligten Personen:  
+        </p>
+        <ul>
+          <li>Namen und Rollen (z. B. Autor, Herausgeber)</li>
+          <li>Eindeutige Autoren-Identifikatoren (z. B. ORCID iD, GND)</li>
+          <li>Informationen zur organisatorischen Zugehörigkeit (z. B. Hochschule, Fakultät, Institut)</li>
+        </ul>
+        <p>
+          Dies dient dem eindeutigen Nachweis und der Anerkennung der Urheberschaft.
+          Mit Übertragung der Publikationmetadaten übertragen wir auch diese personenbezogenen Daten an Dritte
+          und stellen sie über Schnittstellen bereit:
+        </p>
+        <ul>
+          <li>an wissenschaftliche und allgemeine Suchmaschinen wie Google</li>
+          <li>an Dritte weltweit, über Schnittstellen wie OAI (Open Archives Initiative) und das Google Sitemap Protokoll</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section xml:lang="en" title="Privacy Policy">
+    <div class="row">
+      <div class="col-md-12" lang="de">
       
-      <p>
-        Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies
-        zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist.
-        Dies geschieht zur Wahrnehmung der uns übertragenen Aufgabe der Unterstützung von Lehre und Forschung 
-        gemäß Art. 6 Abs. 1 lit. e DSGVO. Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung
-        einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage.
-        Eine Ausnahme gilt in solchen Fällen, in denen eine vorherige Einholung einer Einwilligung aus tatsächlichen 
-        Gründen nicht möglich ist und die Verarbeitung der Daten durch gesetzliche Vorschriften gestattet ist.
-      </p>
-      
-      <h2>II. Verbindungsdaten und Logfiles</h2>
-      
-      <p>
-        Bei jedem Aufruf der Webseiten dieses Publikationsservers überträgt Ihr Web-Browser automatisch Daten des aufrufenden Rechners. 
-        Dies ist eine Grundfunktion des World Wide Web und nicht durch uns beeinflussbar. 
-        Dabei werden folgende Daten übertragen und in Log-Dateien gespeichert:
-      </p>
-      <ul>
-        <li>Datum und Uhrzeit des Zugriffs</li>
-        <li>Adressen der aufgerufenen Webseiten</li>
-        <li>IP-Adresse des Nutzers, daraus ableitbar die Herkunft des Webseitenaufrufs (Land, Stadt oder Organisation, Internet Service Provider)</li>
-        <li>Informationen zum verwendeten Betriebssystem und Browsertyp</li>
-        <li>Adressen der Webseiten, von denen aus Sie auf unsere Webseiten gelangt sind</li>
-      </ul>
-      <p>
-        Die vorübergehende Verarbeitung dieser Verbindungsdaten ist zur Bereitstellung der Plattform technisch zwingend erforderlich.
-        Die Speicherung in Log-Dateien erfolgt zur Optimierung und Sicherstellung der Funktionsfähigkeit und Sicherheit der Plattform.
-        Die Daten in den Log-Dateien werden regelmäßig in anonymisierter Form zu statistischen Zwecken weiterverarbeitet.
-        Personenbezogene Zugriffsdaten werden nach 7 Tagen gelöscht.
-      </p>
-      
-      <h2>III. Session Cookies</h2>
-      
-      <p>
-        Der Publikationsserver verwendet sogenannte Session Cookies. 
-        Session-Cookies sind kleine Informationseinheiten, die ein Webserver 
-        im Arbeitsspeicher des Computers des Besuchers speichert. 
-        In einem Session-Cookie wird eine zufällig erzeugte
-        eindeutige Identifikationsnummer abgelegt, eine sogenannte Session-ID. 
-        Außerdem enthält ein Cookie die Angabe über seine Herkunft und die Speicherfrist. 
-        Diese Cookies können keine anderen Daten speichern. 
-        Die von uns eingesetzten Session-Cookies sind für die Funktion unserer Webseite 
-        notwendig, damit Ihr Browser auch nach einem Seitenwechsel wiedererkannt wird.
-        Sie werden automatisch gelöscht, wenn Sie Ihren Webbrowser schließen.
-        Session Cookies werden nicht zur Erstellung von Nutzerprofilen verwendet.
-      </p>
-      
-      <h2>IV. Anmelde-Daten</h2>
-      
-      <p>
-        Eine Anmeldung (Login) mit persönlichen Daten ist nur zur Bearbeitung der Daten
-        durch Hochschulangehörige erforderlich, nicht für die Suche nach oder den lesenden Zugriff
-        auf Publikationen.
-        Zur Veröffentlichung melden sich Hochschulangehörige mit ihrer Hochschul-Kennung an.
-        Unser Publikationsserver verarbeitet und speichert folgende Nutzerdaten:
-      </p>  
-      <ul>
-        <li>Name</li>
-        <li>Benutzerkennung (nur zur Authentifizierung, wird nicht gespeichert)</li>
-        <li>Hochschulkennung</li>
-        <li>Uhrzeit und Datum des letzten Logins</li>
-        <li>Benutzerrollen (z.B. Administrator*innen, die Rollen werden im Publikationsserver zugewiesen)</li>
-        <li>Verknüpfung zu den in diesem Publikationsserevr erfassten Publikationen, inkl. Datum und Uhrzeit der letzten Änderung</li>
-      </ul>  
-      <p>
-        Die Speicherung und Verarbeitung dieser Daten geschieht zur Wahrnehmung der uns 
-        übertragenen Aufgabe der Unterstützung von Lehre und Forschung gemäß Art. 6 Abs. 1 lit. e DSGVO 
-        und ist erforderlich.
-      </p>
-      <ul>
-        <li>zum Nachweis der Berechtigung zur Nutzung der Publikationsservers</li>
-        <li>zur Kommunikation mit Autor*innen</li>
-        <li>zum Nachweis der Urheberschaft an den Publikationen</li>
-      </ul>
-      
-      <h2>V. Publikationsdaten</h2>
-      
-      <p>
-        Zweck des Publikationsservers ist die weltweite Veröffentlichung und Bereitstellung elektronischer Publikationen.
-        Dazu speichern, verarbeiten und veröffentlichen
-        wir auch personenbezogene Daten der an Publikationen beteiligten Personen:  
-      </p>
-      <ul>
-        <li>Namen und Rollen (z. B. Autor, Herausgeber)</li>
-        <li>Eindeutige Autoren-Identifikatoren (z. B. ORCID iD, GND)</li>
-        <li>Informationen zur organisatorischen Zugehörigkeit (z. B. Hochschule, Fakultät, Institut)</li>
-      </ul>
-      <p>
-        Dies dient dem eindeutigen Nachweis und der Anerkennung der Urheberschaft.
-        Mit Übertragung der Publikationmetadaten übertragen wir auch diese personenbezogenen Daten an Dritte
-        und stellen sie über Schnittstellen bereit:
-      </p>
-      <ul>
-        <li>an wissenschaftliche und allgemeine Suchmaschinen wie Google</li>
-        <li>an Dritte weltweit, über Schnittstellen wie OAI (Open Archives Initiative) und das Google Sitemap Protokoll</li>
-      </ul>
-            </div>
-        </div>
-    </section>
+        <h1>Privacy policy</h1>
+        
+        <h2>I. General information on data processing</h2>
+        
+        <p>
+          We only process our users' personal data to the extent necessary to provide a functional website and our content and services.
+          This is done to perform the task assigned to us of supporting teaching and research in accordance with Art. 6 para. 1 lit. e DSGVO.
+          Insofar as we obtain consent for the processing of personal data, Art. 6 para. 1 lit. a DSGVO serves as the legal basis. 
+          An exception applies in cases where prior consent cannot be obtained for factual reasons and the processing of the data is 
+          permitted by law.
+        </p>
+        
+        <h2>II. Connection data and log files</h2>
+        
+        <p>
+          Each time you access the web pages of this repository, your web browser automatically transmits data from the accessing computer. 
+          This is a basic function of the World Wide Web and cannot be influenced by us. The following data is transmitted and stored in 
+          log files: 
+        </p>
+        <ul>
+          <li>Date and time of access</li>
+          <li>Addresses of the websites accessed</li>
+          <li>
+            IP address of the user, from which the origin of the website access can be derived 
+            (country, city or organization, Internet service provider)
+          </li>
+          <li>Information on the operating system and browser type used</li>
+          <li>Addresses of the websites from which you accessed our websites</li>
+        </ul>
+        <p>
+          The temporary processing of this connection data is technically necessary for the provision of the platform. The data is stored
+          in log files to optimize and ensure the functionality and security of the platform. The data in the log files is regularly 
+          processed in anonymized form for statistical purposes. Personal access data is deleted after 7 days.
+        </p>
+        
+        <h2>III. Session cookies</h2>
+        
+        <p>
+          The repository uses so-called session cookies. Session cookies are small units of information that a web server stores 
+          in the working memory of the visitor's computer. A randomly generated unique identification number, a so-called session 
+          ID, is stored in a session cookie. A cookie also contains information about its origin and the storage period. These cookies 
+          cannot store any other data. The session cookies we use are necessary for the function of our website so that your browser 
+          can be recognized even after a page change. They are automatically deleted when you close your web browser. Session cookies 
+          are not used to create user profiles.
+        </p>
+        
+        <h2>IV. Login data</h2>
+        
+        <p>
+          Registration (login) with personal data is only required for the processing of data by university members, not for searching
+          for or reading access to publications. To publish, university members log in with their university ID. Our repository processes 
+          and stores the following user data:
+        </p>  
+        <ul>
+          <li>Name</li>
+          <li>User ID (only for authentication, is not saved)</li>
+          <li>University ID</li>
+          <li>Time and date of last login</li>
+          <li>User roles (e.g. administrator, the roles are assigned in the repository)</li>
+          <li>Link to the publications recorded in this repository, incl. date and time of the last change</li>
+        </ul>  
+        
+        <h2>V. Publication data</h2>
+        
+        <p>
+          The purpose of the repository is the worldwide publication and provision of electronic publications. For this purpose, we also 
+          store, process and publish personal data of the persons involved in publications:   
+        </p>
+        <ul>
+          <li>Names and roles (e.g. author, editor)</li>
+          <li>Unique author identifiers (e.g. ORCID iD, GND)</li>
+          <li>Information on organizational affiliation (e.g. university, faculty, institute)</li>
+        </ul>
+        <p>
+          This serves as clear proof and recognition of authorship. When we transfer the publication metadata, we also transfer this 
+          personal data to third parties and make it available via interfaces:
+        </p>
+        <ul>
+          <li>to scientific and general search engines such as Google</li>
+          <li>to third parties worldwide, via interfaces such as OAI (Open Archives Initiative) and the Google Sitemap protocol</li>
+        </ul>
+      </div>
+    </div>
+  </section>
   <meta>
-    <log lastEditor="administrator" date="2023-09-21" time="08:30" />
+    <log lastEditor="administrator" date="2024-03-21" time="08:30" />
   </meta>
 </MyCoReWebPage>

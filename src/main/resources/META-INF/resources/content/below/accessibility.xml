@@ -77,6 +77,78 @@
       </div>
     </div>
   </section>
+  <section xml:lang="en" title="Declaration on accessibility">
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <h1>Declaration on accessibility</h1>
+        <p>
+          Information on the accessibility of these web pages in accordance with § 9b NBGG and on how to contact us in this regard.
+        </p>
+        <p>
+          Clausthal University of Technology makes every effort to make its websites and applications accessible in accordance with 
+          legal requirements. A working group has been set up to improve accessibility and regularly exchanges information.
+        </p>
+        <p>
+          These websites are largely compatible with the requirements of the harmonized European standard EN 301 549 V2.1.2 (08-2018).
+        </p>
+        <p>
+          This accessibility statement applies to the Clausthal University Library's repository, which can be accessed at the 
+          domain dokumente.ub.tu-clausthal.de.
+        </p>
+        
+        <h2> 
+          Non-accessible content
+        </h2>
+        <p> 
+          Some of the documents published on the repository are not accessible and cannot be automatically converted into an accessible format,
+          because
+          <ul>
+           <li> Clausthal University Library does not have the right to modify the files, </li>
+           <li> the source formats are not available,</li>
+           <li> the citability of the documents is no longer guaranteed.</li>
+          </ul>
+          Subsequent manual processing of the documents is disproportionately labor-intensive and is only carried out in exceptional cases.
+        </p>
+        <p>
+          The repository is aimed at scientists from the respective subject areas. Due to the complex content, it is not possible to use
+          simple language and common technical terms and abbreviations are used.
+        </p>
+        <h2>
+          Creation of this declaration on accessibility
+        </h2>
+        <p>
+          This declaration was created on 23.09.2020. The assessment is based on a self-assessment. 
+        </p>
+        <h2>
+          Feedback and contact details
+        </h2>
+        <p>
+          You can use the UB-Clausthal contact page to report deficiencies regarding compliance with accessibility requirements
+          and to request non-accessible content in a format that is accessible to you.
+        </p>
+        <h2>
+          Enforcement procedure
+        </h2>
+        <p>
+          If you have not received a satisfactory response to accessibility notifications or requests within six weeks, you can 
+          contact the arbitration board set up by the State Commissioner for People with Disabilities in Lower Saxony.
+        </p>
+        <p>
+          The arbitration board according to § 9 d NBGG has the task of settling disputes between people with disabilities
+          and public bodies of the state of Lower Saxony on the subject of accessibility in IT. The arbitration procedure 
+          is free of charge. No legal assistance is required.
+        </p>
+        <p>
+          State Commissioner for People with Disabilities<br />
+          Hannah-Arendt-Platz 2<br />
+          30159 Hannover <br />
+          <a href="http://www.behindertenbeauftragter-niedersachsen.de/">http://www.behindertenbeauftragter-niedersachsen.de/</a><br />
+          E-Mail: <span class="madress">schlichtungsstelle [at] ms.niedersachsen.de</span><br />
+          Phone: +49 (0)0511 120-4010
+        </p>
+      </div>
+    </div>
+  </section>
   <meta>
     <log lastEditor="administrator" date="2018-11-27" time="12:30" />
   </meta>

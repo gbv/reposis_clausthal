@@ -1,41 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<MyCoReWebPage><section xml:lang="de" title="Informationen für Autoren"><div class="row">
-<div class="col-md-10" lang="de">
-<h2>Elektronisch Publizieren</h2>
+<MyCoReWebPage>
+<section xml:lang="de" title="Leitlinien">
+  <div class="row">
+    <div class="col-md-10" lang="de">
+      <h2>Elektronisch Publizieren</h2>
 
-<p>Als Angehörige/r der Technischen Universität Clausthal haben Sie die Möglichkeit, Ihre Publikationen auf unserem Publikationsserver kostenfrei zu veröffentlichen.<br />
-Alle Publikationen werden unter Wahrung des Urheberrechts <a href="http://open-access.net/">Open Access</a> veröffentlicht. Wir empfehlen, die Dokumente mit einer <a href="https://creativecommons.org/choose/?lang=de">Creative-Commons-Lizenz</a> bereitzustellen, wenn die urheberrechtliche Seite dies erlaubt. Der Sammelauftrag der Universitätsbibliothek der Technischen Universität Clausthal umfasst die Speicherung, Katalogisierung und Archivierung aller durch Mitglieder der Universität Clausthal veröffentlichten elektronischen Dokumente. Details finden Sie unter <a href="https://www.ub.tu-clausthal.de/angebote-fuer-wissenschaftlerinnen/elektronisches-publizieren/leitlinie-publikationsserver/">Leitlinien für den Betrieb des Hochschulschriftenservers</a>.</p>
-
-<p>Um eine Arbeit einreichen zu können, können sich Angehörige der TU Clausthal mit dem RZ-Account über das <a class="httpAuthLogin" href="/servlets/MCRServlet3LoginServlet?url=https://dokumente.ub.tu-clausthal.de/servlets/MCRActionMappingServlet/publish/start&amp;realm=clausthal_ldap">Autoren-Login</a> anmelden.</p>
-
-<h2>Ansprechpartner</h2>
-
-<p>Für Fragen zur Publikation von elektronischen Dokumenten wenden Sie sich bitte an:<br />
-Frau Kleinander<br />
-Tel.: 05323 72 2276<br />
-E-Mail: <a href="mailto:Dokumente@ub.tu-clausthal.de">Dokumente@ub.tu-clausthal.de</a></p>
-
-<p>Für Fragen zu Dissertationen wenden Sie sich bitte an die Dissertationsstelle:<br />
-Ann-Kathrin Koch<br />
-Tel.: 05323 72 3102<br />
-E-Mail: <a href="mailto:Dissertation@ub.tu-clausthal.de">Dissertation@ub.tu-clausthal.de</a></p>
-
-<p>Für Fragen bei technischen Problemen, zur Autorenberatung oder zu Open-Access wenden Sie sich bitte an:<br />
-Silke Frank<br />
-Tel.: 05323 72 2348<br />
-E-Mail: <a href="mailto:silke.frank@tu-clausthal.de">silke.frank@tu-clausthal.de</a></p>
-
-<p>oder</p>
-
-<p>Florian Strauß<br />
-Tel.: 05323 72 2276<br />
-E-Mail: <a href="mailto:florian.strauss@tu-clausthal.de">florian.strauss@tu-clausthal.de</a></p>
-
-<h2>Urheberrecht</h2>
-
-<p>Für alle auf dem Publikationsserver der TU Clausthal eingestellten Dokumente, gilt das <a href="http://www.gesetze-im-internet.de/urhg/index.html">deutsche Urheberrecht</a>.
- Stellen Sie als Autor daher vor dem Einstellen Ihrer Publikationen sicher, dass Sie alle Rechte der Veröffentlichung, Nutzung, Verbreitung, Vervielfältigung und der 
- öffentlichen Wiedergabe besitzen. Alternativ müssen die Nutzungsrechte beim Urheber eingeholt werden.</p>
-</div>
-</div>
-</section><meta><log lastEditor="fstrauss" date="2021-07-26" time="15:56" /></meta></MyCoReWebPage>
+      <p>
+        Als Angehörige/r der Technischen Universität Clausthal haben Sie die Möglichkeit, Ihre Publikationen
+        auf unserem Publikationsserver kostenfrei zu veröffentlichen.<br />
+        Alle Publikationen werden unter Wahrung des Urheberrechts <a href="http://open-access.net/">Open Access</a> veröffentlicht.
+        Wir empfehlen, die Dokumente mit einer <a href="https://creativecommons.org/choose/?lang=de">Creative-Commons-Lizenz</a> 
+        bereitzustellen, wenn die urheberrechtliche Seite dies erlaubt. Der Sammelauftrag der Universitätsbibliothek der 
+        Technischen Universität Clausthal umfasst die Speicherung, Katalogisierung und Archivierung aller durch Mitglieder
+        der Universität Clausthal veröffentlichten elektronischen Dokumente. 
+        Details finden Sie unter 
+        <a href="https://www.ub.tu-clausthal.de/angebote-fuer-wissenschaftlerinnen/elektronisches-publizieren/leitlinie-publikationsserver/">
+          Leitlinien für den Betrieb des Hochschulschriftenservers
+        </a>
+        .
+      </p>
+      
+      <p>Um eine Arbeit einreichen zu können, können sich Angehörige der TU Clausthal mit dem RZ-Account über das <a class="httpAuthLogin" href="/servlets/MCRServlet3LoginServlet?url=https://dokumente.ub.tu-clausthal.de/servlets/MCRActionMappingServlet/publish/start&amp;realm=clausthal_ldap">Autoren-Login</a> anmelden.</p>
+      
+      <h2>Ansprechpartner</h2>
+      
+      <p>Für Fragen zur Publikation von elektronischen Dokumenten wenden Sie sich bitte an:<br />
+      Frau Kleinander<br />
+      Tel.: 05323 72 2276<br />
+      E-Mail: <a href="mailto:Dokumente@ub.tu-clausthal.de">Dokumente@ub.tu-clausthal.de</a></p>
+      
+      <p>Für Fragen zu Dissertationen wenden Sie sich bitte an die Dissertationsstelle:<br />
+      Ann-Kathrin Koch<br />
+      Tel.: 05323 72 3102<br />
+      E-Mail: <a href="mailto:Dissertation@ub.tu-clausthal.de">Dissertation@ub.tu-clausthal.de</a></p>
+      
+      <p>Für Fragen bei technischen Problemen, zur Autorenberatung oder zu Open-Access wenden Sie sich bitte an:<br />
+      <p>Florian Strauß<br />
+      Tel.: 05323 72 2276<br />
+      E-Mail: <a href="mailto:florian.strauss@tu-clausthal.de">florian.strauss@tu-clausthal.de</a></p>
+      
+      <h2>Urheberrecht</h2>
+      
+      <p>
+        Für alle auf dem Publikationsserver der TU Clausthal eingestellten Dokumente, gilt das 
+        <a href="http://www.gesetze-im-internet.de/urhg/index.html">deutsche Urheberrecht</a>.
+        Stellen Sie als Autor daher vor dem Einstellen Ihrer Publikationen sicher, dass Sie alle Rechte der Veröffentlichung, 
+        Nutzung, Verbreitung, Vervielfältigung und der 
+        öffentlichen Wiedergabe besitzen. Alternativ müssen die Nutzungsrechte beim Urheber eingeholt werden.
+      </p>
+       
+    </div>
+  </div>
+</section>
+<section xml:lang="en" title="Guidelines">
+  <div class="row">
+    <div class="col-md-10" lang="de">
+      <h2>Electronic publishing</h2>
+      
+      <p>As a member of Clausthal University of Technology, you have the opportunity to publish your publications on our repository free of charge.
+      All publications are published Open Access in compliance with copyright law. We recommend making the documents available under a Creative Commons
+      license, if this is permitted by copyright law. The collection mandate of the University Library of Clausthal University of Technology
+      includes the storage, cataloging and archiving of all electronic documents published by members of Clausthal University. 
+      Details can be found under 
+      <a href="https://www.ub.tu-clausthal.de/en/publishing-open-access/repository/guideline-repository">Guidelines for the Management of the Repository</a>.
+      In order to submit a paper, members of Clausthal University of Technology can register with their RZ account via the author login.
+      </p>
+      
+      <h2>Contact person</h2>
+      
+      <p>
+        For questions regarding the publication of electronic documents, please contact:<br />
+        Frau Kleinander<br />
+        E-Mail: <span class="madress">dokumente [at] tu-clausthal.de</span> 
+        Phone: +49 (0)5323 72-3102
+      </p>
+      
+      <p>
+        For questions about dissertations, please contact the Dissertation Office:<br />
+        Ann-Kathrin Koch<br />
+        E-Mail: <span class="madress">dissertation [at] ub.tu-clausthal.de</span>
+        Phone: +49 (0)5323 72-3102
+      </p>
+      
+      <p>If you have any questions about technical problems, author advice or Open Access, please contact<br />
+      
+      <p>Florian Strauß<br />
+      Tel.: 05323 72 2276<br />
+      E-Mail: <span class="madress">florian.strauss [at] tu-clausthal.de</span></p>
+      
+      <h2>Copyright</h2>
+      
+      <p>
+        German copyright law applies to all documents posted on the TU Clausthal repository. 
+        As an author, you should therefore ensure that you have all rights of publication, use, 
+        distribution, duplication and public reproduction before posting your publications. 
+        Alternatively, the rights of use must be obtained from the author.
+      </p>
+    </div>
+  </div>
+</section>
+<meta>
+  <log lastEditor="administrator" date="2024-03-28" time="15:56" />
+</meta>
+</MyCoReWebPage>
