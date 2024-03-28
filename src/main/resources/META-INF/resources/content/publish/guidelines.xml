@@ -20,24 +20,34 @@
         .
       </p>
       
-      <p>Um eine Arbeit einreichen zu können, können sich Angehörige der TU Clausthal mit dem RZ-Account über das <a class="httpAuthLogin" href="/servlets/MCRServlet3LoginServlet?url=https://dokumente.ub.tu-clausthal.de/servlets/MCRActionMappingServlet/publish/start&amp;realm=clausthal_ldap">Autoren-Login</a> anmelden.</p>
+      <p>
+        Um eine Arbeit einreichen zu können, können sich Angehörige der TU Clausthal mit dem RZ-Account über das 
+        <a class="httpAuthLogin" href="/servlets/MCRServlet3LoginServlet?url=https://dokumente.ub.tu-clausthal.de/servlets/MCRActionMappingServlet/publish/start&amp;realm=clausthal_ldap">Autoren-Login</a> 
+        anmelden.
+      </p>
       
       <h2>Ansprechpartner</h2>
       
-      <p>Für Fragen zur Publikation von elektronischen Dokumenten wenden Sie sich bitte an:<br />
-      Frau Kleinander<br />
-      Tel.: 05323 72 2276<br />
-      E-Mail: <a href="mailto:Dokumente@ub.tu-clausthal.de">Dokumente@ub.tu-clausthal.de</a></p>
+      <p>
+        Für Fragen zur Publikation von elektronischen Dokumenten wenden Sie sich bitte an:<br />
+        Frau Kleinander<br />
+        Tel.: 05323 72 2276<br />
+        E-Mail: <span class="madress">dokumente [at] ub.tu-clausthal.de</span>
+      </p>
       
-      <p>Für Fragen zu Dissertationen wenden Sie sich bitte an die Dissertationsstelle:<br />
-      Ann-Kathrin Koch<br />
-      Tel.: 05323 72 3102<br />
-      E-Mail: <a href="mailto:Dissertation@ub.tu-clausthal.de">Dissertation@ub.tu-clausthal.de</a></p>
+      <p>
+        Für Fragen zu Dissertationen wenden Sie sich bitte an die Dissertationsstelle:<br />
+        Ann-Kathrin Koch<br />
+        Tel.: 05323 72 3102<br />
+        E-Mail: <span class="madress">dissertation [at] ub.tu-clausthal.de</span>
+      </p>
       
-      <p>Für Fragen bei technischen Problemen, zur Autorenberatung oder zu Open-Access wenden Sie sich bitte an:<br />
-      <p>Florian Strauß<br />
-      Tel.: 05323 72 2276<br />
-      E-Mail: <a href="mailto:florian.strauss@tu-clausthal.de">florian.strauss@tu-clausthal.de</a></p>
+      <p>
+        Für Fragen bei technischen Problemen, zur Autorenberatung oder zu Open-Access wenden Sie sich bitte an:<br />
+        Florian Strauß<br />
+        Tel.: 05323 72 2276<br />
+        E-Mail: <span class="madress"> florian.strauss [at] tu-clausthal.de</span>
+      </p>
       
       <h2>Urheberrecht</h2>
       
@@ -82,11 +92,12 @@
         Phone: +49 (0)5323 72-3102
       </p>
       
-      <p>If you have any questions about technical problems, author advice or Open Access, please contact<br />
-      
-      <p>Florian Strauß<br />
-      Tel.: 05323 72 2276<br />
-      E-Mail: <span class="madress">florian.strauss [at] tu-clausthal.de</span></p>
+      <p>
+        If you have any questions about technical problems, author advice or Open Access, please contact<br />
+        Florian Strauß<br />
+        Phone: 05323 72 2276<br />
+        E-Mail: <span class="madress">florian.strauss [at] tu-clausthal.de</span>
+      </p>
       
       <h2>Copyright</h2>
       
