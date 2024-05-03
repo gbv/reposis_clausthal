@@ -1,173 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
-    <label xml:lang="de" text="Einrichtungen der TU Clausthal" description="Liste der TU-Clausthal-Einrichtungen" />
-    <label xml:lang="en" text="Instituts of TU Clausthal" description="A list of all institutions" />
-    <label xml:lang="x-uri" text="https://dokumente.ub.tu-clausthal.de/classifications/institutes" />
-    <categories>
-        <category ID="fnm">
-            <label xml:lang="de" text="Fakultät für Natur- und Materialwissenschaften" />
-            <url xlink:href="http://www.fakultaeten.tu-clausthal.de/fakultaet-fuer-natur-und-materialwissenschaften/" xlink:type="locator" />
-            <category ID="fnm_aac">
-                <label xml:lang="de" text="Institut für Anorganische und Analytische Chemie" />
-            </category>
-            <category ID="fnm_ept">
-                <label xml:lang="de" text="Institut für Energieforschung und Physikalische Technologien" />
-            </category>
-            <category ID="fnm_m">
-                <label xml:lang="de" text="Institut für Metallurgie" />
-            </category>
-            <category ID="fnm_nw">
-                <label xml:lang="de" text="Institut für Nichtmetallische Werkstoffe" />
-            </category>
-            <category ID="fnm_oc">
-                <label xml:lang="de" text="Institut für Organische Chemie" />
-            </category>
-            <category ID="fnm_pc">
-                <label xml:lang="de" text="Institut für Physikalische Chemie" />
-            </category>
-            <category ID="fnm_pk">
-                <label xml:lang="de" text="Institut für Polymerwerkstoffe und Kunststofftechnik" />
-            </category>
-            <category ID="fnm_tc">
-                <label xml:lang="de" text="Institut für Technische Chemie" />
-            </category>
-            <category ID="fnm_tp">
-                <label xml:lang="de" text="Institut für Theoretische Physik" />
-            </category>
-            <category ID="fnm_ww">
-                <label xml:lang="de" text="Institut für Werkstoffkunde und Werkstofftechnik" />
-            </category>
-        </category>
-        <category ID="few">
-            <label xml:lang="de" text="Fakultät für Energie- und Wirtschaftswissenschaften" />
-            <url xlink:href="http://www.fakultaeten.tu-clausthal.de/energie-wirtschaft/" xlink:type="locator" />
-            <category ID="few_adg">
-                <label xml:lang="de" text="Institut für Aufbereitung, Deponietechnik und Geomechanik" />
-            </category>
-            <category ID="few_b">
-                <label xml:lang="de" text="Institut für Bergbau" />
-            </category>
-            <category ID="few_dibe">
-                <label xml:lang="de" text="Institut für deutsches und internationales Berg- und Energierecht" />
-            </category>
-            <category ID="few_ele">
-                <label xml:lang="de" text="Institut für Elektrische Energietechnik" />
-            </category>
-            <category ID="few_e">
-                <label xml:lang="de" text="Institut für Endlagerforschung" />
-            </category>
-            <category ID="few_eb">
-                <label xml:lang="de" text="Institut für Energieverfahrenstechnik und Brennstofftechnik" />
-            </category>
-            <category ID="few_eeg">
-                <label xml:lang="de" text="Institut für Erdöl- und Erdgastechnik" />
-            </category>
-            <category ID="few_gp">
-                <label xml:lang="de" text="Institut für Geologie und Paläontologie" />
-            </category>
-            <category ID="few_g">
-                <label xml:lang="de" text="Institut für Geophysik" />
-            </category>
-            <category ID="few_gm">
-                <label xml:lang="de" text="Institut für Geotechnik und Markscheidewesen" />
-            </category>
-            <category ID="few_u">
-                <label xml:lang="de" text="Institut für Umweltwissenschaften" />
-            </category>
-            <category ID="few_w">
-                <label xml:lang="de" text="Institut für Wirtschaftswissenschaft" />
-            </category>
-        </category>
-        <category ID="fmim">
-            <label xml:lang="de" text="Fakultät für Mathematik/Informatik und Maschinenbau" />
-            <url xlink:href="http://www.fakultaeten.tu-clausthal.de/math-inf-maschinenbau/" xlink:type="locator" />
-            <category ID="fmim_asor">
-                <label xml:lang="de" text="Institut für Angewandte Stochastik und Operations Research" />
-            </category>
-            <category ID="fmim_cv">
-                <label xml:lang="de" text="Institut für Chemische und Elektrochemische Verfahrenstechnik" />
-            </category>
-            <category ID="fmim_ei">
-                <label xml:lang="de" text="Institut für Elektrische Informationstechnik" />
-            </category>
-            <category ID="7d223644-0972-4c43-b31e-2e984e38a5c5">
-                <label xml:lang="de" text="Institut für Elektrochemie" />
-            </category>
-            <category ID="fmim_i">
-                <label xml:lang="de" text="Institut für Informatik" />
-            </category>
-            <category ID="fmim_mab">
-                <label xml:lang="de" text="Institut für Maschinelle Anlagentechnik und Betriebsfestigkeit" />
-            </category>
-            <category ID="fmim_mw">
-                <label xml:lang="de" text="Institut für Maschinenwesen" />
-            </category>
-            <category ID="fmim_ma">
-                <label xml:lang="de" text="Institut für Mathematik" />
-            </category>
-            <category ID="fmim_mv">
-                <label xml:lang="de" text="Institut für Mechanische Verfahrenstechnik" />
-            </category>
-            <category ID="fmim_pp">
-                <label xml:lang="de" text="Institut für Prozess- und Produktionsleittechnik" />
-            </category>
-            <category ID="fmim_stf">
-                <label xml:lang="de" text="Institut für Schweißtechnik und Trennende Fertigungsverfahren" />
-            </category>
-            <category ID="fmim_tm">
-                <label xml:lang="de" text="Institut für Technische Mechanik" />
-            </category>
-            <category ID="fmim_tvp">
-                <label xml:lang="de" text="Institut für Thermische Verfahrenstechnik und Prozesstechnik" />
-            </category>
-            <category ID="fmim_te">
-                <label xml:lang="de" text="Institut für Tribologie und Energiewandlungsmaschinen" />
-            </category>
-        </category>
-        <category ID="inter">
-            <label xml:lang="de" text="Interdisziplinäre wissenschaftliche Einrichtungen und Arbeitsgruppen" />
-            <category ID="b9913f21-e809-44d4-9cf3-a0145ce5a7e8">
-                <label xml:lang="de" text="CUTEC" />
-            </category>
-            <category ID="inter_czm">
-                <label xml:lang="de" text="Clausthaler Zentrum für Materialtechnik" />
-            </category>
-            <category ID="inter_df1372">
-                <label xml:lang="de" text="DFG Forschergruppe 1372" />
-            </category>
-            <category ID="inter_efn">
-                <label xml:lang="de" text="Energie-Forschungszentrum Niedersachsen" />
-            </category>
-            <category ID="inter_egmcfrp">
-                <label xml:lang="de" text="Europäisches Graduiertenkolleg »Microstructural Control in Free-Radical Polymerization«" />
-            </category>
-            <category ID="inter_fc">
-                <label xml:lang="de" text="Forum Clausthal" />
-            </category>
-            <category ID="inter_hk">
-                <label xml:lang="de" text="Hochtemperatur-Kolleg" />
-            </category>
-            <category ID="inter_iz">
-                <label xml:lang="de" text="Informationstechnisches Zentrum" />
-            </category>
-            <category ID="inter_lac">
-                <label xml:lang="de" text="LaserAnwendungsCentrum" />
-            </category>
-            <category ID="inter_p">
-                <label xml:lang="de" text="Polymerzentrum" />
-            </category>
-            <category ID="inter_sz">
-                <label xml:lang="de" text="Simulationswissenschaftliches Zentrum" />
-            </category>
-            <category ID="inter_s">
-                <label xml:lang="de" text="Sportinstitut" />
-            </category>
-            <category ID="inter_sf675">
-                <label xml:lang="de" text="Sonderforschungsbereich 675" />
-            </category>
-        </category>
-        <category ID="other">
-            <label xml:lang="de" text="Sonstige Angehörige der TU Clausthal" />
-        </category>
-    </categories>
+  <label xml:lang="de" text="Einrichtungen der TU Clausthal" description="Liste der TU-Clausthal-Einrichtungen" />
+  <label xml:lang="en" text="Institutes of TU Clausthal" description="A list of all institutions" />
+  <label xml:lang="x-uri" text="https://dokumente.ub.tu-clausthal.de/classifications/institutes" />
+  <categories>
+    <category ID="515bb9fe-3f93-4a8b-b644-07ddbecc53d6">
+      <label xml:lang="de" text="TU Clausthal" />
+      <label xml:lang="en" text="TU Clausthal" />
+    </category>
+    <category ID="fnm">
+      <label xml:lang="de" text="Fakultät für Natur- und Materialwissenschaften" />
+      <label xml:lang="en" text="Faculty of Natural and Materials Science" />
+      <url xlink:href="http://www.fakultaeten.tu-clausthal.de/fakultaet-fuer-natur-und-materialwissenschaften/" xlink:type="locator" />
+      <category ID="fnm_aac">
+        <label xml:lang="de" text="Institut für Anorganische und Analytische Chemie" />
+        <label xml:lang="en" text="Institute of Inorganic and Analytical Chemistry" />
+      </category>
+      <category ID="7d223644-0972-4c43-b31e-2e984e38a5c5">
+        <label xml:lang="de" text="Institut für Elektrochemie" />
+        <label xml:lang="en" text="Institute of Electrochemistry" />
+      </category>
+      <category ID="fnm_ept">
+        <label xml:lang="de" text="Institut für Energieforschung und Physikalische Technologien" />
+        <label xml:lang="en" text="Institute of Energy Research and Physical Technologies" />
+      </category>
+      <category ID="fnm_m">
+        <label xml:lang="de" text="Institut für Metallurgie" />
+        <label xml:lang="en" text="Institute of Metallurgy" />
+      </category>
+      <category ID="fnm_nw">
+        <label xml:lang="de" text="Institut für Nichtmetallische Werkstoffe" />
+        <label xml:lang="en" text="Institute of Non-Metallic Materials" />
+      </category>
+      <category ID="fnm_oc">
+        <label xml:lang="de" text="Institut für Organische Chemie" />
+        <label xml:lang="en" text="Institute of Organic Chemistry" />
+      </category>
+      <category ID="fnm_pc">
+        <label xml:lang="de" text="Institut für Physikalische Chemie" />
+        <label xml:lang="en" text="Institute of Physical Chemistry" />
+      </category>
+      <category ID="fnm_pk">
+        <label xml:lang="de" text="Institut für Polymerwerkstoffe und Kunststofftechnik" />
+        <label xml:lang="en" text="Institute of Polymer Materials and Plastics Engineering" />
+      </category>
+      <category ID="fnm_tc">
+        <label xml:lang="de" text="Institut für Technische Chemie" />
+        <label xml:lang="en" text="Institute of Technical Chemistry" />
+      </category>
+      <category ID="fnm_tp">
+        <label xml:lang="de" text="Institut für Theoretische Physik" />
+        <label xml:lang="en" text="Institute of Theoretical Physics" />
+      </category>
+      <category ID="fnm_ww">
+        <label xml:lang="de" text="Institut für Werkstoffkunde und Werkstofftechnik" />
+        <label xml:lang="en" text="Institute of Materials Science and Engineering" />
+      </category>
+    </category>
+    <category ID="few">
+      <label xml:lang="de" text="Fakultät für Energie- und Wirtschaftswissenschaften" />
+      <label xml:lang="en" text="Faculty of Energy and Economic Sciences" />
+      <url xlink:href="http://www.fakultaeten.tu-clausthal.de/energie-wirtschaft/" xlink:type="locator" />
+      <category ID="0ab5aacd-7929-4de1-9c82-34d299edf999">
+        <label xml:lang="de" text="Institute of Geo-Engineering" />
+        <label xml:lang="en" text="Institute of Geo-Engineering" />
+      </category>
+      <category ID="few_adg">
+        <label xml:lang="de" text="Institut für Aufbereitung, Recycling und Kreislaufwirtschaftssysteme" />
+        <label xml:lang="en" text="Institute of Mineral and Waste Processing, Recycling and Circular Economy Systems" />
+      </category>
+      <category ID="few_b">
+        <label xml:lang="de" text="Institut für Bergbau" />
+        <label xml:lang="en" text="Institute of Mining" />
+      </category>
+      <category ID="few_dibe">
+        <label xml:lang="de" text="Institut für deutsches und internationales Berg- und Energierecht" />
+        <label xml:lang="en" text="Institute of German and International Mining and Energy Law" />
+      </category>
+      <category ID="few_ele">
+        <label xml:lang="de" text="Institut für Elektrische Energietechnik und Energiesysteme" />
+        <label xml:lang="en" text="Institute of Electrical Power Engineering and Energy Systems" />
+      </category>
+      <category ID="few_e">
+        <label xml:lang="de" text="Institut für Endlagerforschung" />
+        <label xml:lang="en" text="Institute of Disposal Research" />
+      </category>
+      <category ID="few_eb">
+        <label xml:lang="de" text="Institut für Energieverfahrenstechnik und Brennstofftechnik" />
+        <label xml:lang="en" text="Institute of Energy Process Engineering and Fuel Technology" />
+      </category>
+      <category ID="few_eeg">
+        <label xml:lang="de" text="Institute of Subsurface Energy Systems" />
+        <label xml:lang="en" text="Institute of Subsurface Energy Systems" />
+      </category>
+      <category ID="few_gp">
+        <label xml:lang="de" text="Institut für Geologie und Paläontologie" />
+        <label xml:lang="en" text="Institute of Geology and Paleontology" />
+      </category>
+      <category ID="few_g">
+        <label xml:lang="de" text="Institut für Geophysik" />
+        <label xml:lang="en" text="Institute for Geophysics" />
+      </category>
+      <category ID="few_gm">
+        <label xml:lang="de" text="Institut für Geotechnik und Markscheidewesen" />
+        <label xml:lang="en" text="Institute of Geo-Engineering" />
+      </category>
+      <category ID="few_u">
+        <label xml:lang="de" text="Institut für Umweltwissenschaften" description="Aufgelöst zum 31.12.2017" />
+        <label xml:lang="en" text="Institute for Environmental Sciences" description="Closed since 2017/12/31" />
+      </category>
+      <category ID="few_w">
+        <label xml:lang="de" text="Institut für Wirtschaftswissenschaft" />
+        <label xml:lang="en" text="Institute of Management and Economics" />
+      </category>
+    </category>
+    <category ID="fmim">
+      <label xml:lang="de" text="Fakultät für Mathematik/Informatik und Maschinenbau" />
+      <label xml:lang="en" text="Faculty of Mathematics/Computer Science and Mechanical Engineering" />
+      <url xlink:href="http://www.fakultaeten.tu-clausthal.de/math-inf-maschinenbau/" xlink:type="locator" />
+      <category ID="c9264b2b-3f28-4547-85a8-a1c312ff93ba">
+        <label xml:lang="de" text="Institut für Software and Systems Engineering" />
+        <label xml:lang="en" text="Institute of Software and Systems Engineering" />
+      </category>
+      <category ID="fmim_asor">
+        <label xml:lang="de" text="Institut für Angewandte Stochastik und Operations Research" description="Seit dem 01.04.2019 Bestandteil des Instituts für Mathematik" />
+        <label xml:lang="en" text="Institute for Applied Stochastics and Operations Research" description="Since 2019/04/01 part of the Institute for Mathematics" />
+      </category>
+      <category ID="fmim_cv">
+        <label xml:lang="de" text="Institut für Chemische und Elektrochemische Verfahrenstechnik" />
+        <label xml:lang="en" text="Institute of Chemical and Electrochemical Process Engineering" />
+      </category>
+      <category ID="fmim_ei">
+        <label xml:lang="de" text="Institut für Elektrische Informationstechnik" />
+        <label xml:lang="en" text="Institute of Electrical Information Technology" />
+      </category>
+      <category ID="fmim_i">
+        <label xml:lang="de" text="Institut für Informatik" />
+        <label xml:lang="en" text="Institute of Computer Science" />
+      </category>
+      <category ID="fmim_mab">
+        <label xml:lang="de" text="Institut für Maschinelle Anlagentechnik und Betriebsfestigkeit" />
+        <label xml:lang="en" text="Institute of Plant Engineering and Fatigue Analysis" />
+      </category>
+      <category ID="fmim_mw">
+        <label xml:lang="de" text="Institut für Maschinenwesen" />
+        <label xml:lang="en" text="Institute of Mechanical Engineering" />
+      </category>
+      <category ID="fmim_ma">
+        <label xml:lang="de" text="Institut für Mathematik" />
+        <label xml:lang="en" text="Institute of Mathematics" />
+      </category>
+      <category ID="fmim_mv">
+        <label xml:lang="de" text="Institut für Mechanische Verfahrenstechnik" />
+        <label xml:lang="en" text="Institute of Particle Technology" />
+      </category>
+      <category ID="fmim_pp">
+        <label xml:lang="de" text="Institut für Prozess- und Produktionsleittechnik" description="Geschlossen zum 30.09.2017" />
+        <label xml:lang="en" text="Institute for Process and Production Control Engineering" description="Closed as of 09/30/2017" />
+      </category>
+      <category ID="fmim_stf">
+        <label xml:lang="de" text="Institut für Schweißtechnik und Trennende Fertigungsverfahren" />
+        <label xml:lang="en" text="Institute of Welding and Machining" />
+        <url xlink:href="http://www.isaf.tu-clausthal.de/" xlink:type="locator" />
+      </category>
+      <category ID="fmim_tm">
+        <label xml:lang="de" text="Institut für Technische Mechanik" />
+        <label xml:lang="en" text="Institute of Applied Mechanics" />
+      </category>
+      <category ID="fmim_tvp">
+        <label xml:lang="de" text="Institut für Thermische Verfahrenstechnik und Prozesstechnik" />
+        <label xml:lang="en" text="Institute of Separation and Process Technology" />
+      </category>
+      <category ID="fmim_te">
+        <label xml:lang="de" text="Institut für Tribologie und Energiewandlungsmaschinen" />
+        <label xml:lang="en" text="Institute of Tribology and Energy Conversion Machinery" />
+      </category>
+    </category>
+    <category ID="inter">
+      <label xml:lang="de" text="Interdisziplinäre wissenschaftliche Einrichtungen und Arbeitsgruppen" />
+      <category ID="2bc42d7d-1fb5-4764-b357-a3706d3ad8cc">
+        <label xml:lang="de" text="Universitätsbibliothek" />
+        <label xml:lang="en" text="University Library" />
+        <url xlink:href="ub.tu-clausthal.de" xlink:type="locator" />
+      </category>
+      <category ID="477a5112-6ded-427c-953d-48ff8c4bc14e">
+        <label xml:lang="de" text="Drilling Simulator Celle" />
+        <label xml:lang="en" text="Drilling Simulator Celle" />
+      </category>
+      <category ID="d9737636-ff70-4aff-970b-90dbe0eea1f6">
+        <label xml:lang="de" text="Forschungszentrum Energiespeichertechnologien (EST)" />
+        <label xml:lang="en" text="Research Center Energy Storage Technologies (EST)" />
+      </category>
+      <category ID="aad90596-8e20-40b1-bef4-dab4fe7fa0f6">
+        <label xml:lang="de" text="ENTRIA" />
+        <label xml:lang="en" text="ENTRIA" />
+      </category>
+      <category ID="b9913f21-e809-44d4-9cf3-a0145ce5a7e8">
+        <label xml:lang="de" text="CUTEC" />
+        <label xml:lang="en" text="Clausthal Research Center for Environmental Technologies (CUTEC)" />
+      </category>
+      <category ID="inter_czm">
+        <label xml:lang="de" text="Clausthaler Zentrum für Materialtechnik" />
+        <label xml:lang="en" text="Clausthal Centre of Material Technology" />
+      </category>
+      <category ID="inter_df1372">
+        <label xml:lang="de" text="DFG Forschergruppe 1372" />
+        <label xml:lang="en" text="DFG Research Unit 1372" />
+      </category>
+      <category ID="inter_efn">
+        <label xml:lang="de" text="Energie-Forschungszentrum Niedersachsen" />
+        <label xml:lang="en" text="Energy Research Centre of Lower Saxony" />
+      </category>
+      <category ID="inter_egmcfrp">
+        <label xml:lang="de" text="Europäisches Graduiertenkolleg »Microstructural Control in Free-Radical Polymerization«" />
+        <label xml:lang="en" text="European Graduate School »Microstructural Control in Free-Radical Polymerization«" />
+      </category>
+      <category ID="inter_fc">
+        <label xml:lang="de" text="Forum Clausthal" />
+      </category>
+      <category ID="inter_hk">
+        <label xml:lang="de" text="Hochtemperatur-Kolleg" />
+      </category>
+      <category ID="inter_iz">
+        <label xml:lang="de" text="Informationstechnisches Zentrum" />
+      </category>
+      <category ID="inter_lac">
+        <label xml:lang="de" text="LaserAnwendungsCentrum" />
+      </category>
+      <category ID="inter_p">
+        <label xml:lang="de" text="Polymerzentrum" />
+      </category>
+      <category ID="inter_sz">
+        <label xml:lang="de" text="Simulationswissenschaftliches Zentrum" />
+        <label xml:lang="en" text="Simulation Science Center Clausthal-Göttingen" />
+      </category>
+      <category ID="inter_s">
+        <label xml:lang="de" text="Sportinstitut" />
+      </category>
+      <category ID="inter_sf675">
+        <label xml:lang="de" text="Sonderforschungsbereich 675" />
+        <label xml:lang="en" text="Collaborative Research Centre 675" />
+      </category>
+    </category>
+    <category ID="other">
+      <label xml:lang="de" text="Sonstige Angehörige der TU Clausthal" />
+    </category>
+  </categories>
 </mycoreclass>
