@@ -41,6 +41,54 @@
       </div>
     </div>
   </section>
+  
+  <section xml:lang="de" title="Willkommen auf den Seiten des Publikationsserver der TU Clausthal">
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <h2>The repository of TU Clausthal</h2>
+
+        <p>... enables TU members to publish their scientific work electronically as part of the Open Access Initiative.</p>
+
+        <p>In house publications can be stored on the server, e.g. journal articles, conference papers, reports, teaching materials,
+          research data, etc., either as first or second publications. The repository also provides a suitable framework for examination
+          papers, e.g. dissertations and post-doctoral theses, as well as Bachelor's, Master's and other final theses.
+        </p>
+
+        <p>Digital documents produced at TU Clausthal are thus generally searchable. Anyone worldwide can search or browse them.</p>
+
+        <p>The repository of TU Clausthal is a service of the university library. We offer:</p>
+
+        <ul>
+          <li>Permanent archiving</li>
+          <li>Indexing in the GBV union catalog and in the university bibliography</li>
+          <li>Searchable and findable in national catalogs and search engines</li>
+          <li>Submission to the German National Library for first publications</li>
+        </ul>
+
+        <p>
+          Open Access offers free access to scientific information. The exploitation rights remain with the authors. They only grant
+          the library a simple right of use, so that commercial publication is not hindered.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10" lang="de">
+        <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
+          <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+            <img src="../images/cc0.png" alt="CC0" id="clausthal_cc0"/>
+          </a>
+          To the extent possible under law, <a rel="dct:publisher" href="https://www.ub.tu-clausthal.de/">
+          <span property="dct:title">Universitätsbibliothek der Technischen Universität Clausthal</span></a>
+          has waived all copyright and related or neighboring rights to
+          <span property="dct:title">Publikationsserver der Technischen Universität Clausthal</span>.
+          This work is published from:
+          <span property="vcard:Country" datatype="dct:ISO3166" content="DE" about="https://www.ub.tu-clausthal.de/">
+          Deutschland</span>.
+        </p>
+      </div>
+    </div>
+  </section>
   <meta>
     <log lastEditor="SFrank" date="2016-09-28" time="12:25" />
   </meta>
