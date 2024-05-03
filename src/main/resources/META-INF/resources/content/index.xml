@@ -42,9 +42,9 @@
     </div>
   </section>
   
-  <section xml:lang="de" title="Willkommen auf den Seiten des Publikationsserver der TU Clausthal">
+  <section xml:lang="en" title="Willkommen auf den Seiten des Publikationsserver der TU Clausthal">
     <div class="row">
-      <div class="col-md-10" lang="de">
+      <div class="col-md-10" lang="en">
         <h2>The repository of TU Clausthal</h2>
 
         <p>... enables TU members to publish their scientific work electronically as part of the Open Access Initiative.</p>
@@ -73,7 +73,7 @@
     </div>
 
     <div class="row">
-      <div class="col-md-10" lang="de">
+      <div class="col-md-10" lang="es">
         <p xmlns:dct="http://purl.org/dc/terms/" xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#">
           <a rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
             <img src="../images/cc0.png" alt="CC0" id="clausthal_cc0"/>
