@@ -7,7 +7,7 @@
   <xsl:param name="MIR.ePuSta" select="'hide'" />
   <xsl:param name="MIR.ePuSta.Prefix" />
   <xsl:param name="MIR.ePuSta.GraphProviderURL" />
-  <xsl:param name="MIR.ePuSta.ProviderURL" />
+  <xsl:param name="MIR.ePuSta.providerURL" />
 
   <xsl:template match="/">
     <xsl:if test="$MIR.ePuSta = 'show'">
