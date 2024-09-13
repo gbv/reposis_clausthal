@@ -140,9 +140,8 @@
                 </div>
               </div>
             </div>
-            <script src="{$MIR.ePuSta.GraphProviderURL}includes/raphael-2.1.2/raphael-min.js"></script>
-            <script src="{$MIR.ePuSta.GraphProviderURL}includes/morris.js-0.5.1/morris.js"></script>
-            <script src="{$WebApplicationBaseURL}js/epusta.min.js" ></script>
+            <script src="{$WebApplicationBaseURL}assets/epusta-elements.js/epusta-elements.js" ></script>
+            <script src="{$WebApplicationBaseURL}assets/chart.js/chart.js" ></script>
             <style type="text/css">
               @import url("<xsl:value-of select="$MIR.ePuSta.GraphProviderURL" />includes/morris.js-0.5.1/morris.css");
             </style>
