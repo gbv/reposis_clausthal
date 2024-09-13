@@ -66,7 +66,7 @@
               </div>
               <div
                   data-epustaelementtype="ePuStaInline"
-                  data-epustaproviderurl="{$MIR.ePuSta.GraphProviderURL}"
+                  data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                   data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
                   data-epustacounttype="counter_abstract"
               />
@@ -82,7 +82,7 @@
               </div>
               <div
                   data-epustaelementtype="ePuStaInline"
-                  data-epustaproviderurl="{$MIR.ePuSta.GraphProviderURL}"
+                  data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                   data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
                   data-epustacounttype="counter"
                   data-epustafrom="{$from}" data-epustauntil="{$until}"
@@ -93,7 +93,7 @@
                 <xsl:value-of select="i18n:translate('mir.epusta.counter.abstract')" />
               </div>
               <div data-epustaelementtype="ePuStaInline"
-                   data-epustaproviderurl="{$MIR.ePuSta.GraphProviderURL}"
+                   data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                    data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
                    data-epustacounttype="counter_abstract"
                    data-epustafrom="{$from}" data-epustauntil="{$until}"
@@ -128,7 +128,7 @@
                   <div class="modal-body">
                     <div id="epustaGraph" class="mir-epusta-graph"
                         data-epustaelementtype="EPuStaGraph"
-                        data-epustaproviderurl="{$MIR.ePuSta.GraphProviderURL}"
+                        data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                         data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
                         data-epustafrom="{$from}" data-epustauntil="{$until}">
                     </div>
