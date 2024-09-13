@@ -7,6 +7,7 @@
   <xsl:param name="MIR.ePuSta" select="'hide'" />
   <xsl:param name="MIR.ePuSta.Prefix" />
   <xsl:param name="MIR.ePuSta.GraphProviderURL" />
+  <xsl:param name="MIR.ePuSta.ProviderURL" />
 
   <xsl:template match="/">
     <xsl:if test="$MIR.ePuSta = 'show'">
@@ -54,7 +55,7 @@
               </div>
               <div
                   data-epustaelementtype="ePuStaInline"
-                  data-epustaproviderurl="{$MIR.ePuSta.GraphProviderURL}"
+                  data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                   data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
                   data-epustacounttype="counter"
               />
@@ -140,7 +141,7 @@
                 </div>
               </div>
             </div>
-            <script src="{$WebApplicationBaseURL}assets/epusta-elements.js/epusta-elements.js" ></script>
+            <script src="{$WebApplicationBaseURL}assets/epusta_elements.js/epusta_elements.js" ></script>
             <script src="{$WebApplicationBaseURL}assets/chart.js/chart.js" ></script>
             <style type="text/css">
               @import url("<xsl:value-of select="$MIR.ePuSta.GraphProviderURL" />includes/morris.js-0.5.1/morris.css");
