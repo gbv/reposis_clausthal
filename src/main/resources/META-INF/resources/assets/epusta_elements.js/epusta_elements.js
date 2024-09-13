@@ -236,12 +236,21 @@ document.addEventListener('DOMContentLoaded', function () {
     var epustaElementtype=$(element).data('epustaelementtype');
     var epustaProviderurl=$(element).data('epustaproviderurl');
     var epustaIdentifier=$(element).data('epustaidentifier');
+    var epustaTagQuery = "";
+    // For backward compatibility
     var epustaCounttype=$(element).data('epustacounttype');
+    if (epustaCounttype == "counter") {
+    	epustaTagQuery = " -epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter"
+    } else if (epustaCounttype == "counter_abstract") {
+    	epustaTagQuery = " -epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter_abstract"
+    }
+    // End
+    if ($(element).data('epusttagquery')) epustaTagQuery = $(element).data('epustatagquery');
     var epustaFrom=$(element).data('epustafrom');
     var epustaUntil=$(element).data('epustauntil');
     var epustaElement;
     if (epustaElementtype === "ePuStaInline" ) {
-      epustaElement = new ePuStaInline(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil,epustaCounttype);
+      epustaElement = new ePuStaInline(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil,epustaTagQuery);
       epustaElement.requestData();
     }
     if (epustaElementtype === "ePuStaGraph" ) {
