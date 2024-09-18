@@ -248,13 +248,14 @@ document.addEventListener('DOMContentLoaded', function () {
     if ($(element).data('epusttagquery')) epustaTagQuery = $(element).data('epustatagquery');
     var epustaFrom=$(element).data('epustafrom');
     var epustaUntil=$(element).data('epustauntil');
+    var epustaGranularity=$(element).data('epustagranularity');
     var epustaElement;
     if (epustaElementtype === "ePuStaInline" ) {
       epustaElement = new ePuStaInline(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil,epustaTagQuery);
       epustaElement.requestData();
     }
     if (epustaElementtype === "ePuStaGraph" ) {
-      epustaElement = new ePuStaGraph(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil);
+      epustaElement = new ePuStaGraph(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil,epustaTagQuery);
       epustaElement.requestData();
     }
   });

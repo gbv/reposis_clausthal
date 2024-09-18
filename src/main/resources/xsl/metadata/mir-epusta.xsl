@@ -130,6 +130,7 @@
                         data-epustaelementtype="ePuStaGraph"
                         data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                         data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
+                        data-epustagranularity="day"
                         data-epustafrom="{$from}" data-epustauntil="{$until}">
                     </div>
                   </div>
