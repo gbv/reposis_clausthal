@@ -255,7 +255,7 @@ document.addEventListener('DOMContentLoaded', function () {
       epustaElement.requestData();
     }
     if (epustaElementtype === "ePuStaGraph" ) {
-      epustaElement = new ePuStaGraph(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil,epustaTagQuery);
+      epustaElement = new ePuStaGraph(element,epustaProviderurl,epustaIdentifier,epustaFrom,epustaUntil,epustaTagQuery,epustaGranularity);
       epustaElement.requestData();
     }
   });
