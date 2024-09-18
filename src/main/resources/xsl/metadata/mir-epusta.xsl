@@ -141,8 +141,8 @@
                 </div>
               </div>
             </div>
-            <script src="{$WebApplicationBaseURL}assets/epusta_elements.js/epusta_elements.js" ></script>
-            <script src="{$WebApplicationBaseURL}assets/chart.js/chart.js" ></script>
+            <script type="module" src="{$WebApplicationBaseURL}assets/epusta_elements.js/epusta_elements.js" ></script>
+            <script type="module" src="{$WebApplicationBaseURL}assets/chart.js/chart.umd.js" ></script>
             <style type="text/css">
               @import url("<xsl:value-of select="$MIR.ePuSta.GraphProviderURL" />includes/morris.js-0.5.1/morris.css");
             </style>

@@ -240,9 +240,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // For backward compatibility
     var epustaCounttype=$(element).data('epustacounttype');
     if (epustaCounttype == "counter") {
-    	epustaTagQuery = " -epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter"
+    	epustaTagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter"
     } else if (epustaCounttype == "counter_abstract") {
-    	epustaTagQuery = " -epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter_abstract"
+    	epustaTagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter_abstract"
     }
     // End
     if ($(element).data('epusttagquery')) epustaTagQuery = $(element).data('epustatagquery');
