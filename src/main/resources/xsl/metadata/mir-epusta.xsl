@@ -127,7 +127,7 @@
                   </div>
                   <div class="modal-body">
                     <div id="epustaGraph" class="mir-epusta-graph"
-                        data-epustaelementtype="EPuStaGraph"
+                        data-epustaelementtype="ePuStaGraph"
                         data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
                         data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
                         data-epustafrom="{$from}" data-epustauntil="{$until}">
