@@ -1,21 +1,20 @@
 //Class ePuStaInline
 
-function ePuStaInline (element,providerurl,epustaid,from,until,tagquery) {
-  this.providerurl = providerurl;
-  this.epustaid = epustaid;
-  this.$element = $(element);
-  this.count = "";
-  this.tagquery = tagquery;
-  this.state = "";
-  this.errortext ="";
-  this.from = (isNaN(Date.parse(from)) === false) ? from : "2010-01-01";
-  this.until = (isNaN(Date.parse(until)) === false) ? until : new Date().toJSON().substring(0,10);
-  this.granularity = "total";
-}
-ePuStaInline.prototype= {
-  constructor: ePuStaInline
+class ePuStaInline {
+  contructor: (element,providerurl,epustaid,from,until,tagquery) {
+    this.providerurl = providerurl;
+    this.epustaid = epustaid;
+    this.$element = $(element);
+    this.count = "";
+    this.tagquery = tagquery;
+    this.state = "";
+    this.errortext ="";
+    this.from = (isNaN(Date.parse(from)) === false) ? from : "2010-01-01";
+    this.until = (isNaN(Date.parse(until)) === false) ? until : new Date().toJSON().substring(0,10);
+    this._granularity = "total";
+  }
 
-  ,requestData() {
+  async requestData() {
     this.state="waiting";
     this.render();
     $.ajax({
@@ -23,7 +22,7 @@ ePuStaInline.prototype= {
       url : this.providerurl
         + "/statistics?identifier="+this.epustaid
         + "&start_date=" + this.from + "&end_date=" + this.until
-        + "&granularity=total"
+        + "&granularity=" + this._granularity
         + "&tagquery=" + this.tagquery,
       dataType : "json",
       context: this
@@ -36,7 +35,7 @@ ePuStaInline.prototype= {
     });
   }
 
-  ,render() {
+  render() {
     switch(this.state) {
       case "error":
         this.$element.html("<i class='fas fa-exclamation-triangle' data-toggle='tooltip' title='"+this.errortext+"'></i>");
@@ -52,11 +51,11 @@ ePuStaInline.prototype= {
     }
   }
 
-  ,setCount(count) {
+  setCount(count) {
     this.count=count;
   }
 
-  ,getCounttype(counttype) {
+  getCounttype(counttype) {
     return(this.counttype);
   }
 };
@@ -76,25 +75,25 @@ ePuStaInline.receiveData = function(epustainline,json) {
 
 //Class ePuStaGraph
 
-function ePuStaGraph (element,providerurl,epustaid,from,until,tagquery,granularity) {
-  this.providerurl = providerurl;
-  this.epustaid = epustaid;
-  this.element = element;
-  this.$element = $(element);
-  this.state = "";
-  this.errortext ="";
-  this.granularity = granularity;
-  this.tagquery = tagquery;
-  this.from = (isNaN(Date.parse(from)) === false) ? from : "auto";
-  this.until = (isNaN(Date.parse(until)) === false) ? until : new Date().toJSON().substring(0,10);
-  this.data = [];
-  this.barchart = null;
-}
-ePuStaGraph.prototype= {
-  constructor: ePuStaGraph
-
-  ,requestData() {
-    if (this.granularity == 'total') {
+class ePuStaGraph {
+  constructor (element,providerurl,epustaid,from,until,tagquery,granularity) {
+    this.providerurl = providerurl;
+    this.epustaid = epustaid;
+    this.element = element;
+    this.element.epustagraph = this;
+    this.$element = $(element);
+    this.state = "";
+    this.errortext ="";
+    this._granularity = granularity;
+    this.tagquery = tagquery;
+    this.from = (isNaN(Date.parse(from)) === false) ? from : "auto";
+    this.until = (isNaN(Date.parse(until)) === false) ? until : new Date().toJSON().substring(0,10);
+    this.data = [];
+    this.barchart = null;
+  }
+  
+  async requestData() {
+    if (this._granularity == 'total') {
       this.state="error";
       this.errortext="Granularity total selected";
       this.render(); 
@@ -107,7 +106,7 @@ ePuStaGraph.prototype= {
         url : this.providerurl
           + "/statistics?identifier="+this.epustaid
           + "&start_date=" + this.calculateFrom() + "&end_date=" + this.until
-          + "&granularity="+this.granularity
+          + "&granularity="+this._granularity
           + "&tagquery="+this.tagquery,
         dataType : "json",
         context: this
@@ -121,7 +120,7 @@ ePuStaGraph.prototype= {
     }
   }
 
-  ,render() {
+  render() {
     switch(this.state) {
       case "error":
         var html='<div style="with:100%;text-align:center;">';
@@ -139,7 +138,7 @@ ePuStaGraph.prototype= {
         this.canvas = document.createElement("canvas");
         this.element.replaceChildren(this.canvas); 
         var data;
-        switch (this.granularity) {
+        switch (this._granularity) {
           case 'day':
             data=this.data.day;
             break;
@@ -180,25 +179,17 @@ ePuStaGraph.prototype= {
           }
         });
 
-        /*this.barchart = new Morris.Bar({
-          element: "epustaGraphic",
-          data: data,
-          xkey: 'date',
-          ykeys: ['count'],
-          labels: ['Zugriffe'],
-          hideHover:true
-        });*/
         break;
       default:
         this.$element.text("");
     }
   }
 
-  ,calculateFrom() {
+  calculateFrom() {
     if (this.from === "auto") {
       var today=new Date();
       var from=new Date();
-      switch (this.granularity) {
+      switch (this._granularity) {
         case "day":
           from.setDate(today.getDate() - 14);
           break;
@@ -261,3 +252,4 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+export {ePuStaGraph, ePuStaInline};
