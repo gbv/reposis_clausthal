@@ -1,7 +1,7 @@
 //Class ePuStaInline
 
 class ePuStaInline {
-  constructor: (element,providerurl,epustaid,from,until,tagquery) {
+  constructor (element,providerurl,epustaid,from,until,tagquery) {
     this.providerurl = providerurl;
     this.epustaid = epustaid;
     this.$element = $(element);
