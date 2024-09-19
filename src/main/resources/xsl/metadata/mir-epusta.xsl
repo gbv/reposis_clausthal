@@ -128,9 +128,9 @@
                   <div class="modal-body">
                     <div id="epustaGraph" class="mir-epusta-graph"/>
                     <select id="epustaGraphSelect" onchange="changeEpustaGraphSelect();">
-                      <option value='day'>day</option>
-                      <option value='month'>month</option>
-                      <option value='year'>year</option>
+                      <option value='day'>letzten 30 Tage</option>
+                      <option value='month'>letzten 12 Monate</option>
+                      <option value='year'>alle Jahre</option>
                     </select>
                   </div>
                   <div class="modal-footer">
@@ -155,7 +155,7 @@
               var until='<xsl:value-of select="$until"/>';
               var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
               
-              $('#epustaGraph').on('shown.bs.modal', function () {
+              $('#epustaGraphModal').on('shown.bs.modal', function () {
                 var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
                 epustaElement.requestData();
               })
