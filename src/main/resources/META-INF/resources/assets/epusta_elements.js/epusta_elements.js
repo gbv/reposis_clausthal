@@ -201,17 +201,18 @@ class ePuStaGraph {
           from.setDate(today.getDate() - 77);
           break;
         case "month":
-          from.setMonth(today.getMonth() - 12);
+          from.setMonth(today.getMonth() - 11);
           break;
-        default:
-          from.setMonth(today.getMonth() - 12);
+        case "year":
+          from.setFullYear(today.getFullYear() - 12);
+          break;
       }
     } else {
       var from=new Date(this.from);
     }
     switch (this._granularity) {
       case "month":
-        from = new Date (from.getFullYear(), from.getMonth(), 1);
+        from = new Date (from.getFullYear(), from.getMonth() , 1);
         break;
       case "year":
           from = new Date (from.getFullYear(), 0, 1);
