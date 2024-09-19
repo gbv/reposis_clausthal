@@ -191,10 +191,10 @@ class ePuStaGraph {
       var from=new Date();
       switch (this._granularity) {
         case "day":
-          from.setDate(today.getDate() - 14);
+          from.setDate(today.getDate() - 30);
           break;
         case "week":
-          from.setDate(today.getDate() - 77);
+          from.setDate(today.getDate() - 50);
           break;
         case "month":
           from.setMonth(today.getMonth() - 12);
