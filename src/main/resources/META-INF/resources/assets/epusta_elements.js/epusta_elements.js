@@ -101,11 +101,14 @@ class ePuStaGraph {
     
       this.state="waiting";
       this.render();
+      var from = this.calculateFrom();
+      var until = this.calculateUntil();
+      
       $.ajax({
         method : "GET",
         url : this.providerurl
           + "/statistics?identifier="+this.epustaid
-          + "&start_date=" + this.calculateFrom() + "&end_date=" + this.until
+          + "&start_date=" + from + "&end_date=" + until
           + "&granularity="+this._granularity
           + "&tagquery="+this.tagquery,
         dataType : "json",
@@ -186,15 +189,16 @@ class ePuStaGraph {
   }
 
   calculateFrom() {
+	var today=new Date();
+    
     if (this.from === "auto") {
-      var today=new Date();
       var from=new Date();
       switch (this._granularity) {
         case "day":
           from.setDate(today.getDate() - 30);
           break;
         case "week":
-          from.setDate(today.getDate() - 50);
+          from.setDate(today.getDate() - 77);
           break;
         case "month":
           from.setMonth(today.getMonth() - 12);
@@ -202,11 +206,33 @@ class ePuStaGraph {
         default:
           from.setMonth(today.getMonth() - 12);
       }
-      return from.toJSON().substring(0,10);
     } else {
-      return this.from;
+      var from=new Date(this.from);
     }
+    switch (this._granularity) {
+      case "month":
+        from = new Date (from.getFullYear(), from.getMonth(), 1);
+        break;
+      case "year":
+          from = new Date (from.getFullYear(), 1, 1);
+          break;
+    }
+    return from.toJSON().substring(0,10);
   }
+  
+  calculateUntil() {
+    var until=new Date(this.until);
+    switch (this._granularity) {
+      case "month":
+        until = new Date (until.getFullYear(), until.getMonth()+1, 0);
+        break;
+      case "year":
+        until = new Date (until.getFullYear(), 12, 31);
+        break;
+    }
+    return until.toJSON().substring(0,10);
+  }
+  
 };
 
 ePuStaGraph.receiveData = function(epustagraph,json) {
