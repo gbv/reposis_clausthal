@@ -133,6 +133,11 @@
                         data-epustagranularity="day"
                         data-epustafrom="{$from}" data-epustauntil="{$until}">
                     </div>
+                    <select id="epustaGraphSelect" onchange="changeEpustaGraphSelect();">
+                      <option value='day'>day</option>
+                      <option value='month'>month</option>
+                      <option value='year'>year</option>
+                    </select>
                   </div>
                   <div class="modal-footer">
                     <img
@@ -144,9 +149,22 @@
             </div>
             <script type="module" src="{$WebApplicationBaseURL}assets/epusta_elements.js/epusta_elements.js" ></script>
             <script type="module" src="{$WebApplicationBaseURL}assets/chart.js/chart.umd.js" ></script>
-            <style type="text/css">
-              @import url("<xsl:value-of select="$MIR.ePuSta.GraphProviderURL" />includes/morris.js-0.5.1/morris.css");
-            </style>
+            <script type="module">
+              import {ePuStaGraph} from "<xsl:value-of select="$WebApplicationBaseURL"/>assets/epusta_elements.js/epusta_elements.js";
+              function changeFunc() {
+                var graph = document.getElementById('epustaGraph');
+                var graphSelect = document.getElementById('epustaGraphSelect');
+                var granularity = graphSelect.value ;
+                var epustaProviderurl='<xsl:value-of select="$MIR.ePuSta.providerURL"/>';
+                var identifier='<xsl:value-of select="$objID"/>';
+                var from='<xsl:value-of select="$from"/>';
+                var until='<xsl:value-of select="$until"/>';
+                var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
+                var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
+                epustaElement.requestData();
+              }
+              window.changeEpustaGraphSelect = changeFunc;
+            </script>
           </div>
         </div>
       </div>
