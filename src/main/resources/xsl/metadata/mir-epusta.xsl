@@ -126,13 +126,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <div id="epustaGraph" class="mir-epusta-graph"
-                        data-epustaelementtype="ePuStaGraph"
-                        data-epustaproviderurl="{$MIR.ePuSta.providerURL}"
-                        data-epustaidentifier="{$MIR.ePuSta.Prefix}{$objID}"
-                        data-epustagranularity="day"
-                        data-epustafrom="{$from}" data-epustauntil="{$until}">
-                    </div>
+                    <div id="epustaGraph" class="mir-epusta-graph"/>
                     <select id="epustaGraphSelect" onchange="changeEpustaGraphSelect();">
                       <option value='day'>day</option>
                       <option value='month'>month</option>
@@ -151,15 +145,22 @@
             <script type="module" src="{$WebApplicationBaseURL}assets/chart.js/chart.umd.js" ></script>
             <script type="module">
               import {ePuStaGraph} from "<xsl:value-of select="$WebApplicationBaseURL"/>assets/epusta_elements.js/epusta_elements.js";
+              
+              var graph = document.getElementById('epustaGraph');
+              var graphSelect = document.getElementById('epustaGraphSelect');
+              var granularity = 'day' ;
+              var epustaProviderurl='<xsl:value-of select="$MIR.ePuSta.providerURL"/>';
+              var identifier='<xsl:value-of select="$objID"/>';
+              var from='auto';
+              var until='<xsl:value-of select="$until"/>';
+              var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
+              
+              $('#epustaGraph').on('shown.bs.modal', function () {
+                var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
+                epustaElement.requestData();
+              })
               function changeFunc() {
-                var graph = document.getElementById('epustaGraph');
-                var graphSelect = document.getElementById('epustaGraphSelect');
                 var granularity = graphSelect.value ;
-                var epustaProviderurl='<xsl:value-of select="$MIR.ePuSta.providerURL"/>';
-                var identifier='<xsl:value-of select="$objID"/>';
-                var from='<xsl:value-of select="$from"/>';
-                var until='<xsl:value-of select="$until"/>';
-                var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
                 var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
                 epustaElement.requestData();
               }
