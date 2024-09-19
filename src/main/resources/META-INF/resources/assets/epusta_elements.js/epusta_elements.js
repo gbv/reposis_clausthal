@@ -217,7 +217,7 @@ class ePuStaGraph {
           from = new Date (from.getFullYear(), 1, 1);
           break;
     }
-    return from.getFullYear() + '-' + from.getMonth() + '-' + from.getDate();
+    return from.getFullYear() + '-' + from.getMonth().padStart(2, "0") + '-' + from.getDate().padStart(2, "0");
   }
   
   calculateUntil() {
@@ -230,7 +230,7 @@ class ePuStaGraph {
         until = new Date (until.getFullYear(), 12, 31);
         break;
     }
-    return until.getFullYear() + '-' + until.getMonth() + '-' + until.getDate();
+    return until.getFullYear() + '-' + until.getMonth().padStart(2, "0") + '-' + until.getDate().padStart(2, "0");
   }
   
 };
