@@ -130,7 +130,7 @@
                     <select id="epustaGraphSelect" onchange="changeEpustaGraphSelect();">
                       <option value='day'>letzten 30 Tage</option>
                       <option value='month'>letzten 12 Monate</option>
-                      <option value='year'>alle Jahre</option>
+                      <option value='year'>letzten 10 Jahre</option>
                     </select>
                   </div>
                   <div class="modal-footer">

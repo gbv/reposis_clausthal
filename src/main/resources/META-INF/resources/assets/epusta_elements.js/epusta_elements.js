@@ -204,7 +204,7 @@ class ePuStaGraph {
           from.setMonth(today.getMonth() - 11);
           break;
         case "year":
-          from.setFullYear(today.getFullYear() - 12);
+          from.setFullYear(today.getFullYear() - 9);
           break;
       }
     } else {
