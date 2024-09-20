@@ -166,7 +166,7 @@ class ePuStaGraph {
           data: {
             labels: labels_data,
             datasets: [{
-              label: 'Zugriffe',
+              label: 'Volltextzugriffe',
               data: count_data,
               borderWidth: 1
             }]
