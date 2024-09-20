@@ -127,11 +127,17 @@
                   </div>
                   <div class="modal-body">
                     <div id="epustaGraph" class="mir-epusta-graph"/>
-                    <select id="epustaGraphSelect" onchange="changeEpustaGraphSelect();">
-                      <option value='day'>letzten 30 Tage</option>
-                      <option value='month'>letzten 12 Monate</option>
-                      <option value='year'>letzten 10 Jahre</option>
-                    </select>
+                    <div class="row" class="mir-epusta-graph-controls">
+                      <div class="col-md-4"></div>
+                      <div class="col-md-4">
+                        <select id="epustaGraphSelect" class="form-select" onchange="changeEpustaGraphSelect();" style="margin-top:10px">
+                          <option value='day'>letzten 30 Tage</option>
+                          <option value='month'>letzten 12 Monate</option>
+                          <option value='year'>letzten 10 Jahre</option>
+                        </select>
+                      </div>
+                      <div class="col-md-4"></div>
+                    </div>
                   </div>
                   <div class="modal-footer">
                     <img
