@@ -127,7 +127,7 @@
                   </div>
                   <div class="modal-body">
                     <div id="epustaGraph" class="mir-epusta-graph"/>
-                    <div class="row" class="mir-epusta-graph-controls">
+                    <div class="row mir-epusta-graph-controls">
                       <div class="col-md-4"></div>
                       <div class="col-md-4">
                         <select id="epustaGraphSelect" class="form-select" onchange="changeEpustaGraphSelect();" style="margin-top:10px">
