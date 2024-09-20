@@ -162,6 +162,7 @@
               var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
               
               $('#epustaGraphModal').on('shown.bs.modal', function () {
+                var granularity = graphSelect.value ;
                 var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
                 epustaElement.requestData();
               })
