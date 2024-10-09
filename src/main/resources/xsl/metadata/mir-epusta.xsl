@@ -127,16 +127,21 @@
                   </div>
                   <div class="modal-body">
                     <div id="epustaGraph" class="mir-epusta-graph"/>
-                    <div class="row mir-epusta-graph-controls">
-                      <div class="col-md-4"></div>
-                      <div class="col-md-4">
-                        <select id="epustaGraphSelect" class="form-select" onchange="changeEpustaGraphSelect();" style="margin-top:10px">
+                    <div class="row mir-epusta-graph-controls" style="margin-top:13px">
+                      <div class="col-md-12 text-center">
+                        <!--<select id="epustaGraphSelect" class="form-select" onchange="changeEpustaGraphSelect();" style="margin-top:10px">
                           <option value='day'>letzten 30 Tage</option>
                           <option value='month'>letzten 12 Monate</option>
                           <option value='year'>letzten 10 Jahre</option>
-                        </select>
+                        </select>-->
+                        die letzten:
+                        <input style="margin-left:6px" type="radio" id="grday" name="granularity" value="day" onchange="changeEpustaGraphSelect();" checked="checked"/>
+                        <label for="grday">30 Tage</label>
+                        <input style="margin-left:13px" type="radio" id="grmonth" name="granularity" value="month" onchange="changeEpustaGraphSelect();" />
+                        <label for="grday">12 Monate</label>
+                        <input style="margin-left:13px" type="radio" id="gryear" name="granularity" value="year" onchange="changeEpustaGraphSelect();" />
+                        <label for="grday">10 Jahre</label>
                       </div>
-                      <div class="col-md-4"></div>
                     </div>
                   </div>
                   <div class="modal-footer">
@@ -159,16 +164,30 @@
               var identifier='<xsl:value-of select="$objID"/>';
               var from='auto';
               var until='<xsl:value-of select="$until"/>';
-              var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
+              //var tagQuery = "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter";
+              var labelsByTagQuery = [
+                {
+                  label: "Volltextzugriffe",
+                  //color: "#003259",
+                  color: "#3b617f",
+                  tagquery: "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter"
+                },
+                {
+                  label: "Metadatenansichten",
+                  //color: "#e40c31",
+                  color: "#eb4a66",
+                  tagquery: "-epusta:filter:httpMethod -epusta:filter:httpStatus -filter:30sek:counter3 -filter:robot oas:content:counter_abstract"
+                }
+              ];
               
               $('#epustaGraphModal').on('shown.bs.modal', function () {
-                var granularity = graphSelect.value ;
-                var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
+                var granularity = document.querySelector('input[name="granularity"]:checked').value;
+                var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,labelsByTagQuery,granularity)
                 epustaElement.requestData();
               })
               function changeFunc() {
-                var granularity = graphSelect.value ;
-                var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,tagQuery,granularity);
+                var granularity = document.querySelector('input[name="granularity"]:checked').value; 
+                var epustaElement = new ePuStaGraph(graph,epustaProviderurl,identifier,from,until,labelsByTagQuery,granularity)
                 epustaElement.requestData();
               }
               window.changeEpustaGraphSelect = changeFunc;
