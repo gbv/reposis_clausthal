@@ -135,21 +135,35 @@
   <xsl:template name="mir.footer">
     <div class="container">
       <div class="row">
-        <div class="col">
+
+        <div class="col-auto">
           <h4>Info</h4>
           <ul class="project-nav-footer nav">
             <xsl:apply-templates select="$loaded_navigation_xml/menu[@id='below']/*" />
           </ul>
         </div>
-        <div class="col-auto text-right">
-          <xsl:variable name="tmp" select="calendar:new()"/>
-          <div id="copyright">
-            <xsl:text>© </xsl:text>
-            <xsl:value-of select="$MCR.NameOfProject" />
-            <xsl:text> </xsl:text>
-            <xsl:value-of select="calendar:get($tmp, 1)"/>
+
+        <div class="col">
+          <div class="dini-box text-right">
+            <img
+              class="img-fluid"
+              src="{$WebApplicationBaseURL}images/DINI_Siegel_FINAL_22__3_.png"
+              alt="DINI 22" />
           </div>
         </div>
+
+        <div class="col-auto text-right">
+          <div class="text-right">
+            <xsl:variable name="tmp" select="calendar:new()"/>
+            <div id="copyright">
+              <xsl:text>© </xsl:text>
+              <xsl:value-of select="$MCR.NameOfProject" />
+              <xsl:text> </xsl:text>
+              <xsl:value-of select="calendar:get($tmp, 1)"/>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </xsl:template>
