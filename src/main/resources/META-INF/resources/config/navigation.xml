@@ -87,9 +87,13 @@
             <label xml:lang="de">Admin-Formular</label>
             <label xml:lang="en">Admin Editor</label>
         </item>
-        <item href="/content/publish/guidelines.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+        <item href="https://www.ub.tu-clausthal.de/publizieren-open-access/publikationsserver/leitlinie-publikationsserver" type="extern" replaceMenu="false" constrainPopUp="false">
             <label xml:lang="de">Leitlinien</label>
             <label xml:lang="en">Guidelines</label>
+        </item>
+        <item href="/content/publish/guidelines.xml" type="intern" replaceMenu="false" constrainPopUp="false">
+            <label xml:lang="de">Informationen zum Publizieren</label>
+            <label xml:lang="en">Publishing information</label>
         </item>
     </menu>
     <menu id="user">
