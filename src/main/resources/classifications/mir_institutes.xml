@@ -11,7 +11,7 @@
     <category ID="fnm">
       <label xml:lang="de" text="Fakultät für Natur- und Materialwissenschaften" />
       <label xml:lang="en" text="Faculty of Natural and Materials Science" />
-      <url xlink:href="http://www.fakultaeten.tu-clausthal.de/fakultaet-fuer-natur-und-materialwissenschaften/" xlink:type="locator" />
+      <url xlink:type="locator" xlink:href="http://www.fakultaeten.tu-clausthal.de/fakultaet-fuer-natur-und-materialwissenschaften/" />
       <category ID="fnm_aac">
         <label xml:lang="de" text="Institut für Anorganische und Analytische Chemie" />
         <label xml:lang="en" text="Institute of Inorganic and Analytical Chemistry" />
@@ -60,7 +60,11 @@
     <category ID="few">
       <label xml:lang="de" text="Fakultät für Energie- und Wirtschaftswissenschaften" />
       <label xml:lang="en" text="Faculty of Energy and Economic Sciences" />
-      <url xlink:href="http://www.fakultaeten.tu-clausthal.de/energie-wirtschaft/" xlink:type="locator" />
+      <url xlink:type="locator" xlink:href="http://www.fakultaeten.tu-clausthal.de/energie-wirtschaft/" />
+      <category ID="b59fe8f2-e933-4363-be3c-6aa1c0c76993">
+        <label xml:lang="de" text="Institute of Geotechnology and Mineral Resources" />
+        <label xml:lang="en" text="Institute of Geotechnology and Mineral Resources (in Gründung)" />
+      </category>
       <category ID="0ab5aacd-7929-4de1-9c82-34d299edf999">
         <label xml:lang="de" text="Institute of Geo-Engineering" />
         <label xml:lang="en" text="Institute of Geo-Engineering" />
@@ -117,7 +121,7 @@
     <category ID="fmim">
       <label xml:lang="de" text="Fakultät für Mathematik/Informatik und Maschinenbau" />
       <label xml:lang="en" text="Faculty of Mathematics/Computer Science and Mechanical Engineering" />
-      <url xlink:href="http://www.fakultaeten.tu-clausthal.de/math-inf-maschinenbau/" xlink:type="locator" />
+      <url xlink:type="locator" xlink:href="http://www.fakultaeten.tu-clausthal.de/math-inf-maschinenbau/" />
       <category ID="c9264b2b-3f28-4547-85a8-a1c312ff93ba">
         <label xml:lang="de" text="Institut für Software and Systems Engineering" />
         <label xml:lang="en" text="Institute of Software and Systems Engineering" />
@@ -161,7 +165,7 @@
       <category ID="fmim_stf">
         <label xml:lang="de" text="Institut für Schweißtechnik und Trennende Fertigungsverfahren" />
         <label xml:lang="en" text="Institute of Welding and Machining" />
-        <url xlink:href="http://www.isaf.tu-clausthal.de/" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="http://www.isaf.tu-clausthal.de/" />
       </category>
       <category ID="fmim_tm">
         <label xml:lang="de" text="Institut für Technische Mechanik" />
@@ -181,7 +185,7 @@
       <category ID="2bc42d7d-1fb5-4764-b357-a3706d3ad8cc">
         <label xml:lang="de" text="Universitätsbibliothek" />
         <label xml:lang="en" text="University Library" />
-        <url xlink:href="ub.tu-clausthal.de" xlink:type="locator" />
+        <url xlink:type="locator" xlink:href="ub.tu-clausthal.de" />
       </category>
       <category ID="477a5112-6ded-427c-953d-48ff8c4bc14e">
         <label xml:lang="de" text="Drilling Simulator Celle" />

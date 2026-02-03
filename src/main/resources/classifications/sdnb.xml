@@ -10,12 +10,12 @@
   <label xml:lang="x-uri" text="http://www.mycore.org/classifications/SDNB" />
   <categories>
     <category ID="000">
-      <label xml:lang="en" text="000 Generalities, Science" />
       <label xml:lang="de" text="000 Allgemeine Werke" />
+      <label xml:lang="en" text="000 Generalities, Science" />
     </category>
     <category ID="004">
-      <label xml:lang="en" text="004 Data processing Computer sciences" />
       <label xml:lang="de" text="004 Informatik" />
+      <label xml:lang="en" text="004 Data processing Computer sciences" />
     </category>
     <category ID="010">
       <label xml:lang="de" text="010 Bibliographien" />
@@ -26,8 +26,8 @@
       <label xml:lang="en" text="020 Library &amp; information sciences" />
     </category>
     <category ID="030">
-      <label xml:lang="en" text="030 General encyclopedic works" />
       <label xml:lang="de" text="030 Enzyklopädien" />
+      <label xml:lang="en" text="030 General encyclopgpedic works" />
     </category>
     <category ID="050">
       <label xml:lang="de" text="050 Zeitschriften, fortlaufende Sammelwerke" />
@@ -42,76 +42,76 @@
       <label xml:lang="en" text="070 News media, journalismn, publishing" />
     </category>
     <category ID="080">
-      <label xml:lang="en" text="080 General collections" />
       <label xml:lang="de" text="080 Allgemeine Sammelwerke" />
+      <label xml:lang="en" text="080 General collections" />
     </category>
     <category ID="090">
-      <label xml:lang="en" text="090 Manuscripts &amp; rare books" />
       <label xml:lang="de" text="090 Handschriften, seltene Bücher" />
+      <label xml:lang="en" text="090 Manuscripts &amp; rare books" />
     </category>
     <category ID="100">
-      <label xml:lang="en" text="100 Philosphy" />
       <label xml:lang="de" text="100 Philosophie" />
+      <label xml:lang="en" text="100 Philosphy" />
     </category>
     <category ID="130">
       <label xml:lang="de" text="130 Parapsychologie, Okkultismus" />
       <label xml:lang="en" text="130 Paranormal phenomena" />
     </category>
     <category ID="150">
-      <label xml:lang="en" text="150 Psychology" />
       <label xml:lang="de" text="150 Psychologie" />
+      <label xml:lang="en" text="150 Psychology" />
     </category>
     <category ID="200">
-      <label xml:lang="en" text="200 Religion" />
       <label xml:lang="de" text="200 Religion, Religionsphilosophie" />
+      <label xml:lang="en" text="200 Religion" />
     </category>
     <category ID="220">
       <label xml:lang="de" text="220 Bibel" />
       <label xml:lang="en" text="220 Bible" />
     </category>
     <category ID="230">
-      <label xml:lang="en" text="230 Christian theology" />
       <label xml:lang="de" text="230 Theologie, Christentum" />
+      <label xml:lang="en" text="230 Christian theology" />
     </category>
     <category ID="290">
-      <label xml:lang="en" text="290 Other &amp; comarative religions" />
       <label xml:lang="de" text="290 Andere Religionen" />
+      <label xml:lang="en" text="290 Other &amp; comarative religions" />
     </category>
     <category ID="300">
       <label xml:lang="de" text="300 Sozialwissenschaften, Soziologie, Anthropologie" />
       <label xml:lang="en" text="300 Social sciences" />
     </category>
     <category ID="310">
-      <label xml:lang="en" text="310 General statistics" />
       <label xml:lang="de" text="310 Statistik" />
+      <label xml:lang="en" text="310 General statistics" />
     </category>
     <category ID="320">
-      <label xml:lang="en" text="320 Political science" />
       <label xml:lang="de" text="320 Politik" />
+      <label xml:lang="en" text="320 Political science" />
     </category>
     <category ID="330">
       <label xml:lang="de" text="330 Wirtschaft" />
       <label xml:lang="en" text="330 Economics" />
     </category>
     <category ID="333.7">
-      <label xml:lang="en" text="333.7 Natural resources, energy and environment" />
       <label xml:lang="de" text="333.7 Natürliche Ressourcen, Energie und Umwelt" />
+      <label xml:lang="en" text="333.7 Natural resources, energy and environment" />
     </category>
     <category ID="340">
       <label xml:lang="de" text="340 Recht" />
       <label xml:lang="en" text="340 Law" />
     </category>
     <category ID="350">
-      <label xml:lang="en" text="350 Public administration" />
       <label xml:lang="de" text="350 Öffentliche Verwaltung" />
+      <label xml:lang="en" text="350 Public administration" />
     </category>
     <category ID="355">
-      <label xml:lang="en" text="335 Military science" />
       <label xml:lang="de" text="355 Militär" />
+      <label xml:lang="en" text="335 Military science" />
     </category>
     <category ID="360">
-      <label xml:lang="en" text="360 Social services, association" />
       <label xml:lang="de" text="360 Soziale Probleme, Sozialdienste, Versicherungen" />
+      <label xml:lang="en" text="360 Social services, association" />
     </category>
     <category ID="370">
       <label xml:lang="de" text="370 Erziehung, Schul- und Bildungswesen" />
@@ -122,28 +122,28 @@
       <label xml:lang="en" text="380 Commerce, communications, transport" />
     </category>
     <category ID="390">
-      <label xml:lang="en" text="390 Customs, etiquette, folklore" />
       <label xml:lang="de" text="390 Bräuche, Etikette, Folklore" />
+      <label xml:lang="en" text="390 Customs, etiquette, folklore" />
     </category>
     <category ID="400">
       <label xml:lang="de" text="400 Sprache, Linguistik" />
       <label xml:lang="en" text="400 Language, Linguistics" />
     </category>
     <category ID="420">
-      <label xml:lang="en" text="420 English" />
       <label xml:lang="de" text="420 Englisch" />
+      <label xml:lang="en" text="420 English" />
     </category>
     <category ID="430">
-      <label xml:lang="en" text="430 Germanic" />
       <label xml:lang="de" text="430 Deutsch" />
+      <label xml:lang="en" text="430 Germanic" />
     </category>
     <category ID="439">
-      <label xml:lang="en" text="439 Other Germanic languages" />
       <label xml:lang="de" text="439 Andere germanische Sprachen" />
+      <label xml:lang="en" text="439 Other Germanic languages" />
     </category>
     <category ID="440">
-      <label xml:lang="en" text="440 Romance languages French" />
       <label xml:lang="de" text="440 Französisch, romanische Sprachen allgemein" />
+      <label xml:lang="en" text="440 Romance languages French" />
     </category>
     <category ID="450">
       <label xml:lang="de" text="450 Italienisch, Rumänisch, Rätoromanisch" />
@@ -158,12 +158,12 @@
       <label xml:lang="en" text="470 Italic Latin" />
     </category>
     <category ID="480">
-      <label xml:lang="en" text="480 Hellenic languages Classical Greek" />
       <label xml:lang="de" text="480 Griechisch" />
+      <label xml:lang="en" text="480 Hellenic languages Classical Greek" />
     </category>
     <category ID="490">
-      <label xml:lang="en" text="490 Other languages" />
       <label xml:lang="de" text="490 Andere Sprachen" />
+      <label xml:lang="en" text="490 Other languages" />
     </category>
     <category ID="491.8">
       <label xml:lang="de" text="491.8 Slawische Sprachen" />
@@ -174,8 +174,8 @@
       <label xml:lang="en" text="500 Natural sciences" />
     </category>
     <category ID="510">
-      <label xml:lang="en" text="510 Mathematics" />
       <label xml:lang="de" text="510 Mathematik" />
+      <label xml:lang="en" text="510 Mathematics" />
     </category>
     <category ID="520">
       <label xml:lang="de" text="520 Astronomie, Kartographie" />
@@ -186,24 +186,24 @@
       <label xml:lang="en" text="530 Physics" />
     </category>
     <category ID="540">
-      <label xml:lang="en" text="540 Chemistry &amp; allied sciences" />
       <label xml:lang="de" text="540 Chemie" />
+      <label xml:lang="en" text="540 Chemistry &amp; allied sciences" />
     </category>
     <category ID="550">
       <label xml:lang="de" text="550 Geowissenschaften" />
       <label xml:lang="en" text="550 Earth sciences" />
     </category>
     <category ID="560">
-      <label xml:lang="en" text="560 Paleontology Paleozoology" />
       <label xml:lang="de" text="560 Paläontologie" />
+      <label xml:lang="en" text="560 Paleontology Paleozoology" />
     </category>
     <category ID="570">
       <label xml:lang="de" text="570 Biowissenschaften, Biologie" />
       <label xml:lang="en" text="570 Life science" />
     </category>
     <category ID="580">
-      <label xml:lang="en" text="580 Botanical sciences" />
       <label xml:lang="de" text="580 Pflanzen (Botanik)" />
+      <label xml:lang="en" text="580 Botanical sciences" />
     </category>
     <category ID="590">
       <label xml:lang="de" text="590 Tiere (Zoologie)" />
@@ -221,24 +221,24 @@
       <label xml:lang="de" text="620 Ingenieurwissenschaften und Maschinenbau" />
       <label xml:lang="en" text="620 Engineering &amp; allied operations" />
       <category ID="620.1">
-        <label xml:lang="en" text="620.1 Materialwissenschaften" />
         <label xml:lang="de" text="620.1 Materialwissenschaften" />
+        <label xml:lang="en" text="620.1 Materialwissenschaften" />
       </category>
     </category>
     <category ID="621">
-      <label xml:lang="en" text="621 Energie-, Elektrotechnik &amp; Maschinenbau" />
       <label xml:lang="de" text="621 Energie-, Elektrotechnik &amp; Maschinenbau" />
+      <label xml:lang="en" text="621 Energie-, Elektrotechnik &amp; Maschinenbau" />
       <category ID="621.0">
-        <label xml:lang="en" text="621.0 Energietechnik" />
         <label xml:lang="de" text="621.0 Energietechnik" />
+        <label xml:lang="en" text="621.0 Energietechnik" />
       </category>
       <category ID="621.3">
-        <label xml:lang="en" text="621.3 Electrical Engineering, Electronics" />
         <label xml:lang="de" text="621.3 Elektrotechnik, Elektronik" />
+        <label xml:lang="en" text="621.3 Electrical Engineering, Electronics" />
       </category>
       <category ID="621.8">
-        <label xml:lang="en" text="621.8 Maschinenbau" />
         <label xml:lang="de" text="621.8 Maschinenbau" />
+        <label xml:lang="en" text="621.8 Maschinenbau" />
       </category>
     </category>
     <category ID="622">
@@ -254,64 +254,64 @@
       <label xml:lang="en" text="628 Umwelttechnik" />
     </category>
     <category ID="630">
-      <label xml:lang="en" text="630 Agriculture" />
       <label xml:lang="de" text="630 Landwirtschaft, Veterinärmedizin" />
+      <label xml:lang="en" text="630 Agriculture" />
     </category>
     <category ID="640">
-      <label xml:lang="en" text="640 home economics &amp; family living" />
       <label xml:lang="de" text="640 Hauswirtschaft und Familienleben" />
+      <label xml:lang="en" text="640 home economics &amp; family living" />
     </category>
     <category ID="650">
-      <label xml:lang="en" text="650 Management &amp; auxialiary services" />
       <label xml:lang="de" text="650 Management" />
+      <label xml:lang="en" text="650 Management &amp; auxialiary services" />
     </category>
     <category ID="660">
       <label xml:lang="de" text="660 Technische Chemie" />
       <label xml:lang="en" text="660 Chemical engineering" />
     </category>
     <category ID="669">
-      <label xml:lang="en" text="669 Hüttenwesen" />
       <label xml:lang="de" text="669 Hüttenwesen" />
+      <label xml:lang="en" text="669 Hüttenwesen" />
     </category>
     <category ID="670">
-      <label xml:lang="en" text="670 Manufacturing" />
       <label xml:lang="de" text="670 Industrielle und handwerkliche Fertigung" />
+      <label xml:lang="en" text="670 Manufacturing" />
     </category>
     <category ID="690">
       <label xml:lang="de" text="690 Hausbau, Bauhandwerk" />
       <label xml:lang="en" text="690 Buildings" />
     </category>
     <category ID="700">
-      <label xml:lang="en" text="700 The arts" />
       <label xml:lang="de" text="700 Künste, Bildende Kunst allgemein" />
+      <label xml:lang="en" text="700 The arts" />
     </category>
     <category ID="710">
-      <label xml:lang="en" text="710 Civic &amp; landscape art" />
       <label xml:lang="de" text="710 Landschaftsgestaltung, Raumplanung" />
+      <label xml:lang="en" text="710 Civic &amp; landscape art" />
     </category>
     <category ID="720">
-      <label xml:lang="en" text="720 Architecture" />
       <label xml:lang="de" text="720 Architektur" />
+      <label xml:lang="en" text="720 Architecture" />
     </category>
     <category ID="730">
       <label xml:lang="de" text="730 Plastik, Numismatik, Keramik, Metallkunst" />
       <label xml:lang="en" text="730 Plastic arts Sculpture" />
     </category>
     <category ID="740">
-      <label xml:lang="en" text="740 Drawing &amp; decorative arts" />
       <label xml:lang="de" text="740 Zeichnung, Kunsthandwerk" />
+      <label xml:lang="en" text="740 Drawing &amp; decorative arts" />
     </category>
     <category ID="741.5">
-      <label xml:lang="en" text="741.5 Comics Cartoons" />
       <label xml:lang="de" text="741.5 Comics, Cartoons, Karikaturen" />
+      <label xml:lang="en" text="741.5 Comics Cartoons" />
     </category>
     <category ID="750">
-      <label xml:lang="en" text="750 Painting &amp; paintings" />
       <label xml:lang="de" text="750 Malerei" />
+      <label xml:lang="en" text="750 Painting &amp; paintings" />
     </category>
     <category ID="760">
-      <label xml:lang="en" text="760 Graphic arts Printmaking &amp; prints" />
       <label xml:lang="de" text="760 Grafische Verfahren, Drucke" />
+      <label xml:lang="en" text="760 Graphic arts Printmaking &amp; prints" />
     </category>
     <category ID="770">
       <label xml:lang="de" text="770 Fotografie, Computerkunst" />
@@ -330,8 +330,8 @@
       <label xml:lang="en" text="791 Public performances" />
     </category>
     <category ID="792">
-      <label xml:lang="en" text="792 Stage presentations" />
       <label xml:lang="de" text="792 Theater, Tanz" />
+      <label xml:lang="en" text="792 Stage presentations" />
     </category>
     <category ID="793">
       <label xml:lang="de" text="793 Spiel" />
@@ -342,16 +342,16 @@
       <label xml:lang="en" text="796 Athletic &amp; outdoor sports &amp; games" />
     </category>
     <category ID="800">
-      <label xml:lang="en" text="800 Literature &amp; rhetoric" />
       <label xml:lang="de" text="800 Literatur, Rhetorik, Literaturwissenschaft" />
+      <label xml:lang="en" text="800 Literature &amp; rhetoric" />
     </category>
     <category ID="810">
-      <label xml:lang="en" text="810 American literature in English" />
       <label xml:lang="de" text="810 Englische Literatur Amerikas" />
+      <label xml:lang="en" text="810 American literature in English" />
     </category>
     <category ID="820">
-      <label xml:lang="en" text="820 English &amp; Old English literatures" />
       <label xml:lang="de" text="820 Englische Literatur" />
+      <label xml:lang="en" text="820 English &amp; Old English literatures" />
     </category>
     <category ID="830">
       <label xml:lang="de" text="830 Deutsche Literatur" />
@@ -370,16 +370,16 @@
       <label xml:lang="en" text="850 Italian, Romanian, Rhaeto-Romanic literatures" />
     </category>
     <category ID="860">
-      <label xml:lang="en" text="860 Spanish &amp; Portuguese literatures" />
       <label xml:lang="de" text="860 Spanische und portugiesische Literatur" />
+      <label xml:lang="en" text="860 Spanish &amp; Portuguese literatures" />
     </category>
     <category ID="870">
-      <label xml:lang="en" text="870 Italic literatures Latin" />
       <label xml:lang="de" text="870 Lateinische Literatur" />
+      <label xml:lang="en" text="870 Italic literatures Latin" />
     </category>
     <category ID="880">
-      <label xml:lang="en" text="880 Hellenic literatures Classical Greek" />
       <label xml:lang="de" text="880 Griechische Literatur" />
+      <label xml:lang="en" text="880 Hellenic literatures Classical Greek" />
     </category>
     <category ID="890">
       <label xml:lang="de" text="890 Literatur in anderen Sprachen" />
@@ -390,44 +390,44 @@
       <label xml:lang="en" text="891.8 Slavic Literature" />
     </category>
     <category ID="900">
-      <label xml:lang="en" text="900 History" />
       <label xml:lang="de" text="900 Geschichte" />
+      <label xml:lang="en" text="900 History" />
     </category>
     <category ID="910">
-      <label xml:lang="en" text="910 Geography &amp; travel" />
       <label xml:lang="de" text="910 Geografie, Reisen" />
+      <label xml:lang="en" text="910 Geography &amp; travel" />
     </category>
     <category ID="914.3">
       <label xml:lang="de" text="914.3 Geografie, Reisen (Deutschland)" />
       <label xml:lang="en" text="914.3 Geography &amp; travel Germany" />
     </category>
     <category ID="920">
-      <label xml:lang="en" text="920 Biography, genealogy, insignia" />
       <label xml:lang="de" text="920 Biografie, Genealogie, Heraldik" />
+      <label xml:lang="en" text="920 Biography, genealogy, insignia" />
     </category>
     <category ID="930">
-      <label xml:lang="en" text="930 History of the ancient world" />
       <label xml:lang="de" text="930 Alte Geschichte, Archäologie" />
+      <label xml:lang="en" text="930 History of the ancient world" />
     </category>
     <category ID="940">
       <label xml:lang="de" text="940 Geschichte Europas" />
       <label xml:lang="en" text="940 General history of Europe" />
     </category>
     <category ID="943">
-      <label xml:lang="en" text="943 General history of Europe Central Europe Germany" />
       <label xml:lang="de" text="943 Geschichte Deutschlands" />
+      <label xml:lang="en" text="943 General history of Europe Central Europe Germany" />
     </category>
     <category ID="950">
-      <label xml:lang="en" text="950 General history of Asia Far East" />
       <label xml:lang="de" text="950 Geschichte Asiens" />
+      <label xml:lang="en" text="950 General history of Asia Far East" />
     </category>
     <category ID="960">
       <label xml:lang="de" text="960 Geschichte Afrikas" />
       <label xml:lang="en" text="960 General history of Africa" />
     </category>
     <category ID="970">
-      <label xml:lang="en" text="970 General history of North America" />
       <label xml:lang="de" text="970 Geschichte Nordamerikas" />
+      <label xml:lang="en" text="970 General history of North America" />
     </category>
     <category ID="980">
       <label xml:lang="de" text="980 Geschichte Südamerikas" />
