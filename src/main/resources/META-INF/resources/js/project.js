@@ -1,13 +1,11 @@
-
-$(document).ready(function() {
-
-  // spam protection for mails
-  $('span.madress').each(function(i) {
-      var text = $(this).text();
-      var address = text.replace(" [at] ", "@");
-      $(this).after('<a href="mailto:'+address+'">'+ address +'</a>')
-      $(this).remove();
+function replaceMaskedEmails() {
+  document.querySelectorAll("span.madress").forEach(span => {
+    const address = span.textContent.replace(" [at] ", "@");
+    const link = document.createElement("a");
+    link.href = `mailto:${address}`;
+    link.textContent = address;
+    span.replaceWith(link);
   });
+}
 
-});
-
+document.addEventListener("DOMContentLoaded", replaceMaskedEmails);
