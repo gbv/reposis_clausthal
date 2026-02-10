@@ -3,7 +3,7 @@
   <label xml:lang="de" text="Sprache" description="nach RFC 5646" />
   <label xml:lang="en" text="Language" description="as defined in RFC 5646" />
   <label xml:lang="x-auth" text="rfc5646" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/rfc5646" />
+  <label xml:lang="x-uri" text="https://www.mycore.org/classifications/rfc5646" />
   <categories>
     <category ID="de">
       <label xml:lang="de" text="Deutsch" />

@@ -7,7 +7,7 @@
 <mycoreclass ID="SDNB" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd">
   <label xml:lang="de" text="Sachgruppen der Deutschen Nationalbibliographie" />
   <label xml:lang="x-auth" text="sdnb" />
-  <label xml:lang="x-uri" text="http://www.mycore.org/classifications/SDNB" />
+  <label xml:lang="x-uri" text="https://www.mycore.org/classifications/sdnb" />
   <categories>
     <category ID="000">
       <label xml:lang="de" text="000 Allgemeine Werke" />

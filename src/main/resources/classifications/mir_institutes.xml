@@ -2,7 +2,7 @@
 <mycoreclass xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MCRClassification.xsd" ID="mir_institutes">
   <label xml:lang="de" text="Einrichtungen der TU Clausthal" description="Liste der TU-Clausthal-Einrichtungen" />
   <label xml:lang="en" text="Institutes of TU Clausthal" description="A list of all institutions" />
-  <label xml:lang="x-uri" text="https://dokumente.ub.tu-clausthal.de/classifications/institutes" />
+  <label xml:lang="x-uri" text="https://dokumente.ub.tu-clausthal.de/api/v2/classifications/mir_institutes" />
   <categories>
     <category ID="515bb9fe-3f93-4a8b-b644-07ddbecc53d6">
       <label xml:lang="de" text="TU Clausthal" />
