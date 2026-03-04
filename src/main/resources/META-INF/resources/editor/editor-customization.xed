@@ -1,78 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- ======================================================= -->
+<!-- ========== Template Management Notes ========== -->
+<!--
+    This XML document modifies and overrides templates from MIR.
+    Templates are organized in dedicated sections below:
+        1. New
+        2. Overrides
+        3. Modifications
+    Sections are provided for Admin, Host, Genre, and general templates including helper templates.
+    Empty sections are avoided to reduce confusion.
+    Templates within each section should be sorted alphabetically.
+    General new templates should NOT be defined here; they must be placed in a *-editor-includes file.
+    Circular references must be avoided to prevent loops or unintended overrides.
+-->
+<!-- ======================================================= -->
+<xed:template xmlns:mir="http://www.mycore.de/mir" xmlns:xed="http://www.mycore.de/xeditor">
 
-<xed:template xmlns:xed="http://www.mycore.de/xeditor" xmlns:mir="http://www.mycore.de/mir">
-
-  <!-- ========== extend editor-genres.xed ========== -->
+  <!-- ========== Admin: Modifications ========== -->
   <xed:modify ref="admin.fields">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="subject.complex"/>
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="subject.complex" />
+    <xed:remove ref="related.item.other.search.of.all.items" />
+  </xed:modify>
+
+  <!-- ========== Genre: Modifications ========== -->
+  <xed:modify ref="genres.av.common">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
   </xed:modify>
 
   <xed:modify ref="genres.book.common">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
   </xed:modify>
-  
-  <xed:modify ref="genres.thesis.common">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-    
-  <xed:modify ref="genres.teaching_material">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="language"/>
-  </xed:modify>  
-  
-  <xed:modify ref="genres.publication.common">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
-  <xed:modify ref="genres.report.common">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
+
   <xed:modify ref="genres.entry">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
   </xed:modify>
-  
-  <xed:modify ref="genres.preface">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
+
   <xed:modify ref="genres.interview">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
   </xed:modify>
-  
-  <xed:modify ref="genres.speech">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
-  <xed:modify ref="genres.poster">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
-  <xed:modify ref="genres.av.common">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
-  <xed:modify ref="genres.research_data">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
-  </xed:modify>
-  
+
   <xed:modify ref="genres.lecture">
-    <xed:remove  ref="institutes"/>
-    <xed:include ref="institutes.repeat"     before="comment"/>
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
   </xed:modify>
-  
+
+  <xed:modify ref="genres.poster">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
+  <xed:modify ref="genres.preface">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
+  <xed:modify ref="genres.publication.common">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
+  <xed:modify ref="genres.report.common">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
+  <xed:modify ref="genres.research_data">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
+  <xed:modify ref="genres.speech">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
+  <xed:modify ref="genres.teaching_material">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="language" />
+  </xed:modify>
+
+  <xed:modify ref="genres.thesis.common">
+    <xed:remove ref="institutes" />
+    <xed:include ref="institutes.repeat" before="comment" />
+  </xed:modify>
+
   <xed:template id="genres.government_publication">
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="title.original" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="editor.repeated" />
@@ -92,7 +108,5 @@
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="institutes.repeat" />
     <xed:include uri="xslStyle:editor/mir2xeditor:webapp:editor/editor-includes.xed" ref="comment" />
   </xed:template>
-      
+
 </xed:template>
-
-
