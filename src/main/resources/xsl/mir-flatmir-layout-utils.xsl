@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="1.0"
-  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:date="http://exslt.org/dates-and-times"
-  exclude-result-prefixes="date">
+  xmlns:mcracl="xalan://org.mycore.common.xml.MCRXMLFunctions"
+  xmlns:mcri18n="xalan://org.mycore.services.i18n.MCRTranslation"
+  xmlns:mcrversion="xalan://org.mycore.common.MCRCoreVersion"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  exclude-result-prefixes="date mcracl mcri18n mcrversion">
 
   <xsl:import href="resource:xsl/layout/mir-common-layout.xsl" />
 
   <xsl:param name="MCR.NameOfProject" />
 
   <xsl:template name="mir.navigation">
-    <div id="header_box"
-      class="container">
+    <div id="header_box" class="container">
       <div class="row">
         <div class="col-6">
           <div class="project_logo_box">
-            <a href="https://www.tu-clausthal.de/"
-              class="project_logo_link project_logo_link--logo">
-              <img src="{$WebApplicationBaseURL}images/logos/Logo_TUC_de_rgb.SVG"
-                alt="TUC Logo" />
+            <a href="https://www.tu-clausthal.de/" class="project_logo_link project_logo_link--logo">
+              <img src="{$WebApplicationBaseURL}images/logos/Logo_TUC_de_rgb.SVG" alt="TUC Logo" />
             </a>
             <div class="project_slogans">
-              <a href="https://www.ub.tu-clausthal.de/"
+              <a
+                href="https://www.ub.tu-clausthal.de/"
                 class="project_logo_link project_logo_link--ub">
                 Universitätsbibliothek
               </a>
               |
-              <a href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}"
+              <a
+                href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}"
                 class="project_logo_link project_logo_link--project">
                 Publikationsserver
               </a>
@@ -48,25 +50,23 @@
           <div class="row">
             <div class="col">
               <div class="mir-prop-nav">
-                <form action="{$WebApplicationBaseURL}servlets/solr/find"
+                <form
+                  action="{$WebApplicationBaseURL}servlets/solr/find"
                   class="searchfield_box form-inline m-3"
                   role="search">
-                  <input name="condQuery"
-                    placeholder="{document('i18n:mir.navsearch.placeholder')/i18n/text()}"
+                  <input
+                    name="condQuery"
+                    placeholder="{mcri18n:translate('mir.navsearch.placeholder')}"
                     class="form-control mr-sm-2 search-query"
                     id="searchInput"
                     type="text"
                     aria-label="Search" />
                   <xsl:choose>
                     <xsl:when test="contains($isSearchAllowedForCurrentUser, 'true')">
-                      <input name="owner"
-                        type="hidden"
-                        value="createdby:*" />
+                      <input name="owner" type="hidden" value="createdby:*" />
                     </xsl:when>
-                    <xsl:when test="not($CurrentUser='guest')">
-                      <input name="owner"
-                        type="hidden"
-                        value="createdby:{$CurrentUser}" />
+                    <xsl:when test="not(mcracl:isCurrentUserGuestUser())">
+                      <input name="owner" type="hidden" value="createdby:{$CurrentUser}" />
                     </xsl:when>
                   </xsl:choose>
                   <button type="submit"
@@ -84,7 +84,8 @@
     <div class="mir-main-nav">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button class="navbar-toggler"
+          <button
+            class="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#mir-main-nav-collapse-box"
@@ -93,7 +94,8 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div id="mir-main-nav-collapse-box"
+          <div
+            id="mir-main-nav-collapse-box"
             class="collapse navbar-collapse mir-main-nav__entries">
             <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
               <xsl:for-each select="$loaded_navigation_xml/menu">
@@ -148,12 +150,12 @@
   </xsl:template>
 
   <xsl:template name="mir.powered_by">
-    <xsl:variable name="mcr_version"
-      select="document('version:full')/version/text()" />
+    <xsl:variable name="version" select="concat('MyCoRe ', mcrversion:getCompleteVersion())" />
     <div id="powered_by">
-      <a href="http://www.mycore.de">
-        <img src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_powered_120x30_blaue_schrift_frei.png"
-          title="{$mcr_version}"
+      <a href="https://www.mycore.de">
+        <img
+          src="{$WebApplicationBaseURL}mir-layout/images/mycore_logo_powered_120x30_blaue_schrift_frei.png"
+          title="{$version}"
           alt="powered by MyCoRe" />
       </a>
     </div>
