@@ -17,9 +17,10 @@
 <xed:template xmlns:mir="http://www.mycore.de/mir" xmlns:xed="http://www.mycore.de/xeditor">
 
   <!-- ========== Overrides ========== -->
-  <!-- Agreement with two links (registration form and terms), the default only supports one. -->
+  <!-- Agreement with two links (registration form and terms), the default only supports one.
+       The flag in the object contains the URL of the accepted terms (MIR.Agreement.File.URL). -->
   <xed:template id="agreement">
-    <xed:if test="not(../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']/text()=$MIR.Agreement.File)">
+    <xed:if test="not(string-length(../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']/text())&gt;0)">
       <xed:if test="xed:call-java('de.gbv.reposis.agreement.VZGAgreementUtil','isOnlySubmitter')">
         <xed:if test="not(contains($MIR.Agreement.Genres.Skip, concat(',',$genre,',')))">
           <xed:bind xpath="../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']">
@@ -30,7 +31,7 @@
               <div class="row mt-4 mb-4" id="autor-agreement">
                 <div class="offset-3 col-md-9">
                   <div class="form-check required {$xed-validation-marker}">
-                    <input class="form-check-input" type="checkbox" value="{$MIR.Agreement.File}"
+                    <input class="form-check-input" type="checkbox" value="{$MIR.Agreement.File.URL}"
                            id="autor-agreement-check"></input>
                     <label for="autor-agreement-check" class="form-check-label" id="autor-agreement-link">
                       <xed:output i18n="project.form.agreement.accept.pre" />
