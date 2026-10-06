@@ -16,6 +16,43 @@
 <!-- ======================================================= -->
 <xed:template xmlns:mir="http://www.mycore.de/mir" xmlns:xed="http://www.mycore.de/xeditor">
 
+  <!-- ========== Overrides ========== -->
+  <!-- Agreement with two links (registration form and terms), the default only supports one. -->
+  <xed:template id="agreement">
+    <xed:if test="not(../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']/text()=$MIR.Agreement.File)">
+      <xed:if test="xed:call-java('de.gbv.reposis.agreement.VZGAgreementUtil','isOnlySubmitter')">
+        <xed:if test="not(contains($MIR.Agreement.Genres.Skip, concat(',',$genre,',')))">
+          <xed:bind xpath="../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']">
+            <fieldset>
+              <legend class="mir-fieldset-legend">
+                <xed:output i18n="project.form.agreement" />
+              </legend>
+              <div class="row mt-4 mb-4" id="autor-agreement">
+                <div class="offset-3 col-md-9">
+                  <div class="form-check required {$xed-validation-marker}">
+                    <input class="form-check-input" type="checkbox" value="{$MIR.Agreement.File}"
+                           id="autor-agreement-check"></input>
+                    <label for="autor-agreement-check" class="form-check-label" id="autor-agreement-link">
+                      <xed:output i18n="project.form.agreement.accept.pre" />
+                      <a href="{$Clausthal.Agreement.FormURL}" target="_blank"><xed:output
+                          i18n="project.form.agreement.accept.link" /></a>
+                      <xed:output i18n="project.form.agreement.accept.middle" />
+                      <a href="{$Clausthal.Agreement.TermsURL}" target="_blank"><xed:output
+                          i18n="project.form.agreement.accept.terms" /></a>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <xed:validate display="global" xpath="//servflag[@type='agreement']" required="true"
+                          i18n="project.form.validation.agreement" />
+          </xed:bind>
+        </xed:if>
+      </xed:if>
+    </xed:if>
+    <xed:cleanup-rule xpath="//servflag[@type='agreement']" relevant-if="string-length(text())&gt;0" />
+  </xed:template>
+
   <!-- ========== Admin: Modifications ========== -->
   <xed:modify ref="admin.fields">
     <xed:remove ref="institutes" />
