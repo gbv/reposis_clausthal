@@ -20,7 +20,7 @@
   <!-- Agreement with two links (registration form and terms), the default only supports one.
        The flag in the object contains the URL of the accepted terms (MIR.Agreement.File.URL). -->
   <xed:template id="agreement">
-    <xed:if test="not(string-length(../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']/text())&gt;0)">
+    <xed:if test="not(../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']/text()=$MIR.Agreement.File.URL)">
       <xed:if test="xed:call-java('de.gbv.reposis.agreement.VZGAgreementUtil','isOnlySubmitter')">
         <xed:if test="not(contains($MIR.Agreement.Genres.Skip, concat(',',$genre,',')))">
           <xed:bind xpath="../../../../service/servflags[@class='MCRMetaLangText']/servflag[@type='agreement']">
