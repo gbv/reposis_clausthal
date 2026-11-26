@@ -1,16 +1,23 @@
 # reposis_clausthal
 
-## Installation instructions
+[MIR](https://github.com/MyCoRe-Org/mir) plugin with project-specific customizations
+for the repository of TU Clausthal.
 
-* run `mvn clean install`
-* copy jar to `~/.mycore/(dev-)mir/lib/`
-* configure `~/.mycore/(dev-)mir/.mycore.properties` if necessary
+Compatible with **MIR 2023.06.x**.
+
+## Installation
+
+* Run `mvn clean install`.
+* Copy the generated JAR to `~/.mycore/(dev-)mir/lib/`.
+* Configure `mycore.properties` if necessary.
 
 ## Development
 
-You can add these to your `~/.mycore/(dev-)mir/.mycore.properties`:
-```
-MCR.Developer.Resource.Override=/path/to/reposis_clausthal/src/main/resources
+To enable hot reloading of XSL and frontend resources during development,
+add the following properties to `mycore.properties`:
+
+```properties
+MCR.Developer.Resource.Override=/path/to/reposis_ostasien/src/main/resources
 MCR.LayoutService.LastModifiedCheckPeriod=0
 MCR.UseXSLTemplateCache=false
 MCR.SASS.DeveloperMode=true
