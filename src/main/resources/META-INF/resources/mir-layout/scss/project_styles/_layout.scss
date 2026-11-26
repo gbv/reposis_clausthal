@@ -28,7 +28,9 @@
 
 // Medium devices (tablets, less than 992px)
 @include media-breakpoint-down(lg) {
-  // md and lower
+  body {
+    padding-top: 0;
+  }
 }
 
 // Small devices (landscape phones, less than 768px)

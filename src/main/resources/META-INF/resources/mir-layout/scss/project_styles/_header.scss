@@ -21,6 +21,7 @@
   }
 
   #header_box {
+    display: block;
     margin-top: 1rem;
     margin-bottom: 0;
   }
@@ -64,12 +65,23 @@
 
 // Medium devices (tablets, less than 992px)
 @include media-breakpoint-down(lg) {
-  // md and lower
+  header {
+    position: static;
+    box-shadow: none;
+    border-bottom: .0625rem solid $cGrayBackDark;
+  }
 }
 
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(md) {
-  // sm and lower
+  #header_box {
+    margin-top: .75rem;
+  }
+
+  .project_slogans {
+    padding-top: .25rem;
+    padding-left: 0;
+  }
 }
 
 // X-Small devices (portrait phones, less than 576px)

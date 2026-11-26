@@ -14,7 +14,7 @@
   <xsl:template name="mir.navigation">
     <div id="header_box" class="container">
       <div class="row">
-        <div class="col-6">
+        <div class="col-12 col-md-6">
           <div class="project_logo_box">
             <a href="https://www.tu-clausthal.de/" class="project_logo_link project_logo_link--logo">
               <img src="{$WebApplicationBaseURL}images/logos/Logo_TUC_de_rgb.SVG" alt="TUC Logo" />
@@ -34,25 +34,35 @@
             </div>
           </div>
         </div>
-        <div class="col">
+        <div class="col-12 col-md">
           <div class="row">
             <div class="col">
-              <div class="mir-prop-nav">
+              <div class="mir-prop-nav d-flex align-items-center justify-content-md-end">
                 <nav>
                   <ul class="navbar-nav ms-auto flex-row">
                     <xsl:call-template name="mir.loginMenu" />
                     <xsl:call-template name="mir.languageMenu" />
                   </ul>
                 </nav>
+                <button
+                  class="btn btn-primary clausthal-nav-toggler ms-auto ms-md-3 d-lg-none"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#mir-main-nav-collapse-box"
+                  aria-controls="mir-main-nav-collapse-box"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col">
-              <div class="mir-prop-nav">
+              <div class="mir-prop-nav d-flex justify-content-end">
                 <form
                   action="{$WebApplicationBaseURL}servlets/solr/find"
-                  class="searchfield_box d-flex m-3"
+                  class="searchfield_box d-flex align-items-center m-3"
                   role="search">
                   <input
                     name="condQuery"
@@ -84,16 +94,6 @@
     <div class="mir-main-nav">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mir-main-nav-collapse-box"
-            aria-controls="mir-main-nav-collapse-box"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
           <div
             id="mir-main-nav-collapse-box"
             class="collapse navbar-collapse mir-main-nav__entries">

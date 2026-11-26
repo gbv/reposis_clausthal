@@ -27,7 +27,14 @@
 
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(md) {
-  // sm and lower
+  #header_box .searchfield_box {
+    width: 100%;
+    margin: .5rem 0 !important;
+
+    .search-query {
+      flex: 1 1 auto;
+    }
+  }
 }
 
 // X-Small devices (portrait phones, less than 576px)
