@@ -39,7 +39,7 @@
             <div class="col">
               <div class="mir-prop-nav">
                 <nav>
-                  <ul class="navbar-nav ml-auto flex-row">
+                  <ul class="navbar-nav ms-auto flex-row">
                     <xsl:call-template name="mir.loginMenu" />
                     <xsl:call-template name="mir.languageMenu" />
                   </ul>
@@ -52,12 +52,12 @@
               <div class="mir-prop-nav">
                 <form
                   action="{$WebApplicationBaseURL}servlets/solr/find"
-                  class="searchfield_box form-inline m-3"
+                  class="searchfield_box d-flex m-3"
                   role="search">
                   <input
                     name="condQuery"
                     placeholder="{mcri18n:translate('mir.navsearch.placeholder')}"
-                    class="form-control mr-sm-2 search-query"
+                    class="form-control me-sm-2 search-query"
                     id="searchInput"
                     type="text"
                     aria-label="Search" />
@@ -87,8 +87,8 @@
           <button
             class="navbar-toggler"
             type="button"
-            data-toggle="collapse"
-            data-target="#mir-main-nav-collapse-box"
+            data-bs-toggle="collapse"
+            data-bs-target="#mir-main-nav-collapse-box"
             aria-controls="mir-main-nav-collapse-box"
             aria-expanded="false"
             aria-label="Toggle navigation">
@@ -97,7 +97,7 @@
           <div
             id="mir-main-nav-collapse-box"
             class="collapse navbar-collapse mir-main-nav__entries">
-            <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
               <xsl:for-each select="$loaded_navigation_xml/menu">
                 <xsl:choose>
                   <!-- Ignore some menus, they are shown elsewhere in the layout -->
@@ -132,14 +132,14 @@
           </ul>
         </div>
         <div class="col">
-          <div class="dini-box text-right">
+          <div class="dini-box text-end">
             <img class="img-fluid"
               src="{$WebApplicationBaseURL}images/DINI_Siegel_FINAL_22__3_.png"
               alt="DINI 22" />
           </div>
         </div>
-        <div class="col-auto text-right">
-          <div class="text-right">
+        <div class="col-auto text-end">
+          <div class="text-end">
             <div id="copyright">
               <xsl:value-of select="concat('© ', $MCR.NameOfProject, ' ', date:year(date:date()))" />
             </div>
