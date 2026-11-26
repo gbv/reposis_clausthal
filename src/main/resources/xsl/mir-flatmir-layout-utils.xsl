@@ -27,7 +27,7 @@
               </a>
               |
               <a
-                href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2),$HttpSession)}"
+                href="{concat($WebApplicationBaseURL,substring($loaded_navigation_xml/@hrefStartingPage,2))}"
                 class="project_logo_link project_logo_link--project">
                 Publikationsserver
               </a>

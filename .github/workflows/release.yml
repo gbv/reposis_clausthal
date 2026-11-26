@@ -13,7 +13,7 @@ jobs:
       group: release-deploy-${{ github.repository }}-${{ github.ref_name }}
     uses: gbv/reposis_workflows/.github/workflows/maven-release.yml@v1
     with:
-      java-version: '17'
+      java-version: '21'
     secrets:
       MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
       MAVEN_PASSWORD: ${{ secrets.OSSRH_TOKEN }}
