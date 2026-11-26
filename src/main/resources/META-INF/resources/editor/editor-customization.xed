@@ -34,19 +34,19 @@
                     <input class="form-check-input" type="checkbox" value="{$MIR.Agreement.File.URL}"
                            id="autor-agreement-check"></input>
                     <label for="autor-agreement-check" class="form-check-label" id="autor-agreement-link">
-                      <xed:output i18n="project.form.agreement.accept.pre" />
+                      <xed:output i18n="clausthal.form.agreement.accept.pre" />
                       <a href="{$Clausthal.Agreement.FormURL}" target="_blank"><xed:output
-                          i18n="project.form.agreement.accept.link" /></a>
-                      <xed:output i18n="project.form.agreement.accept.middle" />
+                          i18n="clausthal.form.agreement.accept.link" /></a>
+                      <xed:output i18n="clausthal.form.agreement.accept.middle" />
                       <a href="{$Clausthal.Agreement.TermsURL}" target="_blank"><xed:output
-                          i18n="project.form.agreement.accept.terms" /></a>
+                          i18n="clausthal.form.agreement.accept.terms" /></a>
                     </label>
                   </div>
                 </div>
               </div>
             </fieldset>
             <xed:validate display="global" xpath="//servflag[@type='agreement']" required="true"
-                          i18n="project.form.validation.agreement" />
+                          i18n="clausthal.form.validation.agreement" />
           </xed:bind>
         </xed:if>
       </xed:if>
