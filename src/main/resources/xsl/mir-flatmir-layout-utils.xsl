@@ -14,7 +14,7 @@
   <xsl:template name="mir.navigation">
     <div id="header_box" class="container">
       <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-7 col-lg-6">
           <div class="project_logo_box">
             <a href="https://www.tu-clausthal.de/" class="project_logo_link project_logo_link--logo">
               <img src="{$WebApplicationBaseURL}images/logos/Logo_TUC_de_rgb.SVG" alt="TUC Logo" />
@@ -34,7 +34,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md">
+        <div class="col-12 col-md-5 col-lg">
           <div class="row">
             <div class="col">
               <div class="mir-prop-nav d-flex align-items-center justify-content-md-end">
