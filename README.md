@@ -3,7 +3,7 @@
 [MIR](https://github.com/MyCoRe-Org/mir) plugin with project-specific customizations
 for the repository of TU Clausthal.
 
-Compatible with **MIR 2023.06.x**.
+Compatible with **MIR 2025.12.x**.
 
 ## Installation
 
