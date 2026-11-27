@@ -45,7 +45,7 @@
                   </ul>
                 </nav>
                 <button
-                  class="btn btn-primary clausthal-nav-toggler ms-auto ms-md-3 d-lg-none"
+                  class="btn btn-primary clausthal-nav-toggler order-first order-md-last me-auto me-md-0 ms-md-3 d-lg-none"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#mir-main-nav-collapse-box"

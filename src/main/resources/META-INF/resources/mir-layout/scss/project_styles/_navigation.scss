@@ -49,7 +49,9 @@
 
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(md) {
-  // sm and lower
+  .mir-prop-nav .navbar-nav > li:last-child > a {
+    padding-right: 0;
+  }
 }
 
 // X-Small devices (portrait phones, less than 576px)
