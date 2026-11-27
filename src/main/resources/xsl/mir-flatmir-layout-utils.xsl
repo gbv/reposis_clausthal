@@ -67,7 +67,7 @@
                   <input
                     name="condQuery"
                     placeholder="{mcri18n:translate('mir.navsearch.placeholder')}"
-                    class="form-control me-sm-2 search-query"
+                    class="form-control me-2 search-query"
                     id="searchInput"
                     type="text"
                     aria-label="Search" />
@@ -80,7 +80,7 @@
                     </xsl:when>
                   </xsl:choose>
                   <button type="submit"
-                    class="btn btn-primary my-2 my-sm-0">
+                    class="btn btn-primary">
                     <i class="fas fa-search"></i>
                   </button>
                 </form>
