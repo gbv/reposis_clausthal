@@ -37,23 +37,13 @@
         <div class="col-12 col-md-5 col-lg">
           <div class="row">
             <div class="col">
-              <div class="mir-prop-nav d-flex align-items-center justify-content-md-end">
+              <div class="mir-prop-nav clausthal-meta-nav d-flex justify-content-end">
                 <nav>
                   <ul class="navbar-nav ms-auto flex-row">
                     <xsl:call-template name="mir.loginMenu" />
                     <xsl:call-template name="mir.languageMenu" />
                   </ul>
                 </nav>
-                <button
-                  class="btn btn-primary clausthal-nav-toggler order-first order-md-last me-auto me-md-0 ms-md-3 d-lg-none"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#mir-main-nav-collapse-box"
-                  aria-controls="mir-main-nav-collapse-box"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
               </div>
             </div>
           </div>
@@ -64,6 +54,16 @@
                   action="{$WebApplicationBaseURL}servlets/solr/find"
                   class="searchfield_box d-flex align-items-center m-3"
                   role="search">
+                  <button
+                    class="btn btn-primary clausthal-nav-toggler me-2 d-md-none"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mir-main-nav-collapse-box"
+                    aria-controls="mir-main-nav-collapse-box"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
                   <input
                     name="condQuery"
                     placeholder="{mcri18n:translate('mir.navsearch.placeholder')}"
@@ -94,6 +94,16 @@
     <div class="mir-main-nav">
       <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
+          <button
+            class="btn btn-primary clausthal-nav-toggler my-2 d-none d-md-inline-block d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mir-main-nav-collapse-box"
+            aria-controls="mir-main-nav-collapse-box"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
           <div
             id="mir-main-nav-collapse-box"
             class="collapse navbar-collapse mir-main-nav__entries">

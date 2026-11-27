@@ -75,7 +75,15 @@
 // Small devices (landscape phones, less than 768px)
 @include media-breakpoint-down(md) {
   #header_box {
-    margin-top: .75rem;
+    position: relative;
+    margin-top: .25rem;
+    padding-top: 1.75rem;
+  }
+
+  .clausthal-meta-nav {
+    position: absolute;
+    top: 0;
+    right: .75rem;
   }
 
   .project_slogans {
